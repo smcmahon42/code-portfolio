@@ -1,0 +1,59 @@
+/********************************************************************************
+ * Navigation styles
+ *******************************************************************************/
+
+/* 
+Tabs for Sub Navigation ----------------------------------------------------------- */
+.m-secondary-navigation { 
+  li {
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    border: 1px solid lighten( $primary-color, 30 );
+    background: $primary-color;
+    @include box-shadow( black 0 0 5px 0px inset );
+    @include border-radius();
+    a { 
+      color: white;
+      text-decoration: none;
+      &:hover { color: lighten($blue, 20); }
+      i { font-size: 0.75em; }
+    }//a
+  }//li
+  li.active {
+    cursor: default;
+    border: none;
+    background: none;
+    @include box-shadow( 0 0 0 0 );
+    @include border-radius( 0 0 0 0 );
+  }//li.active
+}//#track-set-nav 
+
+/* 
+Alphabet Shortcut Navigation ----------------------------------------------------------- */
+.m-alphabet-navigation { 
+  @include clearfix();
+  span {
+      display: block;
+      float: left;
+      margin: 0 2px 3px 0;
+      a {
+        font-size: 0.85em;
+        display: inline-block;
+        border: 1px solid #ccc;
+        background: white;
+        padding:4px 0;
+        margin: 0;
+        width: 21px;
+        text-align: center;
+        text-decoration: none;
+        @include border-radius();
+        &:hover {
+          color: white;
+          background: $primary-color;
+        }
+      }
+  }
+}//nav-alphabet
+

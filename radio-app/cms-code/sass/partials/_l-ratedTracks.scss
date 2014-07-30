@@ -1,0 +1,25 @@
+//UNMATCHED USER RATED TRACKS ------------
+#track-set-contents { 
+  .m-subnavBG-top {
+    p {
+      color: lighten($primary-text-color, 20);
+      margin: 5px 0;
+      font-size: 0.85em; 
+      line-height: 1.25em;
+    }
+  }
+  .m-toggleRadio {
+    li {
+      margin: 15px 0;
+      h5 {
+        margin-bottom: 10px;
+      }
+    }
+    li:nth-child(1){
+      margin-top: 0;
+    }
+    li:last-child{
+      margin-bottom: 0;
+    }
+  }
+}

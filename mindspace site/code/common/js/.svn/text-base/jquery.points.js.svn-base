@@ -1,0 +1,175 @@
+jQuery.points = {
+    startingBalance : 10,
+	balance : 10,
+	totalPages : 12,
+
+    pointValues : {
+		home:0,
+        services:2,
+        webservices:2,
+        otherservices:2,
+        failedcampaigns:2,
+        gamification:2,
+        gamificationoptions:2,
+        process:2,
+        ourbook:2,
+        about:2,
+        playing:2,
+        people:2,
+        gallery:2,
+		contact:2,
+		redeem:0,
+		bookgift:0,
+		screengift:0,
+		videogift:0
+    },
+
+	pageIsUnlocked : function(page)
+	{
+		var pageCookie = getCookie(page);
+		if(pageCookie)
+		{
+			return true;
+		} else {
+			return false;
+		}
+	},
+
+	unlockPage : function(page)
+	{
+		trace("Unlocking Page...");
+		setCookie(page, "unlocked", "");
+
+		// set pages unlocked
+		var unlockedCookie = getCookie("pagesunlocked");
+		var numUnlocked;
+		if(unlockedCookie)
+		{
+			numUnlocked = unlockedCookie.substr(unlockedCookie.indexOf("=")+1);
+		} else {
+			numUnlocked = 0;
+		}
+
+		numUnlocked++;
+		setCookie("pagesunlocked", numUnlocked, "");
+		//document.cookie = "pagesunlocked=" + numUnlocked + expires + "; path=/";
+
+		// deduct page cost
+		var cost = this.getPoints(page);
+		this.deductPoints(cost);
+	},
+
+	setPointsBalance : function()
+	{
+		var val;
+		var pointsCookie = getCookie('pointsbalance');
+		if(pointsCookie)
+		{
+			trace("Player has points cookie: " + pointsCookie);
+			val = pointsCookie.substr(pointsCookie.indexOf("=")+1);
+			this.balance = val;
+			trace("Existing balance = " + this.balance);
+		} else {
+			this.balance = this.startingBalance;
+		}
+
+		// set cookie
+		var expires = "";
+		var value = this.balance;
+		document.cookie = 'pointsbalance = ' + value + expires + "; path=/";
+
+		this.updatePointDisplay();
+	},
+
+    getPoints : function(page)
+	{
+        var p = this.pointValues[page];
+        return p;
+    },
+
+	deductPoints : function(cost)
+	{
+		this.balance -= cost;
+
+		// set cookie
+		var expires = "";
+		var value = this.balance;
+		document.cookie = 'pointsbalance = ' + value + expires + "; path=/";
+
+		this.updatePointDisplay();
+	},
+
+	updatePointDisplay : function()
+	{
+		$('#creditsNum').html(this.balance);
+	},
+
+	getBalance : function()
+	{
+		return this.balance;
+	},
+
+	setProgressBar : function()
+	{
+		// need to see how many pages the player has unlocked
+		// this will be in database eventually... but in meatime:
+
+		var numUnlocked;
+
+		// get cookie
+		var unlockedCookie = getCookie("pagesunlocked");
+		if(unlockedCookie)
+		{
+			numUnlocked = unlockedCookie.substr(unlockedCookie.indexOf("=")+1);
+		} else {
+			numUnlocked = 0;
+		}
+
+		var percUnlocked;
+
+		if(numUnlocked <= 4)
+		{
+
+			percUnlocked = Math.round((numUnlocked / 4) * 100);
+			$('#progBar01').css('width', percUnlocked + '%');
+
+		} else if(numUnlocked > 4 && numUnlocked <= 8) {
+			$('#progBar01').css('width', '100%');
+
+			$('#ribbon01').removeClass('ribbon-locked');
+			$('#ribbon01').addClass('ribbon-unlocked');
+			$('#giftCount').html('1');
+			$('#redeem-gifts').show();
+
+			percUnlocked = Math.round(((numUnlocked - 4) / 4) * 100);
+			$('#progBar02').css('width', percUnlocked + '%');
+		} else if(numUnlocked > 8 && numUnlocked < 12) {
+			$('#progBar01').css('width', '100%');
+			$('#progBar02').css('width', '100%');
+
+			$('#ribbon01').removeClass('ribbon-locked');
+			$('#ribbon01').addClass('ribbon-unlocked');
+			$('#ribbon02').removeClass('ribbon-locked');
+			$('#ribbon02').addClass('ribbon-unlocked');
+			$('#giftCount').html('2');
+			$('#redeem-gifts').show();
+
+			percUnlocked = Math.round(((numUnlocked - 8) / 4) * 100);
+			$('#progBar03').css('width', percUnlocked + '%');
+		} else {
+			$('#progBar01').css('width', '100%');
+			$('#progBar02').css('width', '100%');
+			$('#progBar03').css('width', '100%');
+
+			$('#ribbon01').removeClass('ribbon-locked');
+			$('#ribbon01').addClass('ribbon-unlocked');
+			$('#ribbon02').removeClass('ribbon-locked');
+			$('#ribbon02').addClass('ribbon-unlocked');
+			$('#ribbon03').removeClass('ribbon-locked');
+			$('#ribbon03').addClass('ribbon-unlocked');
+			$('#giftCount').html('3');
+			$('#redeem-gifts').show();
+		}
+
+	}
+}

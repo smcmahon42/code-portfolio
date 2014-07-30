@@ -1,0 +1,15 @@
+/* VIEWS/ADMIN/HEADER.PHP LOADS
+   THE STYLE.CSS FILE BY DEFAULT,
+   SO THOSE STYLES APPLY UNLESS
+   THEY ARE OVERWRITTEN HERE */
+	
+/* ========= */
+/* = FONTS = */
+/* ========= */
+.admin h1{font-size:18px;font-weight:bold;border-bottom:1px solid;clear:both;padding-bottom:10px;margin-bottom:10px;}
+
+/* ============== */
+/* = CONTAINERS = */
+/* ============== */
+#container{width:800px;}
+#content{clear:both;padding:20px;}

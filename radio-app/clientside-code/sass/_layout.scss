@@ -1,0 +1,149 @@
+//temp
+[radio-controller] {
+  overflow: hidden !important;
+}
+
+[album-cover] {
+  position: absolute;
+}
+
+//end temp
+
+body {
+  margin: 0px;
+  background: #0c0c0c;
+  color: #CCC;
+}
+
+// -- Main Layout Sections --------------------
+div#App {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: scroll;
+}
+
+section[radio-controller],
+section[radio-scheduler] {
+  min-width: 768px;
+  width: 100%;
+}
+
+#Logo {
+  display: none;
+}
+
+#Request,
+#Mixer {
+  overflow: hidden;
+  // Everything in these viewports scrolls via interior views
+}
+
+.inside {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 768px;
+  margin: 0 0 0 0;
+  padding: 0;
+}
+
+// -- Radio Controller --------------------
+[radio-controller] {
+  overflow: visible;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  height: 120px;
+  background: #0b0b0b;
+  background-size: cover;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+
+[radio-controller] > header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 45px;
+  background: transparent;
+}
+
+// -- Radio Scheduler --------------------
+[radio-scheduler] {
+  position: absolute;
+  left: 0;
+  top: 120px;
+  right: 0;
+  bottom: 0;
+  @include background-image(linear-gradient( #1c1412, darken(#1c1412, 20%)));
+}
+
+[radio-app] [radio-scheduler] > nav {
+  position: absolute;
+  min-width: 768px;
+}
+
+[radio-scheduler] > section {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 50px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+[radio-scheduler] > nav {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 9999;
+  height: 50px;
+  @include background-image(linear-gradient( rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)));
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+
+// -- Media Queries --------------------
+
+@include breakpoint-height(tall) {
+  [data-layout="maximized"] #Logo {
+    display: block;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1;
+    padding: 10px 0 0;
+    text-align: center;
+  }
+  [data-layout="maximized"] [radio-controller] {
+    height: 300px;
+  }
+  [data-layout="maximized"] [radio-scheduler] {
+    top: 300px;
+  }
+}
+
+
+@include breakpoint-width(small) {
+  html {
+    min-width: 768px;
+    overflow: auto;
+  }
+  .inside {
+    left: 50%;
+    margin: 0 0 0 -384px;
+  }
+}
+
+
+@include breakpoint-width(big) {
+  .inside {
+    width: 1024px;
+    margin: 0 0 0 -512px;
+  }
+}

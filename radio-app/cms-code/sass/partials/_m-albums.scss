@@ -1,0 +1,68 @@
+//ALBUM ARTWORK ---------------
+.m-album-detail-Container { //.m-albums-details-responsiveContainer
+  float: none;
+  margin: auto;
+  overflow: hidden;
+  @include mx-breakPoints(lg) { width: 93%; }
+  @include mx-breakPoints(md) { width: 100%; }
+  @include mx-breakPoints(sm) { width: 90%; }
+  @include mx-breakPoints(x-sm) { width: 50%; }
+  .m-single-album { //m-single-album-responsiveContainer
+    @include mx-breakPoints(lg) { width: 23%; }
+    @include mx-breakPoints(md) { width: 21%; }
+    @include mx-breakPoints(sm) { width: 80%; }
+    @include mx-breakPoints(x-sm) { width: 100%; margin-left: 0; }
+    [album-title] {
+      margin: 30px 0 0 0;
+    }
+  }
+}//.m-album-detail-Container
+
+
+// SINGLE ALBUM STYLES ON ARTISTS PAGE --------------
+.m-album-detail-single { //m-album-details-single
+  float: left;
+  max-width: 200px;
+  margin-left: 15px;
+
+  [album-title] {  
+    border: 1px solid lighten($primary-color, 60);
+    background: lighten($primary-color, 72);
+    margin: 0 0 0 0;
+    padding: 2px;
+    min-height: 38px;
+    text-align: center;
+    font-size: 0.95em;
+    @include border-radius(5px 5px 0 0);
+    a {
+      font-family: $font-secondary;
+      text-decoration: none;
+    }
+    span {
+      font-family: $font-secondary;
+      color: lighten($primary-text-color, 30);
+    }
+  }
+  .cover {
+    @include clearfix();
+    display: block;
+    max-width: 100%;
+    img {
+      width: 100%;
+    }
+  }//cover
+  .fix-art {
+    display: inline-block;
+    margin: -2px 0 0 0;
+    padding: 8px 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    font-family: $font-secondary;
+    color: white;
+    text-decoration: none;
+    background: $primary-color;
+    @include border-radius(0 0 5px 5px);
+  }//fix-art
+
+}//.m-album-detail-single

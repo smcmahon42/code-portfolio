@@ -1,0 +1,27 @@
+// ICONS DISPLAY -------------
+[data-album-type="Album"] {
+  background: url("../img/vinyl.svg") 0 0 no-repeat;
+  padding-left: 18px;
+}
+[data-album-type="EP"] {
+  background: url("../img/vinyl-ep.svg") 0 0 no-repeat;
+  padding-left: 18px;
+}
+[data-album-type="Single"] {
+  background: url("../img/eighthnote.svg") 0 0 no-repeat;
+  padding-left: 18px;
+}
+.m-stations-svgIcon { 
+  background: url("../img/tower.svg") 0 4px no-repeat;
+  padding-left: 18px;
+}
+.m-headphones-svgIcon {
+  padding-left: 22px;
+  text-decoration: none;
+  background: url("../img/headphones.svg") 0 2px no-repeat;
+  &:hover { text-decoration: underline; }
+}
+.m-userIcon-svgIcon {
+  padding-left: 18px;
+  background: url("../img/user.svg") 0 0 no-repeat;
+}

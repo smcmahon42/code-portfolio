@@ -1,0 +1,1103 @@
+/*Track info headPlayer parent
+===============================================*/
+
+.background-art {
+  position: absolute;
+  width: 100%;
+  height: 67%;
+  opacity: .10;
+  background-size: cover;
+  background-position: center center;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  filter: blur(5px);
+}
+
+@include breakpoint-height(short) {
+  .background-art {
+    display: none;
+  }
+}
+
+
+[data-layout="maximized"] #track-info [track-detail] {
+  position: relative;
+  @include breakpoint-height(short) {
+    margin-top: 10px;
+    height: 120px;
+  }
+
+  @include breakpoint-height(tall) {
+    height: 300px;
+  }
+}
+
+[data-layout="maximized"] #track-info .inside {
+  padding: 0;
+  @include breakpoint-both(large, short) {
+    //background: url(../img/headPlayer/playerBG-large.png) repeat-x;
+  }
+
+  @include breakpoint-both(large, tall) {
+    //background: url(../img/headPlayer/headPlayerBG.jpg);
+  }
+
+  @include breakpoint-both(small, short) {
+    //background: url(../img/headPlayer/playerBG-large.png) repeat-x;
+  }
+
+  @include breakpoint-both(small, tall) {
+    //background: url(../img/headPlayer/headPlayerBG_small.jpg);
+  }
+}
+
+/*Album Cover
+===============================================*/
+[data-layout="maximized"] [track-detail] [album-cover] {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  @include background-image(linear-gradient(#404040 0%, black 100%));
+  @include breakpoint-height(short) {
+    width: 100px;
+    height: 100px;
+    padding: 7px;
+  }
+
+  @include breakpoint-height(tall) {
+    width: 248px;
+    height: 248px;
+    padding: 7px;
+    margin-top: 33px;
+    margin-left: 10px;
+  }
+}
+
+/*Orange Girl Logo
+===============================================*/
+[data-layout="maximized"] #track-info [track-detail] .girlLogo {
+  @include breakpoint-both(large, short) {
+    display: none;
+  }
+
+  @include breakpoint-both(large, tall) {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    width: 35.5%;
+  }
+
+  @include breakpoint-both(small, short) {
+    display: none;
+  }
+
+  @include breakpoint-both(small, tall) {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 70px;
+    width: 30%;
+  }
+}
+
+/*Track Infromation / Description
+===============================================*/
+[data-layout="maximized"] #track-info [track-detail] [track-identity] {
+  width: 400px;
+  position: relative;
+  z-index: 1;
+  @include breakpoint-both(large, short) {
+    width: 235px;
+    margin-left: 111px;
+  }
+
+  @include breakpoint-both(large, tall) {
+    margin-left: 280px;
+    padding: 20px 0 0 0;
+  }
+
+  @include breakpoint-both(small, short) {
+    width: 235px;
+    margin-left: 110px;
+  }
+
+  @include breakpoint-both(small, tall) {
+    margin-left: 270px;
+    padding: 20px 0 0 0;
+  }
+
+  [track-title] {
+    position: relative;
+    display: inline-block;
+    color: #FFF;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @include breakpoint-both(large, short) {
+      font-size: 0.9em;
+      max-width: 225px;
+      padding: 0px 10px 0 0;
+    }
+
+    @include breakpoint-both(large, tall) {
+      font-size: 1.5em;
+      max-width: 400px;
+      padding: 10px 15px 0 0;
+    }
+
+    @include breakpoint-both(small, short) {
+      font-size: 0.9em;
+      max-width: 225px;
+      padding: 0px 10px 0 0;
+    }
+
+    @include breakpoint-both(small, tall) {
+      font-size: 1.5em;
+      max-width: 350px;
+      padding: 10px 15px 0 0;
+    }
+
+    img {
+      position: absolute;
+      right: 0;
+      @include breakpoint-both(large, short) {
+        top: 5px;
+        width: 5px;
+      }
+
+      @include breakpoint-both(large, tall) {
+        top: 19px;
+      }
+
+      @include breakpoint-both(small, short) {
+        top: 5px;
+        width: 5px;
+      }
+
+      @include breakpoint-both(small, tall) {
+        top: 19px;
+      }
+    }
+    //img
+  }
+  //[track-title]
+  [track-album-info] {
+    @include breakpoint-both(large, short) {
+      margin-top: -3px;
+    }
+
+    @include breakpoint-both(small, short) {
+      margin-top: -3px;
+    }
+
+    span {
+      color: #868586;
+      display: inline-block;
+      line-height: 1em;
+      @include breakpoint-both(large, short) {
+        font-size: 0.8em;
+      }
+
+      @include breakpoint-both(large, tall) {}
+
+      @include breakpoint-both(small, short) {
+        font-size: 0.8em;
+      }
+
+      @include breakpoint-both(small, tall) {}
+    }
+    .track-year {
+      display: inline-block;
+      @include breakpoint-height(short) {
+        margin: 2px 0 0 0;
+        display: inline-block;
+      }
+    }
+  }
+  [track-sources] {
+    @include breakpoint-both(large, short) {
+      margin-top: 9px;
+    }
+
+    @include breakpoint-both(small, short) {
+      margin-top: 9px;
+    }
+
+    span:nth-child(1) {
+      color: #FFF;
+      @include breakpoint-both(large, short) {
+        padding-top: 0px;
+        font-size: 0.8em;
+        font-weight: normal;
+      }
+
+      @include breakpoint-both(large, tall) {
+        padding-top: 20px;
+        font-weight: bold;
+      }
+
+      @include breakpoint-both(small, short) {
+        padding-top: 0px;
+        font-size: 0.8em;
+        font-weight: normal;
+      }
+
+      @include breakpoint-both(small, tall) {
+        padding-top: 20px;
+        font-weight: bold;
+      }
+    }
+    span {
+      color: #868586;
+      @include breakpoint-both(large, short) {
+        display: inline-block;
+        font-size: 0.8em;
+      }
+
+      @include breakpoint-both(large, tall) {
+        display: inline-block;
+      }
+
+      @include breakpoint-both(small, short) {
+        display: inline-block;
+        font-size: 0.8em;
+      }
+
+      @include breakpoint-both(small, tall) {
+        display: inline-block;
+      }
+    }
+    span .by-name {
+      color: #868586;
+      @include breakpoint-both(large, short) {
+        font-size: 1em;
+        font-weight: normal;
+      }
+
+      @include breakpoint-both(large, tall) {
+        font-weight: normal;
+      }
+
+      @include breakpoint-both(small, short) {
+        font-size: 1em;
+        font-weight: normal;
+      }
+
+      @include breakpoint-both(small, tall) {
+        font-weight: normal;
+      }
+    }
+  }
+  //[track-sources]
+  span.new-track {
+    margin-left: 15px;
+    display: inline-block;
+    background: #f15822;
+    color: #000;
+    padding: 0 3px;
+    font-size: 0.8em;
+    @include border-radius(2px);
+  }
+}
+
+//#track-info [track-detail] [track-identity]
+
+/*Timer Progress
+===============================================*/
+[data-layout="maximized"] #track-info [track-detail] [track-timer] {
+  position: absolute;
+  font-size: 0.8em;
+  z-index: 2;
+  @include breakpoint-both(large, short) {
+    top: 76px;
+    right: 230px;
+    text-align: right;
+    width: 100px;
+    margin: 0px;
+  }
+
+  @include breakpoint-both(large, tall) {
+    top: 115px;
+    left: 320px;
+    right: 22%;
+    text-align: right;
+    width: 200px;
+    margin: 0px;
+  }
+
+  @include breakpoint-both(small, short) {
+    display: none;
+  }
+
+  @include breakpoint-both(small, tall) {
+    top: 115px;
+    left: 310px;
+    right: 22%;
+    text-align: right;
+    width: 150px;
+    margin: 0px;
+  }
+
+  .timeElapsed {
+    display: inline;
+    position: absolute;
+    z-index: 2;
+    left: -40px;
+    top: 0px;
+  }
+  .timeDuration {
+    display: inline;
+    position: absolute;
+    z-index: 2;
+    right: -40px;
+    top: 0px;
+  }
+  .progressbar {
+    background-color: transparent;
+    height: 3px;
+    display: block;
+    width: 100%;
+    position: relative;
+    top: 2px;
+  }
+  .elapsed {
+    position: absolute;
+    left: 0px;
+    top: 5px;
+    width: 0px;
+    z-index: 4;
+    height: 3px;
+    background-color: #aca7ad;
+    border-radius: 2px;
+  }
+  .seekable {
+    position: absolute;
+    left: 0px;
+    top: 5px;
+    width: 0px;
+    z-index: 3;
+    height: 3px;
+    background-color: #000;
+  }
+  .bufferMessage {
+    position: absolute;
+    display: block;
+    left: 0px;
+    top: 13px;
+    width: 200px;
+    font-size: 11px;
+    line-height: 14px;
+    height: 14px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    text-align: left;
+  }
+}
+
+/*Ratings Toggle & Ratings Controler Parent
+===============================================*/
+[data-layout="maximized"] .rating-controls {
+  position: absolute;
+  z-index: 3;
+  bottom: 0px;
+  &.highlight-artist-rating .rating-toggle input.off.artistBtn {
+    @include background-image(linear-gradient(black 0%, #2e1109 80%));
+  }
+  @include breakpoint-both(large, short) {
+    width: 1024px;
+    height: 50px;
+    bottom: 10px;
+  }
+
+  @include breakpoint-both(large, tall) {
+    width: 1024px;
+    height: 99px;
+    padding-left: 255px;
+  }
+
+  @include breakpoint-both(small, short) {
+    width: 768px;
+    height: 50px;
+    bottom: 10px;
+  }
+
+  @include breakpoint-both(small, tall) {
+    width: 768px;
+    height: 99px;
+    padding-left: 255px;
+  }
+
+  .rating-toggle {
+    font-size: 0.8em;
+    display: inline-block;
+    position: relative;
+    border: 1px solid #000;
+    @include border-radius;
+    @include breakpoint-both(large, short) {
+      width: 200px;
+      height: 32px;
+      margin: 0;
+      position: absolute;
+      top: -50px;
+      left: 350px;
+    }
+
+    @include breakpoint-both(large, tall) {
+      width: 250px;
+      height: 32px;
+      margin: 10px 10px 0 24px;
+    }
+
+    @include breakpoint-both(small, short) {
+      width: 200px;
+      height: 32px;
+      margin: 0;
+      position: absolute;
+      top: -50px;
+      left: 350px;
+    }
+
+    @include breakpoint-both(small, tall) {
+      width: 200px;
+      height: 25px;
+      margin: 13px 10px 0 15px;
+    }
+
+    input {
+      width: 49.95%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      border: 0px;
+      padding: 0px;
+      margin: 0px;
+      color: #FFF;
+      text-transform: uppercase;
+      &.on {
+        border: 1px solid #000;
+        @include background-image(linear-gradient(#969696 0%, #595959 13%, #2a2a2a 80%));
+      }
+      &.off {
+        border: 1px solid #282728;
+        background: #000;
+      }
+    }
+    .trackBtn {
+      left: 0px;
+      @include border-left-radius(5px);
+    }
+    .artistBtn {
+      right: 0px;
+      @include border-right-radius(5px);
+    }
+  }
+  //rating-toggle
+  .infoBtn {
+    position: absolute;
+    cursor: pointer;
+    .info-icon {
+      display: block;
+      width: 23px;
+      height: 23px;
+      border: 0px solid transparent;
+      position: relative;
+      text-align: left;
+      border-radius: 23px;
+      box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.8);
+      &:before {
+        content: "\e60f";
+        font-family: "icomoon";
+        font-weight: normal;
+        color: #ccc;
+        text-align: center;
+        text-indent: 0;
+        position: relative;
+        display: block;
+        font-size: 24px;
+        width: 25px;
+        height: 25px;
+        line-height: 1em;
+      }
+    }
+    @include breakpoint-both(large, short) {
+      display: none;
+    }
+
+    @include breakpoint-both(large, tall) {
+      top: 15px;
+      left: 544px;
+    }
+
+    @include breakpoint-both(small, short) {
+      display: none;
+    }
+
+    @include breakpoint-both(small, tall) {
+      top: 15px;
+      left: 480px;
+      img {
+        width: 20px;
+      }
+    }
+  }
+  &.highlight-artist-rating .infoBtn .info-icon:before {
+    color: $orange;
+    background: -webkit-linear-gradient(#fd8f73, $orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  //infoBtn
+  .buttonDivider {
+    position: absolute;
+    @include breakpoint-both(large, short) {
+      display: none;
+    }
+
+    @include breakpoint-both(large, tall) {
+      top: 8px;
+      left: 582px;
+    }
+
+    @include breakpoint-both(small, short) {
+      display: none;
+    }
+
+    @include breakpoint-both(small, tall) {
+      display: none;
+    }
+  }
+  //buttonDivider
+}
+
+//.rating-controls
+
+[data-layout="maximized"] .rating-controls-background {
+  position: absolute;
+  z-index: 0;
+  bottom: 0px;
+  @include breakpoint-both(large, short) {
+    background: url(../img/headPlayer/playerBG.png) 0 0 repeat-x;
+    width: 1024px;
+    height: 50px;
+    bottom: 10px;
+  }
+
+  @include breakpoint-both(large, tall) {
+    background: url(../img/headPlayer/playerBG.png) 0 0 repeat-x;
+    width: 1024px;
+    height: 99px;
+  }
+
+  @include breakpoint-both(small, short) {
+    background: url(../img/headPlayer/playerBG.png) 0 0 repeat-x;
+    width: 768px;
+    height: 50px;
+    bottom: 10px;
+  }
+
+  @include breakpoint-both(small, tall) {
+    background: url(../img/headPlayer/playerBG.png) 0 0 repeat-x;
+    width: 768px;
+    height: 99px;
+  }
+}
+
+/* Player Options for Time Machine and Guily Pleasures
+===============================================*/
+[data-layout="maximized"] .playerOptions {
+  position: absolute;
+  width: 100%;
+  max-width: 10%;
+  @include breakpoint-both(large, short) {
+    top: -49px;
+    left: 595px;
+  }
+
+  @include breakpoint-both(large, tall) {
+    top: 11px;
+    left: 600px;
+  }
+
+  @include breakpoint-both(small, short) {
+    top: -49px;
+    left: 594px;
+  }
+
+  @include breakpoint-both(small, tall) {
+    display: none;
+  }
+
+  input {
+    width: 50%;
+    height: 30px;
+    border: 2px solid #000;
+    margin: 0;
+    float: left;
+    display: block;
+  }
+  input:first-child {
+    @include border-left-radius(5px);
+    @include background-image(url(../img/headPlayer/timeMachineIcon.png), linear-gradient(#b65be0 0%, #4b1961 80%));
+    background: {
+      repeat: no-repeat;
+      position: center center;
+    };
+    border-right: none;
+  }
+  input:last-child {
+    @include border-right-radius(5px);
+    @include background-image(url(../img/headPlayer/guiltyPleasuresIcon.png), linear-gradient(#f76c51 0%, #881e09 80%));
+    background: {
+      repeat: no-repeat;
+      position: center center;
+    };
+  }
+}
+
+//playerOptions
+
+/* Feedback Button
+===============================================*/
+[data-layout="maximized"] [report-issue] {
+  position: absolute;
+  z-index: 5;
+  width: 75px;
+  background: #282627;
+  color: #838386;
+  @include border-radius;
+  text-align: center;
+  top: 10px;
+  right: 10px;
+}
+
+/* Artist / Track Rating Buttons
+===============================================*/
+
+[data-layout="maximized"] #track-info .track-schedule,
+[data-layout="maximized"] #track-info .artist-schedule {
+  width: 100%;
+  font-size: 1em;
+  @include breakpoint-height(short) {
+    label {
+      display: none;
+    }
+    .description {
+      display: none;
+    }
+  }
+
+  @include breakpoint-both(small, tall) {
+    label {
+      display: none;
+    }
+    .description {
+      display: none;
+    }
+  }
+
+  @include breakpoint-both(large, tall) {
+    label {
+      position: absolute;
+      top: -2px;
+      right: -195px;
+      width: 185px;
+      font-size: 0.8em;
+      color: #666;
+    }
+    .description {
+      position: absolute;
+      top: 14px;
+      right: -195px;
+      width: 185px;
+      font-size: 1em;
+    }
+  }
+}
+
+//#track-info .artist-schedule
+
+[data-layout="maximized"] #track-info [artist-reference],
+[data-layout="maximized"] #track-rate-wrapper {
+  position: absolute;
+  top: 58px;
+  left: 270px;
+  width: 30%;
+  @include breakpoint-both(large, tall) {
+    left: 280px;
+  }
+
+  @include breakpoint-height(short) {
+    top: 8px;
+    left: 350px;
+    width: 26.5%;
+  }
+}
+
+// #track-info [artist-reference]
+
+[data-layout="maximized"] #track-rate-wrapper {
+  z-index: 4;
+}
+
+[data-layout="maximized"] #track-info [artist-reference] {
+  z-index: 3;
+}
+
+[data-layout="maximized"] ul.segmented-options {
+  padding: 0;
+  margin: 0;
+}
+
+.highlight-artist-rating .artist-schedule ul {
+  @include border-radius(5px);
+  background-color: $orange;
+  box-shadow: 0 0 3px 2px $orange;
+  li {
+    border-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+[data-layout="maximized"] ul.segmented-options li {
+  display: block;
+  font-size: 15px;
+  line-height: 1;
+  float: left;
+  margin: 0;
+  width: 16.666666667%;
+  padding: 8px 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-radius: 0;
+  text-align: center;
+  @include background-image(linear-gradient(#969696 0%, #595959 5%, #2a2a2a 80%));
+}
+
+[data-layout="maximized"] ul.segmented-options li:first-child {
+  @include border-left-radius;
+}
+
+[data-layout="maximized"] ul.segmented-options li:last-child {
+  @include border-right-radius;
+}
+
+[data-layout="maximized"] ul.segmented-options li.rated {
+  @include background-image(linear-gradient(lighten(#969696, 10%) 0%, lighten(#595959, 10%) 5%, lighten(#2a2a2a, 5%) 80%));
+  color: white;
+}
+
+[data-layout="maximized"] ul.segmented-options li:hover {
+  @include background-image(linear-gradient(#1f1f20 0%, #595959 13%, #1f1f20 80%));
+}
+
+[data-layout="maximized"] ul.segmented-options li.lit {
+  color: #000;
+}
+
+[data-layout="maximized"] #track-info li.rating0.lit,
+[radio-scheduler] [track-list] li.rating0.lit,
+[radio-scheduler] .artist-schedule li.rating0.lit,
+[radio-scheduler] .track-schedule li.rating0.lit {
+  background-image: url(../img/headPlayer/rating-light-x.png);
+  box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.75), 0px -1px 6px 0px red;
+}
+
+[data-layout="maximized"] #track-info .rated li.rating1.lit,
+[track-list] .rated li.rating1.lit,
+.artist-schedule .segmented-options li.rating1.lit,
+.track-schedule .segmented-options li.rating1.lit {
+  background-image: url(../img/headPlayer/rating-light-1.png);
+  box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.75), 0px -1px 6px 0px #ff6a00;
+}
+
+[data-layout="maximized"] #track-info .rated li.rating2.lit,
+[track-list] .rated li.rating2.lit,
+.artist-schedule .segmented-options li.rating2.lit,
+.track-schedule .segmented-options li.rating2.lit {
+  background-image: url(../img/headPlayer/rating-light-2.png);
+  box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.75), 0px -1px 6px 0px #ffd400;
+}
+
+[data-layout="maximized"] #track-info .rated li.rating3.lit,
+[track-list] .rated li.rating3.lit,
+.artist-schedule .segmented-options li.rating3.lit,
+.track-schedule .segmented-options li.rating3.lit {
+  background-image: url(../img/headPlayer/rating-light-3.png);
+  box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.75), 0px -1px 6px 0px #bfff00;
+}
+
+[data-layout="maximized"] #track-info .rated li.rating4.lit,
+[track-list] .rated li.rating4.lit,
+.artist-schedule .segmented-options li.rating4.lit,
+.track-schedule .segmented-options li.rating4.lit {
+  background-image: url(../img/headPlayer/rating-light-4.png);
+  box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.75), 0px -1px 6px 0px #55ff00;
+}
+
+[data-layout="maximized"] #track-info .rated li.rating5.lit,
+[track-list] .rated li.rating5.lit,
+.artist-schedule .segmented-options li.rating5.lit,
+.track-schedule .segmented-options li.rating5.lit {
+  background-image: url(../img/headPlayer/rating-light-5.png);
+  box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.75), 0px -1px 6px 0px #00ff80;
+}
+
+.track-learn-more {
+  display: none;
+  z-index: 5;
+  position: absolute;
+  top: 60px;
+  left: 270px;
+  height: 35px;
+  width: 30%;
+  background: orange;
+  border: 2px solid #000;
+  text-align: center;
+  color: #FFF;
+  font-size: 0.9em;
+  padding-top: 6px;
+  cursor: pointer;
+  @include orange-btn;
+  @include border-radius;
+  @include breakpoint-both(large, tall) {
+    left: 280px;
+  }
+
+  @include breakpoint-height(short) {
+    top: 8px;
+    left: 350px;
+    width: 26.5%;
+  }
+
+  &:hover {
+    color: #000;
+  }
+}
+
+/* Play / Playback Buttons
+===============================================*/
+
+[data-layout="maximized"] [playback-control-set] {
+  @include breakpoint-both(large, tall) {
+    position: absolute;
+    top: -31px;
+    right: 0px;
+    background: url(../img/headPlayer/playControlBG.png) no-repeat;
+    width: 260px;
+    height: 131px;
+  }
+
+  @include breakpoint-both(small, tall) {
+    position: absolute;
+    top: -31px;
+    right: 0px;
+    background: url(../img/headPlayer/playControlBG.png) no-repeat;
+    width: 260px;
+    height: 131px;
+  }
+}
+
+//[playback-control-set]
+
+[data-layout="maximized"] #cannotSkip {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #000;
+  color: #000;
+  @include background-image(radial-gradient(10px 10px, #c3c3c8 9px, #1d1d1e 15px));
+  @include border-radius(50px);
+}
+
+//Play / Playback Buttons Tall
+@include breakpoint-height(tall) {
+  [data-layout="maximized"] {
+    [playback-buttons] {
+      height: 131px;
+      position: relative;
+    }
+    [playback-buttons] a,
+    [playback-buttons] span {
+      display: block;
+      font: 0/0;
+      position: absolute;
+      float: left;
+      margin: 0;
+      color: transparent;
+      background: none;
+      border: none;
+      box-shadow: none;
+      top: 19px;
+      left: 20px;
+    }
+    [playback-buttons] #PlayButton {
+      width: 125px;
+      height: 115px;
+      background: url(../img/headPlayer/playIcon.png) center center no-repeat;
+    }
+    [playback-buttons] #PauseButton {
+      width: 125px;
+      height: 115px;
+      background: url(../img/headPlayer/pauseIcon.png) center center no-repeat;
+    }
+    [playback-buttons] #SkipButton {
+      width: 75px;
+      height: 100px;
+      top: 29px;
+      left: 170px;
+      background: url(../img/headPlayer/fastForwardIcon.png) 15px center no-repeat;
+    }
+    [playback-skip-capacity] {
+      position: absolute;
+      top: 13px;
+      left: 120px;
+      height: 102px;
+      width: 55px;
+      overflow: hidden;
+      li {
+        list-style: none;
+        width: 18px;
+        height: 26px;
+        position: absolute;
+        background: url(../img/headPlayer/indicatorOff.png) no-repeat;
+      }
+      li:nth-child(1) {
+        top: -8px;
+        left: 23px;
+        @include rotateZ(-29deg);
+      }
+      li:nth-child(2) {
+        top: 10px;
+        left: 31px;
+        @include rotateZ(-11deg);
+      }
+      li:nth-child(3) {
+        top: 29px;
+        left: 35px;
+        @include rotateZ(-1deg);
+      }
+      li:nth-child(4) {
+        top: 49px;
+        left: 35px;
+        @include rotateZ(12deg);
+      }
+      li:nth-child(5) {
+        top: 68px;
+        left: 30px;
+        @include rotateZ(26deg);
+      }
+      li:nth-child(6) {
+        top: 85px;
+        left: 21px;
+        @include rotateZ(39deg);
+      }
+      li.on {
+        background: url(../img/headPlayer/indicatorOn.png) no-repeat;
+      }
+    }
+    #cannotSkip {
+      top: 65px;
+      right: -180px;
+      margin: 0px;
+    }
+  }
+}
+
+
+//Play / Playback Buttons @include breakpoint-height(tall)
+
+//Play / Playback Buttons Short
+@include breakpoint-height(short) {
+  [data-layout="maximized"] {
+    [playback-buttons] {
+      position: absolute;
+      right: 35px;
+      top: 50%;
+      width: 120px;
+      height: 40px;
+      margin: -20px 0 0 -60px;
+    }
+    [playback-buttons] a,
+    [playback-buttons] span {
+      display: block;
+      font: 0/0 a;
+      position: relative;
+      float: left;
+      width: 60px;
+      height: 40px;
+      margin: 0;
+      color: transparent;
+    }
+    [playback-buttons] a:after,
+    [playback-buttons] span:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 30px;
+      height: 18px;
+      margin: -8px 0 0 -15px;
+      background: url(../img/headPlayer/control-sprite.png) no-repeat 0 0;
+    }
+    [playback-buttons] a[disabled]:after,
+    [playback-buttons] span[disabled]:after {
+      opacity: 0.4;
+    }
+    #PlayButton,
+    #PauseButton,
+    #PlayPauseButton {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    #PlayButton:after,
+    #PlayPauseButton.play:after {
+      background-position: -6px -12px;
+    }
+    #PauseButton:after,
+    #PlayPauseButton.pause:after {
+      background-position: -45px -12px;
+    }
+    #SkipButton {
+      border-left: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    #SkipButton:after {
+      background-position: -86px -12px;
+    }
+    [playback-skip-capacity] {
+      padding: 1px 1px 2px 1px;
+      margin: 0;
+      position: absolute;
+      top: 5px;
+      right: 7px;
+      li {
+        float: left;
+        clear: both;
+        list-style: none;
+        width: 19px;
+        height: 6px;
+        margin: 0;
+        padding: 0;
+        background: url(../img/headPlayer/indicatorOffSmall.png) no-repeat;
+      }
+      li.on {
+        background: url(../img/headPlayer/indicatorOnSmall.png) no-repeat;
+      }
+    }
+    #cannotSkip {
+      top: 5px;
+      right: -20px;
+      margin: 0px;
+      padding-top: 1px;
+      border: 1px solid #000;
+    }
+  }
+}
+
+
+//@include breakpoint-height(short)

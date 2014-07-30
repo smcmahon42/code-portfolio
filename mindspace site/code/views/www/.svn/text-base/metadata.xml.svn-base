@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<site>
+    <section name="home">
+        <page name="home">
+            <title>Home Page</title>
+            <keywords></keywords>
+            <description></description>
+        </page>
+    </section>
+    <section name="default">
+        <page name="home.php">
+            <title>Mindspace</title>
+        </page>
+        <page name="contact.php">
+            <title>Mindspace | Contact Us</title>
+        </page>
+        <page name="gamification.php">
+            <title>Mindspace | Gamification</title>
+        </page>
+        <page name="gamificationoptions.php">
+            <title>Mindspace | Your Gamification Options</title>
+        </page>
+        <page name="process.php">
+            <title>Mindspace | The Mindspace Process</title>
+        </page>
+        <page name="ourbook.php">
+            <title>Mindspace | Our Book</title>
+        </page>
+        <page name="about.php">
+            <title>Mindspace | About Us</title>
+        </page>
+        <page name="playing.php">
+            <title>Mindspace | Playing This Site</title>
+        </page>
+        <page name="people.php">
+            <title>Mindspace | Our People</title>
+        </page>
+        <page name="gallery.php">
+            <title>Mindspace | Gallery of Greatness</title>
+        </page>
+        <page name="services.php">
+            <title>Mindspace | Services</title>
+        </page>
+        <page name="webservices.php">
+            <title>Mindspace | Email, Websites &amp; Video</title>
+        </page>
+        <page name="otherservices.php">
+            <title>Mindspace | Other Things We Do</title>
+        </page>
+        <page name="failedcampaigns.php">
+            <title>Mindspace | Campaigns That Failed</title>
+        </page>
+        <page name="default"> <!-- keep this at the bottom of the xmlList -->
+            <title>Mindspace</title>
+            <keywords>super, awesome, seo</keywords>
+            <description>default description</description>
+        </page>
+    </section>
+</site>

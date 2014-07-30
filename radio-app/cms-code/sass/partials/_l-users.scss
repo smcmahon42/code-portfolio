@@ -1,0 +1,111 @@
+#Users-displayUsers { 
+  table {
+    width: 100%;
+    td:nth-child(1){width: 35%; }
+    td:nth-child(2){width: 65%; }
+    td { 
+      font-size: 0.85em; 
+    }
+  }
+}
+
+#Users-displayGenre-Level { 
+  table {
+    width: 100%;
+    td:nth-child(1){width: 35%; }
+    td:nth-child(2){width: 65%; }
+    td { 
+      font-size: 0.85em; 
+    }
+  }
+}
+
+#Users-displayAnalyticStats { 
+  $l-amount : 20; //lighten percentage
+  margin: 0;
+  @include clearfix();
+  li {
+    display: inline-block;
+    float: left;
+    margin: 0 20px 0 0;
+    border: 1px solid lighten($primary-text-color, 60);
+    padding: 10px;
+    @include border-radius();
+    @include mx-breakPoints(sm) { float: none; display:block; margin:0 0 5px 0; }
+    .duration {
+      font-size: 0.9em;
+      font-family: $font-secondary;
+      color: lighten($primary-text-color, $l-amount);
+    }//duration
+    .number {
+      font-size: 3em;
+      font-family: $font-secondary;
+      color: lighten($primary-text-color, $l-amount);
+    }//number
+    .type {
+      font-size: 1.3em;
+      font-family: $font-secondary;
+      margin: 4px 0;
+      color: lighten($primary-text-color, $l-amount);
+    }//type
+    .comparison {
+      font-size: 1.3em;
+      font-family: $font-secondary;
+      font-weight: 700;
+      &.rising { color: $green; }
+      &.falling { color: $red; }
+      &.stagnant { color: $blue; }
+      span {
+        color: lighten($primary-text-color, $l-amount);
+        font-family: $font-secondary;
+        font-weight: 300;
+      }//span
+    }//comparison
+  }//li
+  li:last-child {
+    margin: 0;
+  }//li:last-child
+}//userDashboard-stats
+
+#Users-displayGoogleGraphs { 
+  @include clearfix();
+  .displayUserGraph {
+    width: 49%;
+    float: left;
+    clear: left;
+    @include mx-breakPoints(lg) { min-width: 49%; }
+    @include mx-breakPoints(md) { min-width: 100%; float: none; }
+    @include mx-breakPoints(sm) { width: 100%; }
+  }//displayUserGraph
+  article {
+    height: 300px;
+    width: 100%;
+  }
+  .userGraph1 {
+    margin-bottom: 15px;
+  }//userGraph1
+}//displayGraph
+
+#Users-displayListenersList { 
+  width: 49%;
+  height: 615px;
+  overflow-y: scroll;
+  float: right;
+  @include mx-breakPoints(lg) { min-width: 49%; }
+  @include mx-breakPoints(md) { 
+    min-width: 100%; float: none; height: 200px; margin-bottom: 20px; }
+  @include mx-breakPoints(sm) { width: 100%; }
+  h3 {
+    margin: 0 0 10px 0;
+  }//h3
+}//Users-displayListenersList
+
+#Users-PieCharts { 
+  @include clearfix();
+  #bucketPieChart, #playingFromPieChart, #ratingPieChart {
+    float: left;
+    width: 33%;
+    @include mx-breakPoints(sm) { float: none; width:100%; }
+  }  
+}
+

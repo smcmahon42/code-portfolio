@@ -1,0 +1,71 @@
+//=> HTML relation
+//=>  /inc/guilty-pleasures.html
+
+.guilty-pleasures .inside {
+  padding: 0;
+  background-color: $bg-light;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+  @include background-image(linear-gradient( #bb3500, darken(#bb3500, 20%)));
+}
+
+[viewer-header].guilty-pleasures-header {}
+
+.gp-list-title {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: .7em;
+  margin: 0;
+  padding: 10px 20px;
+  @include background-image(linear-gradient( #393939, darken(#393939, 10%)));
+}
+
+[track-list-item].gp-track-list-item {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  [box-density="medium"] {
+    width: 45%;
+    float: left;
+    padding: 5px;
+    [track-title] {
+      font-weight: normal;
+      font-size: 1em;
+    }
+  }
+  .track-rating {
+    width: 55%;
+    float: right;
+  }
+}
+
+.guilty-pleasures {
+  .content {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 50%;
+    padding: 20px;
+  }
+  [track-list] {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    padding: 0;
+    overflow: auto;
+  }
+}
+
+[spinner-container].guilty-pleasures-spinner {
+  width: 105px;
+  margin: 10px auto;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  line-height: 1.2em;
+  .spinner {
+    top: 3px;
+    right: 5px;
+  }
+}

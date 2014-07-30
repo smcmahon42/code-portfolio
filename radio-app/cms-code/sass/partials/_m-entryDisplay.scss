@@ -1,0 +1,357 @@
+.m-entry {
+  font: normal 1em/0.9em $font-secondary;
+  padding: 10px;
+  background: lighten($yellow, 63);
+  border: 1px solid lighten($primary-color, 60);
+  border-top: 1px solid lighten($primary-color, 70);
+  border-bottom: 1px solid lighten($primary-color, 50);
+  @include clearfix();
+  .rank {
+    display: block;
+    float: left;
+    width: 3%;
+    font: normal 0.9rem/1.2rem $font-secondary;
+  }//.rank
+  .timeEntry {
+    display: none;
+  }
+  button.edit {
+    display: block;
+    float: left;
+  }//button.edit
+  .title, .artist, .play, .album {
+    display: block;
+  }//.title
+  button.rematch {
+    display: block;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    background: lighten($primary-color, 15);
+    @include box-shadow( black 0 0 5px 0px inset );
+    img {
+      display: block;
+      width: 15px;
+      margin: auto;
+      opacity: 0.75;
+    }
+  }//button.rematch
+  .artist {
+    font-weight: 700;
+    font-size: 0.85em;
+    color: lighten($primary-text-color, 20);
+  }//.artist
+}//.m-entry
+
+
+// TRACK-SETS SOURCE MODULE -------------
+.m-source-col1 {
+  width: 100%;
+  float: left;
+  @include clearfix();
+  span {
+    font: normal 0.9rem/1.2rem $font-secondary;
+  }//span
+  .m-col1 {
+    float: left;
+    width: 60%;
+    margin:0 10px;
+  }//.m-col1
+  .m-col2 {
+    float: left;
+    width: 25%;
+  }//.m-col2
+}
+
+.m-source-col2 {
+  width: 45%;
+  float: left;
+  @include clearfix();
+  span {
+    font: normal 0.9rem/1.2rem $font-secondary;
+  }//span
+  .m-col1 {
+    float: left;
+    width: 50%;
+    margin:0 10px;
+  }//.m-col1
+  .m-col2 {
+    float: left;
+    width: 35%;
+  }//.m-col2
+}
+
+.m-source-col3 {
+  width: 28%;
+  float: left;
+  @include clearfix();
+  span {
+    font: normal 0.9rem/1.2rem $font-secondary;
+  }//span
+  .m-col1 {
+    float: left;
+    width: 60%;
+    margin:0 10px;
+  }//.m-col1
+  .m-col2 {
+    float: left;
+    width: 25%;
+  }//.m-col2
+}
+
+
+// TRACK-SETS METADATA MODULE -------------
+.m-metadata-col1 {
+  width: 100%;
+  float: left;
+  padding-left: 5px;
+  margin-right: 5px;
+  @include clearfix();
+  span {
+    font: normal 0.9rem/1.2rem $font-secondary;
+  }
+  button.rematch {
+    float: left;
+  }//button.rematch
+  .data {
+    float: right;
+    width:88%;
+  }//data
+  .m-col1 {
+    float: left;
+    width: 40%;
+  }//.m-col1
+  .m-col2 {
+    float: left;
+    width: 40%;
+    margin: 0 3px;
+  }//.m-col2
+  .album {
+    margin-top: 5px;
+  }
+}
+
+.m-metadata-col2 {
+  width: 45%;
+  float: left;
+  padding-left: 5px;
+  margin-right: 5px;
+  @include clearfix();
+  span {
+    font: normal 0.9rem/1.2rem $font-secondary;
+  }
+  button.rematch {
+    float: left;
+  }//button.rematch
+  .data {
+    float: right;
+    width:88%;
+  }//data
+  .m-col1 {
+    float: left;
+    width: 40%;
+  }//.m-col1
+  .m-col2 {
+    float: left;
+    width: 40%;
+    margin: 0 3px;
+  }//.m-col2
+  .album {
+    margin-top: 5px;
+  }
+}
+
+.m-metadata-col3 {
+  width: 33%;
+  float: left;
+  padding-left: 5px;
+  margin-right: 5px;
+  @include clearfix();
+  span {
+    font: normal 0.9rem/1.2rem $font-secondary;
+  }
+  button.rematch {
+    float: left;
+  }//button.rematch
+  .data {
+    float: right;
+    width:88%;
+  }//data
+  .m-col1 {
+    float: left;
+    width: 40%;
+  }//.m-col1
+  .m-col2 {
+    float: left;
+    width: 40%;
+    margin: 0 3px;
+  }//.m-col2
+  .album {
+    margin-top: 5px;
+  }
+}
+
+
+// TRACK-SETS STREAM MODULE -------------
+.m-stream-col1 {
+  width: 100%;
+  float: left;
+  span {
+    font: normal 0.9rem/1.2rem $font-secondary;
+  }//span
+  .data {
+    float: right;
+    width:88%;
+  }//data
+  .m-col1 {
+    float: left;
+    width: 50%;
+    margin-right: 5px;
+  }//.m-col1
+  .m-col2 {
+    float: left;
+    width: 46%;
+  }//.m-col2
+  .album {
+    float: left;
+    width: 75%;
+  }
+  .play {
+    margin-top: 5px;
+    float: right;
+    width: 20%;
+  }//.album
+  button.rematch {
+    float: left;
+  }//button.rematch
+  .player {
+    float: right;
+    margin-top: 15px;
+    width: 200px;
+    img, audio {
+      width: 200px;
+    }//img, audio
+  }//.player
+}
+
+.m-stream-col2 {
+  width: 45%;
+  float: left;
+  span {
+    font: normal 0.9rem/1.2rem $font-secondary;
+  }//span
+  .data {
+    float: right;
+    width:88%;
+  }//data
+  .m-col1 {
+    float: left;
+    width: 50%;
+    margin-right: 5px;
+  }//.m-col1
+  .m-col2 {
+    float: left;
+    width: 46%;
+  }//.m-col2
+  .album {
+    float: left;
+    width: 75%;
+  }
+  .play {
+    margin-top: 5px;
+    float: right;
+    width: 20%;
+  }//.album
+  button.rematch {
+    float: left;
+  }//button.rematch
+  .player {
+    float: right;
+    margin-top: 15px;
+    width: 200px;
+    img, audio {
+      width: 200px;
+    }//img, audio
+  }//.player
+}
+
+.m-stream-col3 {
+  width: 34%;
+  float: left;
+  span {
+    font: normal 0.9rem/1.2rem $font-secondary;
+  }//span
+  .data {
+    float: right;
+    width:88%;
+  }//data
+  .m-col1 {
+    float: left;
+    width: 50%;
+    margin-right: 5px;
+  }//.m-col1
+  .m-col2 {
+    float: left;
+    width: 46%;
+  }//.m-col2
+  .album {
+    float: left;
+    width: 75%;
+  }
+  .play {
+    margin-top: 5px;
+    float: right;
+    width: 20%;
+  }//.album
+  button.rematch {
+    float: left;
+  }//button.rematch
+  .player {
+    float: right;
+    margin-top: 15px;
+    width: 200px;
+    img, audio {
+      width: 200px;
+    }//img, audio
+  }//.player
+}
+
+.m-emphasis-rating {
+  .stats {
+    display: block;
+    margin-left: 10px;
+  }
+  .rating {
+    color: $blue;
+    padding:0 4px;
+    display: inline-block;
+    border: 1px solid $blue;
+    @include border-radius(3px);
+  }
+  .album {
+    margin-left: 10px;
+  }
+}//m-emphasis-rating
+
+.m-callOut-userRating {
+  position: relative;
+  .userTrackRating {
+    display: block;
+    position: absolute;
+    color: $warning-color;
+    padding:10px 4px 0 0;
+    font-size: 2.2rem;
+    margin-left: -6px;
+  }
+}//m-callOut-userRating
+
+.userHistory-entry {
+  .timeEntry {
+    display: block;
+    float: left;
+    font: normal 0.9rem/1.2rem $font-secondary;
+    min-width: 25px;
+    min-height: 10px;
+  }//.timeEntry
+}
+

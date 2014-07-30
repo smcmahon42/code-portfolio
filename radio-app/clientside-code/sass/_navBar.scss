@@ -1,0 +1,138 @@
+/**
+ *  Main navigation bar
+ */
+[radio-scheduler] > nav .inside {
+  width: 100%;
+  max-width: 1000px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+[radio-scheduler-menu],
+[radio-scheduler-menu] li {
+  float: left;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+[radio-scheduler-menu] {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1;
+  width: auto;
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  li {
+    position: relative;
+    padding: 16px 30px 14px;
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    a {
+      font-weight: 300;
+    }
+    &.popup-nav {
+      padding: 0;
+      label {
+        display: block;
+        padding: 16px 30px 14px;
+        cursor: pointer;
+      }
+    }
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.15);
+      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
+    }
+    &.active {
+      @include background-image(linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)));
+      color: #fff;
+      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
+      box-shadow: inset 0px 2px 7px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.box {
+  position: absolute;
+  left: -40px;
+  right: -40px;
+  bottom: 45px;
+  z-index: 100;
+  padding: 10px 10px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 3px solid #434343;
+  opacity: 0;
+  @include border-radius(10px);
+  @include box-shadow(inset 0 0 20px black);
+  @include transform(scale(0));
+  @include transform-origin(bottom, center);
+  -webkit-transition: -webkit-transform ease-out .15s, opacity ease-out .2s;
+  -moz-transition: -moz-transform ease-out .15s, opacity ease-out .2s;
+  -ms-transition: -ms-transform ease-out .15s, opacity ease-out .2s;
+  -o-transition: -o-transform ease-out .15s, opacity ease-out .2s;
+  -webkit-backface-visibility: hidden;
+  // Prevent some white flashing in Safari 5.1
+  &:before {
+    position: absolute;
+    bottom: -12px;
+    margin-left: -9px;
+    left: 50%;
+    display: inline-block;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #eee;
+    border-left: 12px solid transparent;
+    border-top-color: #434343;
+    content: '';
+  }
+  &:after {
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    margin-left: -3px;
+    display: inline-block;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #000;
+    border-left: 6px solid transparent;
+    content: '';
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    border: none;
+    margin: 10px 0;
+    padding: 0;
+    display: block;
+    float: none;
+    width: auto;
+  }
+}
+
+.popUpControl {
+  display: none;
+}
+
+.popUpControl:checked ~ label > .box {
+  opacity: 1;
+  @include transform(scale(1));
+}
+
+[radio-version] {
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin: -6px 0 0;
+  opacity: 0.66;
+}
+
+/* @end */

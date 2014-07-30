@@ -1,0 +1,340 @@
+[slider-editor] {
+  z-index: 10;
+  position: relative;
+  height: 100%;
+  background: $bg-light;
+}
+
+//Popular List View
+.popular-list-container {
+  overflow: auto;
+  height: 100%;
+  ul {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    li {
+      float: left;
+      height: 100%;
+      width: 245px;
+      margin: 0 0px 0 0;
+      padding: 10px;
+      list-style: none;
+    }
+    article {
+      height: 100%;
+      border-radius: 5px;
+      position: relative;
+      @include box-shadow(inset 0px 1px 1px 0px rgba(255, 255, 255, 0.2), 0px 0px 3px rgba(0, 0, 0, 0.5));
+      background-position: center center;
+      background-size: cover;
+      h2 {
+        margin: 0;
+        padding: 15px 20px;
+        position: relative;
+        text-align: center;
+        @include text-shadow(1px 1px 0px rgba(0, 0, 0, 0.5));
+        font-weight: 400;
+        border-radius: 4px 4px 0 0;
+        // -webkit-transition: all .1s ease-in-out;
+        // -moz-transition: all .1s ease-in-out;
+        // -ms-transition: all .1s ease-in-out;
+        // -o-transition: all .1s ease-in-out;
+        // transition: all .1s ease-in-out;
+        color: $orange;
+        text-shadow: none;
+        background-color: rgba(0, 0, 0, 0.65);
+        // &:hover {
+        //   color: $orange;
+        //   text-shadow: none;
+        //   background-color: rgba(0, 0, 0, 0.65);
+        // }
+        &:before {
+          content: "";
+          height: 1px;
+          width: 100%;
+          @include background-image(linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)));
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+        &:after {
+          content: "\e627";
+          font-family: 'icomoon';
+          color: $orange;
+          font-size: 24px;
+          font-weight: normal;
+          speak: none;
+          display: block;
+          position: absolute;
+          top: 45%;
+          right: 7px;
+          height: 18px;
+          margin-top: -9px;
+        }
+      }
+      button {
+        position: absolute;
+        bottom: 10px;
+        height: 40px;
+        width: 180px;
+        left: 50%;
+        margin-left: -90px;
+        @include black-btn;
+      }
+    }
+  }
+}
+
+//Time Machine View
+.timemachine {
+  background: #160e2e;
+  background: url(../img/mixer/timemachine-bg.jpg) no-repeat #160e2e center center;
+  background-size: cover;
+  h1 {
+    margin-top: 0;
+  }
+  header h2 .trackset-icon {
+    display: inline-block;
+    margin-right: 5px;
+    &:before {
+      content: "\e603";
+      font-family: 'icomoon';
+      font-size: 18px;
+      font-weight: normal;
+      speak: none;
+      display: inline-block;
+      top: 0;
+      left: 8px;
+      line-height: 33px;
+    }
+  }
+}
+
+.genre-controls button {
+  &.timemachine {
+    padding-left: 32px;
+  }
+  &.timemachine:before {
+    content: "\e603";
+    font-family: 'icomoon';
+    font-size: 18px;
+    font-weight: normal;
+    speak: none;
+    position: absolute;
+    top: 0;
+    left: 8px;
+    line-height: 33px;
+  }
+}
+
+.timemachine-view {
+  padding: 20px 150px 20px 20px;
+}
+
+.timemachine-action-btn {
+  margin-top: 20px;
+  button {
+    padding: 10px 40px;
+    @include orange-btn;
+    &:hover {
+      @include orange-btn-hover;
+    }
+    &:active {
+      @include orange-btn-active;
+    }
+  }
+}
+
+@media (min-height: 605px) and (max-height: 650px) {
+  .timemachine-view {
+    padding-top: 10px;
+  }
+  .timemachine article p {
+    margin-top: 0;
+  }
+  .timemachine-action-btn {
+    margin-top: 10px;
+  }
+}
+
+// All Genres
+.allgenres [viewer-content] {
+  overflow: auto;
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      position: relative;
+      list-style: none;
+      width: 33.33333%;
+      float: left;
+      padding: 10px;
+      height: 70px;
+      border-top: 1px solid #472820;
+      border-left: 1px solid #472820;
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
+      &:nth-child(6n-2),
+      &:nth-child(6n-1),
+      &:nth-child(6n-0) {
+        background-color: #34201A;
+      }
+      h2 {
+        margin: 0 0 5px 0;
+        padding: 0 15px 0 0;
+        font-size: 1em;
+        font-weight: 400;
+        color: #E1C3BA;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &:hover {
+          color: $orange;
+        }
+      }
+      p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: .8em;
+        color: #62453D;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.genre-art {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-right: 10px;
+  background-size: cover;
+  opacity: .75;
+  -webkit-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -ms-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.add-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  text-align: right;
+  color: $orange;
+  &:hover {
+    color: white;
+  }
+}
+
+// Genre Detail
+
+.inside.detail {
+  @include background-image(linear-gradient( #303030, darken(#303030, 10%)));
+  [viewer-content] {
+    width: 89%;
+    padding: 10px 200px 25px 20px;
+    overflow: auto;
+    h1 {
+      font-size: 1.6em;
+      margin: 0 0 10px 0;
+    }
+    ul {
+      padding: 0 0 15px 0;
+      margin: 0;
+      li {
+        width: 33.33333%;
+        float: left;
+        list-style: none;
+        font-size: .9em;
+        line-height: 1.5em;
+        color: white;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    button {
+      padding: 10px 20px;
+      @include orange-btn;
+      &:hover {
+        @include orange-btn-hover;
+      }
+      &:active {
+        @include orange-btn-active;
+      }
+    }
+    .detail-timemachine {
+      position: relative;
+      padding-top: 15px;
+      &:before {
+        content: "";
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        @include background-image(linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)));
+      }
+      &:after {
+        content: "";
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        top: 1px;
+        @include background-image(linear-gradient(left, rgba(225, 225, 225, 0), rgba(225, 225, 225, 0.1), rgba(225, 225, 225, 0)));
+      }
+      h3 {
+        margin: 0 10px 0 0;
+        float: left;
+        line-height: 30px;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 16px;
+        &:before {
+          content: "\e603";
+          font-family: 'icomoon';
+          font-size: 16px;
+          font-weight: normal;
+          speak: none;
+          display: inline-block;
+          line-height: 30px;
+          padding-right: 5px;
+        }
+      }
+      select {
+        font-size: 14px;
+        line-height: 1em;
+      }
+    }
+  }
+}
+
+.detail-content {
+  position: relative;
+  z-index: 9;
+}
+
+.genre-detail-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  opacity: .1;
+  background-size: cover;
+  background-position: center center;
+}

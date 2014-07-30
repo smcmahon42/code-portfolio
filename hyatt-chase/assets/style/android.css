@@ -1,0 +1,8 @@
+/*#screenHGPlock .lockType .hyattlogo { width: 20%; }
+#screenHGPlock .lockType .cWrapper { height: 45%; }
+#screenHGPlock .lockType .cWrapper .cImage { width: 43%; margin: 0 0 0 9%; }
+#screenHGPlock .lockType .cWrapper .copy { width: 40%; margin: 8px 0 0 8%; }
+#screenHGPlock .lockType form { height: 18%; }*/
+
+#intro .step1 .logo { width: 20%; margin: 7% auto 2% auto; }
+#intro .step1 .chaselogo { width: 55%; }

@@ -1,0 +1,280 @@
+//=> HTML relation
+//=>  /inc/artist-detail.html
+
+/* Artist Screen Layout */
+.artist-controller {
+  background-color: $bg-light;
+  @include background-image(linear-gradient( $bg-light, darken($bg-light, 10%)));
+}
+
+[artist-screen] {
+  z-index: 10;
+  h2 {
+    margin: 0;
+  }
+  [track-rotation-panel] {
+    position: absolute;
+    left: 20px;
+    top: 100px;
+    right: 68%;
+    bottom: 20px;
+    overflow: auto;
+  }
+  [albums-panel] {
+    position: absolute;
+    left: 35%;
+    top: 100px;
+    right: 0;
+    bottom: 20px;
+    overflow: auto;
+  }
+}
+
+/* Artist Header */
+[artist-header] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 10px 20px;
+  background: $bg-dark;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid black;
+  @include box-shadow(0px 1px 0px 0px rgba(255, 255, 255, 0.1));
+  [artist-rating] {
+    display: inline-block;
+    margin-top: 9px;
+    width: 250px;
+    .artist-schedule {
+      width: 100%;
+      label, .description {
+        display: none;
+      }
+    }
+  }
+  menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin: 0;
+  }
+  h1 {
+    font-weight: 100;
+    font-size: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    margin: 0px 20px 0px 0;
+    max-width: 405px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+#HowRatingsWorkText {
+  position: absolute;
+  right: 20px;
+  bottom: -26px;
+  color: #B04E22;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 3px 27px 3px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0 0 3px 3px;
+  @include box-shadow(inset 0px 0px 5px 1px rgba(0, 0, 0, 0.3));
+  &:after {
+    content: "\e60f";
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 4px;
+    font-family: 'icomoon';
+    font-size: 18px;
+    line-height: 1.2em;
+    speak: none;
+  }
+  &:hover {
+    color: #ff6f2d;
+  }
+}
+
+/* Track List (track-rotation-panel) */
+[track-rotation-panel] {
+  [track-list] {
+    position: absolute;
+    left: 0;
+    top: 35px;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background: #181818;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.45), 0 1px 1px rgba(255, 255, 255, 0.1);
+    -webkit-overflow-scrolling: touch;
+  }
+  .track-rating {
+    position: static;
+    padding: 0 13px 11px;
+    text-align: center;
+  }
+  .empty-result {
+    font-size: 11px;
+    padding: 125px 15px 0;
+    opacity: 0.25;
+    text-align: center;
+  }
+  .empty-result h3 {
+    font-size: 17px;
+  }
+}
+
+[track-list-item]:before,
+[track-list-item]:after {
+  //clearfix track-list-item
+  content: " ";
+  display: table;
+}
+
+[track-list-item]:after {
+  //clearfix track-list-item
+  clear: both;
+}
+
+[track-list-item] {
+  border-top: 1px solid lighten(#262626, 3%);
+  border-bottom: 1px solid black;
+  @include background-image(linear-gradient( #262626, darken(#262626, 10%)));
+  position: relative;
+  [track-title] {
+    margin: 0;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+[track-rating]:before,
+[track-rating]:after {
+  //clearfix track-rating
+  content: " ";
+  display: table;
+}
+
+[track-rating]:after {
+  //clearfix track-rating
+  clear: both;
+}
+
+[track-list-item] [track-rating] .track-schedule {
+  label,
+  .description {
+    display: none;
+  }
+}
+
+/*  Albums Panel  */
+
+[albums-panel] [album-list],
+[albums-panel] [album-view] {
+  position: absolute;
+  left: 0;
+  top: 35px;
+  right: 20px;
+  bottom: 0;
+  overflow: auto;
+}
+
+[artist-screen] > section > header h2 {
+  font-size: 19px;
+  font-weight: 100;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+[albums-panel] {
+  header h2 {
+    .icon-arrow-left2 {
+      font-size: 0.7em;
+    }
+  }
+  [album-list] {
+    padding: 0 3px;
+  }
+}
+
+[albums-panel] [album-view] {
+  background: #181818;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+[albums-panel] .albumBackBtn {
+  color: #f26525;
+}
+
+[count-badge] {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  padding: .5em;
+  margin: 0;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1em;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.1);
+  border-radius: 2em;
+}
+
+.albumBackBtn:hover [count-badge] {
+  background: rgba(255, 255, 255, 0.8);
+  background: white;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+/* Album Detail (album-view) */
+[album-detail] {
+  [box-density="medium"] {
+    padding: 0;
+  }
+  [track-title] {
+    display: block;
+    width: 90%;
+    float: right;
+    padding-left: 10px;
+    line-height: 40px;
+    font-size: 1.2em;
+    font-weight: normal;
+  }
+  [track-position] {
+    display: block;
+    width: 10%;
+    float: left;
+    padding: 0;
+    font-weight: bold;
+    text-align: center;
+    line-height: 85px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    @include box-shadow(inset -1px -1px 0px 0px rgba(0, 0, 0, 0.31));
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  [track-album-info] {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    opacity: .2;
+  }
+  .track-rating {
+    width: 90%;
+    float: right;
+    padding: 0 10px 10px 10px;
+  }
+}

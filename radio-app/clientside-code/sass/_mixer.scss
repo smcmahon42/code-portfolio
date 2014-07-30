@@ -1,0 +1,244 @@
+//=> HTML relation
+//=>  /inc/mixer.html /inc/mixer/sliders.html
+
+#Mixer {
+  @include background-image(linear-gradient( #31221e, #392722));
+  box-shadow: inset 0px 50px 100px rgba(0, 0, 0, 0.25), inset 0px 2px 5px rgba(0, 0, 0, 0.5), inset 0px -2px 5px rgba(0, 0, 0, 0.5), inset 0px 200px 200px rgba(0, 0, 0, 0.5);
+}
+
+[viewer-header].viewer-header-sliders {
+  h2 {
+    max-width: 125px;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0px 20px 0px 339px;
+    line-height: 27px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+}
+
+[genre-first-run] {
+  padding: 2em 2em;
+  text-align: center;
+  color: #D9BAB1;
+  font-size: .9em;
+  h3 {
+    color: $orange;
+    font-size: 2.5em;
+    margin-top: 0;
+  }
+  p {
+    font-size: 1.2em;
+  }
+  button {
+    padding: 10px 40px;
+    @include orange-btn;
+    &:hover {
+      @include orange-btn-hover;
+    }
+    &:active {
+      @include orange-btn-active;
+    }
+  }
+}
+
+// -- Preset Menu -- //
+.presets {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: $bg-dark;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+
+.preset-title {
+  padding-top: 12px;
+}
+
+.preset-switches {
+  padding: 8px;
+  float: left;
+}
+
+.preset-switches button {
+  border-radius: 0;
+  margin: 0;
+  float: left;
+  width: 63px;
+  padding: 9px 7px 8px;
+  font-size: 10px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  &.active {
+    @include orange-btn-on;
+  }
+}
+
+.preset-switches button:nth-child(1) {
+  border-radius: 3px 0 0 3px;
+}
+
+.preset-switches button:last-child {
+  border-radius: 0 3px 3px 0;
+}
+
+[spinner-container].rating-spinner.artist-spinner {
+  position: absolute;
+  top: 12px;
+  right: 17px;
+  width: 264px;
+  z-index: 2;
+}
+
+// -- Genre Control Set -- //
+
+[genre-schedule-control-set] {
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: 0;
+  background: #392722;
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.48);
+}
+
+[genre-first-run] {
+  float: left;
+  position: relative;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: inset 1px 1px 0px #4B2920;
+  width: 66.66%;
+}
+
+[genre-schedule] {
+  float: left;
+  position: relative;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: inset 1px 1px 0px #4B2920;
+  width: 11.111%;
+}
+
+[genre-schedule].playing,
+[requests-switch].playing {
+  background-color: #A14A13;
+  background-image: radial-gradient(circle at bottom center, #a14913, #482a20 20%);
+  -webkit-box-shadow: inset 0px 0px 15px 0px #A14A13;
+  -moz-box-shadow: inset 0px 0px 15px 0px #A14A13;
+  -o-box-shadow: inset 0px 0px 15px 0px #A14A13;
+  -ms-box-shadow: inset 0px 0px 15px 0px #A14A13;
+  box-shadow: inset 0px 0px 15px 0px #A14A13;
+  button {
+    @include orange-btn-on;
+    &:hover {
+      @include orange-btn-on-hover;
+    }
+  }
+}
+
+.all-genres {
+  cursor: pointer;
+  background: url(../img/mixer/genres.png) top center no-repeat;
+  @include background-image(url(../img/mixer/genres.png), linear-gradient(to bottom, #3e1112, #1c0708));
+  background-position: top center;
+  background-size: cover;
+}
+
+[genre-schedule] label,
+[focused-slider] label {
+  display: block;
+  font: 12px Arial,Helvetica,sans-serif;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 5px;
+  height: 45px;
+  //background-color: tan;
+  overflow: hidden;
+  text-align: center;
+}
+
+[genre-schedule] label span {
+  display: block;
+  height: 100%;
+  color: #999;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+[genre-schedule] label span:hover {
+  color: #fff;
+}
+
+// -- New Music Slider and Requests Switch (dark sliders) -- //
+
+[contemporaneity-scale],
+[requests-switch] {
+  float: left;
+  position: relative;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.1);
+  width: 11.111%;
+  background: #3c3b3c;
+  background: -moz-linear-gradient(top, #3c3b3c 0%, #1c1a1b 50%, #110f10 50%, #110f10 50%, #110f10 99%, #110f10 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3c3b3c), color-stop(50%, #1c1a1b), color-stop(50%, #110f10), color-stop(50%, #110f10), color-stop(99%, #110f10), color-stop(100%, #110f10));
+  background: -webkit-linear-gradient(top, #3c3b3c 0%, #1c1a1b 50%, #110f10 50%, #110f10 50%, #110f10 99%, #110f10 100%);
+  background: -o-linear-gradient(top, #3c3b3c 0%, #1c1a1b 50%, #110f10 50%, #110f10 50%, #110f10 99%, #110f10 100%);
+  background: -ms-linear-gradient(top, #3c3b3c 0%, #1c1a1b 50%, #110f10 50%, #110f10 50%, #110f10 99%, #110f10 100%);
+  background: linear-gradient(to bottom, #3c3b3c 0%, #1c1a1b 50%, #110f10 50%, #110f10 50%, #110f10 99%, #110f10 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3c3b3c', endColorstr='#110f10',GradientType=0 );
+  .help {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    margin-left: -8px;
+    opacity: .75;
+    z-index: 9;
+  }
+}
+
+[contemporaneity-scale] label,
+[requests-switch] label {
+  font: bold 11px Arial,Helvetica,sans-serif;
+  position: absolute;
+  left: 0px;
+  bottom: 21px;
+  right: 0;
+  text-align: center;
+}
+
+[contemporaneity-scale] .ui-slider .ui-slider-handle,
+[requests-switch] .ui-slider .ui-slider-handle {
+  background: url(../img/mixer/slider-handle-dark.png) transparent center center no-repeat;
+}
+
+@include breakpoint-width(big) {
+  [viewer-header].viewer-header-sliders h2 {
+    max-width: 150px;
+    margin: 0 20px 0 446px;
+  }
+  .preset-switches button {
+    width: 85px;
+    padding: 9px 10px 7px;
+    font-size: 12px;
+  }
+  [genre-schedule] label button {
+    font-size: 11px;
+    font-weight: bold;
+  }
+}

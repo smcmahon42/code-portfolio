@@ -1,0 +1,32 @@
+// Colors ----------------------------------------------------------- 
+$moongrey:  #2e3638;
+$black: 	#000000;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+$primary-color: $moongrey;
+$primary-text-color: $moongrey;
+$primary-background-color: $moongrey;
+$alert-color: $red;
+$warning-color: lighten($yellow, 10);
+
+// Fonts ----------------------------------------------------------- 
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Open Sans Condensed', sans-serif; 
+
+// Compass Default settings ----------------------------------------------------------- 
+$default-border-radius: 5px;
+$default-box-shadow-color: $primary-color;
+$experimental-support-for-svg: true;
+
+//PIE CHART COLORS ---------------------
+//#4C5E88 = rgb(76,94,136)
+//#964C76 = rgb(150,76,118)
+//#89A453 = rgb(137,164,83)
+//#AB8F57 = rgb(171,143,87)

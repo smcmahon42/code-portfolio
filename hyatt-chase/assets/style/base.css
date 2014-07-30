@@ -1,0 +1,1184 @@
+@charset "utf-8";
+/* =================================================================== */
+/* =================            @FONT-FACE             =============== */
+/* =================================================================== */
+
+@font-face {
+    font-family: 'proxima_nova_blblack';
+    src: url('/assets/font/proximanova-black-webfont.eot');
+    src: url('/assets/font/proximanova-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/font/proximanova-black-webfont.woff') format('woff'),
+         url('/assets/font/proximanova-black-webfont.ttf') format('truetype'),
+         url('/assets/font/proximanova-black-webfont.svg#proxima_nova_blblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'proxima_nova_rgbold';
+    src: url('/assets/font/proximanova-bold-webfont.eot');
+    src: url('/assets/font/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/font/proximanova-bold-webfont.woff') format('woff'),
+         url('/assets/font/proximanova-bold-webfont.ttf') format('truetype'),
+         url('/assets/font/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'proxima_nova_ltlight';
+    src: url('/assets/font/proximanova-light-webfont.eot');
+    src: url('/assets/font/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/font/proximanova-light-webfont.woff') format('woff'),
+         url('/assets/font/proximanova-light-webfont.ttf') format('truetype'),
+         url('/assets/font/proximanova-light-webfont.svg#proxima_nova_ltlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'proxima_nova_rgregular';
+    src: url('/assets/font/proximanova-regular-webfont.eot');
+    src: url('/assets/font/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/font/proximanova-regular-webfont.woff') format('woff'),
+         url('/assets/font/proximanova-regular-webfont.ttf') format('truetype'),
+         url('/assets/font/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'proxima_nova_ltsemibold';
+    src: url('/assets/font/proximanova-semibold-webfont.eot');
+    src: url('/assets/font/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/font/proximanova-semibold-webfont.woff') format('woff'),
+         url('/assets/font/proximanova-semibold-webfont.ttf') format('truetype'),
+         url('/assets/font/proximanova-semibold-webfont.svg#proxima_nova_ltsemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* =================================================================== */
+/* =================           GLOBAL RESETS           =============== */
+/* =================================================================== */
+html {
+    -webkit-text-size-adjust: none; /* Prevent font scaling in landscape */
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd,  ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; background: url(../img/backgroundtexture.jpg); position: relative; }
+ ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+em, i { font-style: italic; }
+b, strong { font-weight: 600; }
+
+@media 
+    only screen and (max-device-width: 1136px) and (min-device-width: 960px) and (max-device-height: 640px) and (min-device-height: 560px), 
+    only screen and (max-device-height: 1136px) and (min-device-height: 960px) and (max-device-width: 640px) and (min-device-width: 560px), 
+    only screen and (min-device-width : 200px) and (max-device-width : 1024px)
+    {
+       /* Added elements to target tablet */
+        .chaseLockup,
+        #intro #introChaseLarge,
+        #intro #introHyatt {
+            display:none;
+        }
+
+        /* =================================================================== */
+        /* ================         BASE LAYOUT ELEMENTS        ============== */
+        /* =================================================================== */
+        #master { position: relative; overflow: hidden; }
+        .controlsWide { position: absolute; top: 82%; left: 10%; z-index: 80; height: 17%;  width: 80%; }
+        .decisionControls { position: absolute; bottom: 0%; left: 26%; z-index:3; height: 17%; width: 80%; }
+        #screenVlock   { z-index: 11; }
+
+        .currentTitle, .question { text-transform: uppercase; }
+
+        .screenSize    { position: absolute; display: none; }
+        #screenHGPlock { z-index: 4; }
+        #intro         { z-index: 3; }
+        #gamePlay      { z-index: 2; }
+        #imageSlides   { z-index: 1; }
+        #preloadImg { display: none; }
+
+        /*
+        Vertical Screen Lock ______________________________________________________________ */
+        #screenVlock { overflow: hidden; }
+        #screenVlock img { width: 100%; position:absolute; z-index:1;}
+        #screenVlock .lockType { position:absolute; z-index:2; margin:8% 10%; width: 80%; text-align: center; padding-top:5%;}
+        #screenVlock .lockType .hyattlogo { position: static; width:90%; margin: 0 0 0 5%; }
+        #screenVlock .lockType .chaselogo { position: static; width:50%; margin: 8% 25%;}
+        #screenVlock .lockType p { color: #FFF;  }
+        #screenVlock .lockType small { color: #f3dda1; display:inline-block; padding:5%; }
+
+        .screenLockfooter.properCSS { font-size: .5em; }
+        .screenLockfooter.properCSS ul { width: auto; margin: 14px 0 0 -12.5%; text-align: center; }
+        .screenLockfooter.properCSS ul li { display: inline; margin: 0 5px; line-height: 1.5em; white-space: nowrap; text-align: center; }
+        .screenLockfooter.properCSS ul li a { color: #ccc; text-decoration: none; font-family: 'proxima_nova_rgregular', helvetica, arial, sans-serif; text-transform: uppercase; }
+
+
+        /*
+        HGP Number Screen Lock ______________________________________________________________ */
+        #screenHGPlock { overflow: hidden; background:rgba(83,83,83,1); width: 100%; height: 100%; }
+        #screenHGPlock .lockType {  z-index:2; margin:4% 0%; width: 100%; height: 86%; text-align: center; }
+        #screenHGPlock .lockType .block { width: 100%; }
+        #screenHGPlock .lockType .hyattlogo { position: static; width:25%; margin: 0 0 0 5%; }
+        #screenHGPlock .lockType .cWrapper { width: 93%; height: 53%; display: block; overflow: hidden;  }
+        #screenHGPlock .lockType .cWrapper .cImage { width: 50%; height: 90%; float: left; padding-top: 1.5%; position: relative; }
+        #screenHGPlock .lockType .cWrapper .cImage img { width:80%; position: absolute; right: 5%; top: 10%; }
+        #screenHGPlock .lockType .cWrapper .copy { display: table; width:50%; height: 87%; vertical-align: middle; float: left; }
+        #screenHGPlock .lockType .copy article { display: table-cell; color: #FFF; vertical-align: middle; text-align: left; }
+        #screenHGPlock .lockType .copy article p {  margin: 3% 0; font-size:90%; font-family: 'proxima_nova_rgregular', helvetica, arial, sans-serif; }
+
+        #screenHGPlock .lockType p.error { color: #f3dda1; margin: 3% 0; display: none; }
+        #screenHGPlock .lockType small { color: #f3dda1; display:inline-block; padding:5%; }
+        #screenHGPlock .lockType form { height: 25%; margin: 5px auto 0 auto; }
+        #screenHGPlock .lockType form input#hgpid { border: 3px solid #f3dda1; width: 212px; height: 20px; -webkit-border-radius: 7px; border-radius: 7px; text-align: center; }
+
+        #screenHGPlock .lockType form .formSubmit { height: 30px; margin-left: 2%; color: #666; background-color: #f3dda1; border: 3px solid #f3dda1; text-transform: uppercase; font-family: 'proxima_nova_rgregular', helvetica, arial, sans-serif; -webkit-appearance: none; -webkit-border-radius: 7px; border-radius: 7px; }
+
+        #screenHGPlock .lockType form .hgpNumAlert { display: none; clear: both; padding-top: 3%; color: red; font-size:75%; font-family: 'proxima_nova_rgregular', helvetica, arial, sans-serif; }
+
+        #screenHGPlock .lockType .screenLockfooter { position: static; width: auto; margin: auto;}
+        #screenHGPlock .lockType .screenLockfooter ul span { background: #ccc; display: block; width: 1px; height: 8px; float: left; margin: 0 4px; }
+        #screenHGPlock .lockType .screenLockfooter ul li { color: #ccc; font-size: 9px; float: left; }
+        #screenHGPlock .lockType .screenLockfooter ul li a { color: #ccc; text-decoration: none; font-family: 'proxima_nova_rgregular', helvetica, arial, sans-serif; text-transform: uppercase; }
+
+        .screenLockLegal { width: 106%; margin: 0 0 5px -4%; color: #ccc; font-size: 9px; }
+
+        .lockFooterLinks { width: 70%; margin: auto; }
+
+        /*
+        Intro  ______________________________________________________________ */
+
+        .videoNavInfo { width: 55%; text-align: center; font-size: 75%; margin: 5px auto 0 auto; color: rgba(83,83,83,1); }
+        .legalCopyReveal.fullScreenReminder { width: 53%; color: rgba(83,83,83,1); font-size: 75%; }
+
+        #intro { overflow: hidden; }
+        #intro img { width: 110%; position:absolute; z-index:1; } 
+
+        #intro .step1 { position:absolute; z-index:2; width: 100%; height: 100%; display: none;  }
+        #intro .logo { display: block; position: static; width: 25%; margin: 5% auto 2% auto; }
+        #intro .chaselogo { display: block; position: static; width: 60%;  margin: 0% auto; }
+
+        #intro .step2 { position:absolute; z-index:3; width: 100%; height: 100%; display: none; }
+        #intro .step2 .logo { position: static; width: 20%; margin: 1% 30% 1% 40%; }
+        #intro .step2 .copyBlock { position: absolute; border: 10px solid #fee193; background-color: rgba(255,255,255,0.75); padding: 2% 2% 6% 2%; margin: 1% 5% 1% 5%; width: 83%; z-index: 4; color: #5d5d5d; text-align: center; font-size: 100%; }
+        #intro .step2 .copyBlock p { margin-bottom: 2%; }
+        #intro .step2 .start { position: absolute; z-index: 5; left: 30%; bottom:-64%;  width:40%; }
+        /* #intro .step2 .start { position: absolute; z-index: 5; left: 23%; bottom:-25%;  width:55%; } */
+
+        #intro .step3 { position:absolute; z-index:3; width: 100%; height: 100%; display: none; }
+        #intro .step3 .logo { position: static; width: 20%; margin: 1% 30% 1% 40%; }
+        #intro .step3 .copyBlock { position: absolute; border: 10px solid #fee193; background-color: rgba(255,255,255,0.75); padding: 2%;  margin: 1% 5% 1% 5%; width: 83%; z-index: 4; color: #5d5d5d; text-align: center; font-size: 90%; }
+        #intro .step3 .copyBlock p { margin-bottom: 2%; display: none; }
+        #intro .step3 .trunks { position: absolute; z-index: 5; left: 0; right: 0;  width:55%; margin: auto; }
+
+        #intro .step4 { display: none; position: absolute; width: 100%; height: 100%; z-index: 8; }
+        #intro .step4 .logo { position: static; width: 20%; margin: 1% 30% 1% 40%; }
+        #intro .step4 .copyBlock { position: absolute; border: 10px solid #fee193; background-color: rgba(255,255,255,0.75); padding: 2% 2% 14% 2%;  margin: 1% 5% 1% 5%; width: 83%; z-index: 4; color: #5d5d5d; text-align: center; font-size: 100%; }
+        #intro .step4 .copyBlock p { margin-bottom: 2%; }
+        #intro .step4 .start { position: absolute; z-index: 5; left: 26%; bottom:-20%;  width:49%; }
+
+        #intro .controlsWide { opacity: 1; }
+        #intro .controlsWide .backBtn { width: 10%; position: absolute; top:0; left: 0; }
+        #intro .controlsWide .videoBtn { width: 10%; position: absolute; top:0; left: 12%; }
+        #intro .controlsWide .forwardBtn { width: 10%; position: absolute; top:0; right: 0; }
+        #intro .controlsWide .legalCopy { width: 65%; margin: 0 0 0 23%; color: #FFF;  font-size: 70%; }
+        #intro .controlsWide .legalCopy a { color: #FFF; }
+
+        /*
+        Game Play  ______________________________________________________________ */
+        #gamePlay { overflow: hidden; }
+        #gamePlay #controlFrame { position: absolute; z-index: 10; width: 100%; height: 100%; overflow: hidden; }
+        #gamePlay #controlFrame .status { width: 24%; height: 100%; background: rgba(0,0,0,0.75); position: absolute; }
+
+        #controlFrame .status .logo { width: 70%; margin: 8% 0 5% 20%; }
+        #staysView, #pointsView, #cashView, #progressView, #trunksView { font-family: helvetica, arial, sans-serif; color: #f3dda1; font-size: 75%; margin: 2%; text-align: center; }
+        #staysView .box, #pointsView .box, #cashView .box, #progressView .box, #trunksView .box { border: 1px solid #676767;
+        	margin-top: 5%; padding: 2% 3% 5% 3%; overflow: hidden; color: #FFF; font-size:150%; font-family: georgia, 'Times New Roman', serif;
+        }
+
+        /*  ______________ Left Side Progress Display ________________ */
+        #progressView .box { padding-bottom: 3%; }
+        #progressView .box .dotWrapper { width: 94px; margin: auto; }
+        #progressView .box li { display: block; float: left; list-style: none;  border: 1px solid #FFF; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px;  width: 10px; height:10px; margin: 3% 3px 2% 0;  }
+        #progressView .box li:first-child { margin-left: 4%;  }
+        #progressView .box li .dot { background: #FFF; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px;  width: 60%; height:60%; margin:20%;}
+        #progressView .box li .off { display: none; }
+
+        #trunksView .box { padding-bottom: 3%; }
+        #twrapper { padding-top: 3%; }
+        #twrapper img { width: 20%;  }
+        #twrapper img.off { opacity: .20; }
+        #twrapper img.on { opacity: 1; }
+
+        /*  ______________ Side Menu ________________ */
+        .sideMenu { position: absolute; z-index: 30; background: #000; top: 0; right: -30%; min-width: 20%; height: 100%; color: #FFF; padding: 3%; }
+        .sideMenu .closeMenu { width: 25px; height: 25px; font-family: sans-serif; margin: 0 0 10% 85%; font-size: larger; }
+        .sideMenu .closeMenu img { width: 100%; }
+        .sideMenu ul li { list-style: none; margin: 15% 0; display:block; font-family: Helvetica, arial, sans-serif; }
+        .sideMenu ul li a { color: #f3dda1; text-decoration: none;  }
+
+        /*  ______________ Toggle slide controls ________________ */
+        #controlFrame .header { position: relative; width: 75%; margin: 1% 0 0 25%; }
+        #controlFrame .header .bonusLogo { width:12%; margin-left:5%; opacity: 0;}
+        #controlFrame .header .chaseLogo { width:28%; margin:0 29% 0 14%; }
+        #controlFrame .header .navToggle { width:9%; }
+
+        #controlFrame .controlsShort { position: absolute; overflow: hidden; bottom: 1%; right: 8%; z-index:3; /* height: 20%; */ width: 66%; color: #FFF; }
+        #controlFrame .controlsShort img { width: 12%; display: inline-block; float: left; margin-top: 5%; }
+        #controlFrame .controlsShort .display { width: 75%; display: inline-block; float: left; }
+
+        #controlFrame .display .progress { overflow: hidden; width: 42px; margin: 5.5% auto 0 auto; }
+        #controlFrame .display .progress li { float: left; list-style: none; background: #FFF; -webkit-border-radius: 25px; -moz-border-radius: 25px; border-radius: 25px;  width: 10px; height:10px; margin:2px; }
+        #controlFrame .display .progress li.off { opacity: .5; }
+        #controlFrame .display .legal { font-size: 50%; text-align: center; padding: 0 2%; }
+
+        /*  ______________ Decision Arrow Select ________________ */
+        .direction { font-size: 90%; font-style: italic; }
+        .place { text-transform: uppercase; white-space: nowrap; }
+        .decisionControls { position: absolute; overflow: hidden; bottom: 2%; right: 8%; z-index:3; height: 17%; width: 66%; color: #FFF; }
+        .decisionControls img { width: 27%; display: inline-block; }
+        .decisionControls .displayOne { display: inline-block; width: 45%; float: left; }
+        .decisionControls .displayOne p { float: left; display: inline-block; margin: 1% 0 0 5%; width: 63%  }
+        .decisionControls .displayOne p .direction { display: block; }
+        .decisionControls .displayOne p .place {display: block; color: #f3dda1; font-size: 100%; }
+        .decisionControls .displayOne img { float: left; }
+
+        .decisionControls .displayTwo { display: inline-block; width: 52%; float: right; }
+        .decisionControls .displayTwo p { float: left; display: inline-block; margin: 1% 5% 0 ; width: 67%; text-align: right; }
+        .decisionControls .displayTwo p .direction { display: block; }
+        .decisionControls .displayTwo p .place {display: block; color: #f3dda1; font-size: 100%; }
+        .decisionControls .displayTwo img { float: right; width: 22.5%; }
+
+        /*
+        Image Slides  ______________________________________________________________ */
+
+        #imageSlides #nextDest {  position: absolute; width: 60%; top: 26%; left: 30%; color: #FFF; display: none; }
+        #imageSlides #nextDest .currentTitle {display: block; text-align: center; }
+        #imageSlides #nextDest .threeDots { display: block; width: 1.4%; margin:4% auto;}
+        #imageSlides #nextDest .plane { display: block; width: 15%; margin: auto; }
+        #imageSlides #nextDest .question { display: block; text-align: center; margin-top: 4%; }
+
+        #imageSlides { overflow: hidden; }
+        #imageSlides img { width: 120%; margin: 0 0 -.5% -10%; }
+        #imageSlides .layerParent { position: absolute; width: 100%; height: 100%; }
+        #imageSlides .layerParent .layer { position: absolute; width: 100%; overflow: hidden; }
+        #imageSlides .layerParent .display { position: absolute;  width: 65%; color: #666; background: rgba(255,255,255,0.80); border: 8px solid #f3dda1; top: 21.5%; left: 26.5%; padding: 4% 2%; text-align: center; }
+
+        #imageSlides .layerParent .off { display: none; }
+
+        .displayTable { position: absolute; width: 70%; top: 23.25%; right: 3%; color: #fff; }
+        .displayTable .row1 { font-size: 71%; text-align: center; }
+        #dubai .displayTable { width: 73%; top:17.25%; right:2%; color: #fff; font-size: .75em; }
+        .tablebody.dubaiTable td { font-size: 139%; }
+        .row1.dubaiTable tr td, .row2.dubaiTable tr td { font-size: 127%; text-align: center; }
+
+        #dubai #imageSlides .row1. img, #dubai #imageSlides .row2 img {
+        width: 40%; }
+        .displayTable .row1 { background: rgba(26,26,26,0.95); width: 100%; font-style: italic; }
+        .displayTable .row2 { background: rgba(26,26,26,0.75); width: 100%; font-size: 70%; font-style: italic; }
+        .row2.vegasTable, .row2.hongKongTable { font-size: 70%; }
+        .displayTable .tablebody { font-size: 75%; }
+        .displayTable .displaytable { margin-bottom: 2%; width: 91%; color: #666; background: rgba(255,255,255,0.80); border: 8px solid #f3dda1; top: 21.5%; left: 26.5%; padding: 4% 2%; text-align: center; }
+
+        #imageSlides .row1 img, 
+        #imageSlides .row2 img { width: 15px; display: block; margin: auto;}
+        #imageSlides .row1 tr td, 
+        #imageSlides .row2 tr td { vertical-align: middle;  padding:2% 0; }
+        #imageSlides table.row1 tr, 
+        #imageSlides table.row2 tr { text-align: center; }
+
+        #imageSlides .tablebody { width: 100%; background: #fff; color: #666; border-left: 2px solid white; border-right: 2px solid white;}
+        #imageSlides .tablebody td { padding:1.25% 0 1.25% 4.7%;}
+        #imageSlides .tablebody tr.selected { background: #fee191;  }
+        #imageSlides .tablebody tr.head { font-weight: bold; text-transform: uppercase; }
+
+        #imageSlides .smallTable { background: black; position: absolute; width: 111%; left: -2.2%; bottom: -55%;  color: #fff; font-size: .75em; font-style: italic; text-align: center; }
+
+        #imageSlides .smallTable tr td { padding: 3% .5%; vertical-align: middle; }
+        #imageSlides .smallTable img { width: 15px; }
+
+        span.londonShow, span.parisShow { display: none; }
+        /* span.oneTrunk, span.twoTrunks, span.pluralTrunks { display: none; } */
+        span.dubaiShow, span.hongkongShow { display: none; }
+        span.pluralOfTrunks, /* span.typeThem, span.typeIt,  */
+        span.noTrunks, span.theyIt, span.areTrunks, span.singleOfTrunks  { display: none; }
+
+        #chicago, #saopaolo, #lasvegas, #sydney, #spa, #tokyo,
+        #hongkong, #restaurant, #london, #paris, #newyork, #dubai { bottom:250%; display: none; }
+
+        /*
+        Reveal Section  ______________________________________________________________ */
+        #reveal { overflow: hidden; position: relative; width: 100%; height: 100%; opacity: 0; }
+        #reveal img.logo, 
+        #reveal .bg1, 
+        #reveal .bg2 { position: absolute; width: 115%; }
+
+        #reveal .controlsWide { opacity: 1; color: #ccc; text-transform: uppercase; }
+        #reveal img.logo { width: 20%; margin:3% 40% 0 40%; position: absolute; z-index: 9; }
+        #reveal .controlsWide .backBtn { width: 10%; float: left; opacity: 0; }
+        #reveal .controlsWide .forwardBtn { width: 10%; float: right; opacity: 0; }
+        #reveal .controlsWide .infoLeft { float: left; color: #fff; margin:1.5% 3% 3% 3%; width: 30%; display: table; vertical-align: middle; opacity: 0; }
+        #reveal .controlsWide .infoRight { float: right; color: #fff; margin:1.5% 3% 3% 3%; width: 30%; display: table; vertical-align: middle; text-align: right; opacity: 0; }
+
+        .legalCopyReveal { position: absolute; right: 0; top: 1%; left: 0; z-index: 3; height: 14%; width: 92%; margin: auto; font-size: .525em; color: #FFF; text-align: center; }
+        .legalCopyReveal a { color: #FFF; }
+
+        #reveal .part4, #reveal .part2, #reveal .part3 { display: none; }
+
+        /*  ______________ Reveal Part1 ________________ */
+        #reveal .part1 { position: absolute; z-index: 1; width: 100%; height: 100%; background: rgba(0,0,0,0.0); padding: 13% 0 0 0; }
+        #reveal .part1 img { width: 30%; }
+        #reveal .part1 .display { position: absolute; width: 100%; }
+        #reveal .part1of1, 
+        #reveal .part2of1, 
+        #reveal .part3of1 { padding: 3%; width: 80%; margin: auto; background: rgba(255,255,255,0.8); border: 10px solid #f3dda1; color: #666; text-align: center; }
+
+        #reveal .part3of1 .blk { color: black; margin: 8px 0 0 0; }
+        #reveal .part1 .trunkWrap { position: relative; z-index: 40; top:40%; }
+        #reveal .part1 .trunk1 { margin: 0 0 0 7%; } /* 7, 24, 40 */
+        #reveal .part1 .trunk1, #reveal .part1 .trunk2, #reveal .part1 .trunk3 {display: none;}
+        #reveal .exp1,
+        #reveal .exp2,
+        #reveal .exp3,
+        #reveal .sweepstakes  { display: none; }
+
+        #reveal .part2of1, 
+        #reveal .part3of1 { display: none; }
+
+        /*  ______________ Reveal Part2 ________________ */
+        #reveal .bg1 { }
+        #reveal .part2 { position: absolute; z-index: 2; width: 100%; height: 100%; padding: 13% 0 0 0; }
+        #reveal .part2 img { width: 60%; margin: 0 auto; }
+        #reveal .part2 .display { color: #FFF; text-align: center; font-size: 98%; }
+
+        #reveal .open0, 
+        #reveal .open1, 
+        #reveal .open2 { display: none; width: 30%; height: 65%; text-align: center; color: #FFF; float: left; position: relative; }
+        #reveal .open0 { margin-left:5%; }
+        #reveal .part2 img.pin { width:40%; margin: 0 auto; display: block; }
+        #reveal .part2 img.tk { position: absolute; bottom: 4%; left: 30%; }
+        #reveal .part2 a { position: absolute; left: 20%; bottom: -5%; color: white; font-style: italic; }
+
+        /*  ______________ Reveal Part3 ________________ */
+        #reveal .part3 { position: absolute; z-index: 3; width: 100%; height: 100%; padding: 12% 0 0 0; }
+        #reveal .part3 .pin {  width:10%; margin: 0 auto; display: block;  }
+        #reveal .part3 .offerSelected { color: #FFF; text-align: center; width: 40%; margin: auto; }
+        #reveal .part3 .trunkSelected { width: 30%; margin: 2% 0 0 38%; }
+        #reveal .part3 a {color: #FFFFFF; display: block; text-align: center; width: 100%;}
+
+        /*  ______________ Reveal Part4 ________________ */
+        #reveal .part4 { position: absolute; z-index: 4; width: 100%; height: 100%; padding: 13% 0 0 0; }
+        #reveal .part4 .display { padding: 3%; width: 85%; margin: 0 auto 2% auto; background: rgba(255,255,255,0.8); border: 10px solid #f3dda1; color: #666; text-align: center; font-size: 85%; }
+        #reveal .part4 .btns { width: 60%; overflow: hidden; margin: auto; }
+        #reveal .part4 .account, 
+        #reveal .part4 .booknow { color: #666; padding:2% 3%; width: 40%; display: inline-block; background: rgba(255,255,255,0.8); border: 3px solid #f3dda1; text-align: center; text-transform: uppercase; float: left; }
+        #reveal .part4 .booknow { float: right; }
+        .hgpn { text-transform: uppercase; }
+        .offer { font-size: .9em; }
+        .prizeEmphasis { display: block; font-weight: bold; font-style: italic; margin: 5px 0 0 0; font-size: 1.2em; }
+
+
+        /*
+        LIGHTBOX _________________________________________________________________ */
+        #lightbox { position: absolute; background: rgba(255,255,255,0.80); z-index: 10; margin:3% 0 0 2%; width: 90%; height: 84%; padding: 3%; display: none; }
+        #frame { overflow-x: scroll; -webkit-overflow-scrolling:touch; overflow-y: none; height: 50%; border-bottom: 1px solid #666; border-top: 1px solid #666; }
+        #lightbox .selectBtns { width: 80%; margin: 5% auto; height: 25%}
+        .selectBtns .denyBtn, .selectBtns .acceptBtn { display:inline-table; vertical-align: middle; margin: 0 0 0 28%; text-align: center; text-align: center; height:70%; border: 3px solid #f3dda1; width: 45%; float: left; background: white; color: #666; text-transform: uppercase; }
+        .selectBtns .denyBtn { margin: 0 2% 0 4%; }
+        .selectBtns .denyBtn p, .selectBtns .acceptBtn p { display: table-cell; vertical-align: middle; text-align: center;  }
+
+        #movieBox { z-index: 8; position: absolute; width: 100%; height: 100%; background: rgba(255,255,255,0.80); display: none; }
+        #movieBox video { position: absolute; top: 0; right: 0; bottom: 0; left: 0; border: 1px solid #ccc; height: 191px; margin: auto; width: 341px;  }
+        #movieBox .movieClose { position: absolute; top: 4%; right: 4%; display: block; padding: 5px 5px 10px 10px; color: #666; text-decoration: underline; font-family: 'proxima_nova_rgregular', arial, helvetica, sans-serif; }
+
+        /*
+        Rules Page _________________________________________________________________ */
+
+        #rulesPage { background: rgba(225,225,225, 0.7); color: black; width: 100%; height: 100%; padding: 1px; }
+        #rulesPage section { width: 90%; margin: 2% auto;  }
+        #rulesPage section p { margin: 7px 0;}
+        #rulesPage ol li { padding: 5px 0; }
+        #rulesPage ul { list-style: disc; margin-left: 3%; }
+        #rulesPage .ulHead { margin:  3%; }
+        #rulesPage ul li ul { list-style-type: circle; }
+        #rulesPage  b { font-weight: bold; }
+        #rulesPage table { background:#e8e8e8; font-size: .55em; width:25%; }
+        #rulesPage table tr td { border: 1px solid black; padding: 5px; }
+
+        /*
+        Rules Page _________________________________________________________________ */
+
+        #learnPage { background: rgba(225,225,225, 0.7); color: black; width: 100%; height: 100%; padding: 1px; }
+        #learnPage section { width: 90%; margin: 2% auto;  }
+        #learnPage ol li { padding: 5px 0; }
+        #learnPage ul { list-style: disc; margin-left: 3%; }
+        #learnPage .ulHead { margin:  3%; }
+        #learnPage ul li ul { list-style-type: circle; }
+        #learnPage  b { font-weight: bold; }
+        #learnPage table { width: 100%; margin: 8px 0; font-size: .75em; }
+        #learnPage table tr td, th { border: 1px solid black; padding: 5px; }
+        #learnPage h1, h2 { font-weight: 600; margin: .83em; }
+        #learnPage h1 { font-size: 1.75em; text-align: center; }
+        #learnPage p { margin: .83em 0; }
+}
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    /* Vertical lock screen */
+    #screenVlock { overflow: hidden; text-align: center; }
+    #screenVlock img { display:block; width: 100%; z-index:1;}
+    #screenVlock .lockType { text-align: center; }
+    #screenVlock .lockType .hyattlogo { position: static; width:100%; margin: -5% 0 0 5%; }
+    #screenVlock .lockType .chaselogo { position: static; width:50%; margin: 8% 25%;}
+    #screenVlock .lockType p { color: #FFF; font-size:1.5em; }
+    #screenVlock .lockType small { color: #f3dda1; font-size:2.5em; display:block; margin:auto; padding:5%; width:auto; }    
+    #screenVlock .lockType .properCSS .screenLockLegal { font-style: italic; font-size:1.75em; }
+
+    #screenVlock .lockType ul { bottom:0; margin:0 auto; left:0; padding:0; position:fixed; width:100%; }
+        #screenVlock .lockType ul li { display:inline-block; float:none; margin:1em; }
+        #screenVlock .lockType ul li:last-child { margin-right:0; }
+        #screenVlock .lockType ul li a { border:1px solid #ccc; display:block; font-size:1.5em; margin-right:.5em; padding-right:1em; }
+        #screenVlock .lockType ul li a:last-child { border:0; margin-right:0; }
+}
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd,  ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video { 
+        font-size: 105%;
+    }    
+
+    /* Globals */
+    .controlsWide, #controlFrame .controlsShort, #reveal .controlsWide { bottom: 0%; height: 3em; left: auto; position: absolute; top: auto; width: 100%; z-index: 5000; }
+        #reveal .controlsWide { bottom:2%; }
+        #controlFrame .controlsShort { right:0%; width:76%; }
+
+        #controlFrame .controlsShort .backBtn,
+        #controlFrame .controlsShort .videoBtn,
+        #controlFrame .controlsShort .forwardBtn,
+        #reveal .controlsWide .backBtn,
+        #reveal .controlsWide .videoBtn, 
+        #reveal .controlsWide .forwardBtn,        
+        #intro .controlsWide .backBtn, 
+        #intro .controlsWide .videoBtn, 
+        #intro .controlsWide .forwardBtn,
+        .decisionControls .displayOne .selectBtnOne,
+        .decisionControls .displayTwo .selectBtnTwo { height:47px; width:47px; }
+
+        #controlFrame .controlsShort img { margin-top:auto; }
+
+        #controlFrame .controlsShort .backBtn, #reveal .controlsWide .backBtn, #intro .controlsWide .backBtn { left:1em; }
+            #controlFrame .controlsShort .backBtn { position:absolute; float:none; }
+        #intro .controlsWide .videoBtn { left:4em; }
+        #controlFrame .controlsShort .forwardBtn, #reveal .controlsWide .forwardBtn, #intro .controlsWide .forwardBtn { right:1em; }
+            #controlFrame .controlsShort .forwardBtn { position:absolute; float:none; }
+
+        #controlFrame .controlsShort .display { display:block; float:none; left:13%; position:absolute;  }
+            #controlFrame .display .progress { margin:auto auto .5em auto; }
+                #controlFrame .display .progress {  }
+
+        .decisionControls { bottom:0%; height:3em; left:auto; right:0%; width:76%; }
+            .decisionControls .displayOne { float:left; margin-left:1em; text-align: left; width:45%; }
+                .decisionControls .displayOne p { float:left; margin:auto; margin-left:3%; width:auto; }
+            .decisionControls .displayTwo { float:right; margin-right:1em; text-align: right; width:45%; }
+                .decisionControls .displayTwo p { float:right; margin:auto; margin-right:3%; width:auto; }
+
+        #imageSlides #nextDest { top:32%; }
+        #imageSlides #nextDest .question, #imageSlides #nextDest .currentTitle { font-size:1.5em; }
+
+        #imageSlides .smallTable { bottom:-56%; left:-9px; width:109%; }
+
+        /* Header */
+        #intro .chaseLockup { 
+            background:url("../img/chaseLogoPortrait-x2.png");
+            background-repeat:no-repeat;
+            background-size:189px 88px; 
+            background-position:center center;
+            display:block;
+            height:88px; 
+            margin:.5em auto auto auto;
+            padding:0;
+            text-indent:-9999px;
+            width:100%; 
+        }
+
+        /* Nav */
+        #controlFrame .header .navToggle { height:30px; position:absolute; right:1em; top:.5em; width:30px; }
+
+        /* Dashboard */
+        #gamePlay #controlFrame .status { padding:.5em; width:22%; text-align: center; }
+        #controlFrame .status .logo { margin:.5em auto auto auto; }
+        #staysView, #pointsView, #cashView, #progressView, #trunksView { font-size:90%; margin:1.55em auto; }
+        #progressView .box .dotWrapper { width:80%; }
+        #progressView .box li { height:20px; width:20px; }
+
+        /* Reveal */
+        .legalCopyReveal { bottom:1%; height:auto; left:0; right:0; text-align:center; top:auto; width:100%; }
+
+    /* Lock screen */
+    #screenHGPlock { background:url("../img/backgroundtexture.jpg"); }
+    #screenHGPlock .lockType form { height:auto; margin:auto; padding:0; width:60%; }
+    #screenHGPlock .lockType form .hgpGroup input { float:left; font-size:1em; line-height:100%; font-size:1em; margin:0; width:30%; }
+    #screenHGPlock .lockType form .hgpGroup input#hgpid { height:45px; margin-left:5%; padding:0em; width:50%; }
+    #screenHGPlock .lockType form .hgpGroup .formSubmit { float:right; padding:.5em; padding-bottom:1.5em; margin-right:5%; text-align: center; width:35%; }
+    #screenHGPlock .lockType .screenLockfooter { bottom:3%; position:fixed; width:100%; }
+    .screenLockLegal { font-size:16px; font-style:italic; margin:.5em auto; padding:0; text-align: center; width:80%; }
+    .hgpNumAlert { clear:both; }
+        #screenHGPlock .lockType .screenLockfooter ul { margin:auto; text-align:center; width:80%; }
+        #screenHGPlock .lockType .screenLockfooter ul li {
+            border-right:1px solid #999; 
+            display:inline-block; 
+            float:none; 
+            font-size:12px; 
+            padding-left:2em;
+            padding-right:2em;
+        }
+            #screenHGPlock .lockType .screenLockfooter ul li:first-child { padding-left: 0em; }
+            #screenHGPlock .lockType .screenLockfooter ul li:last-child { border:0px; padding-right:0em; }
+        #screenHGPlock .lockType .screenLockfooter ul span { display:none; }
+
+        #lightbox { 
+            background: rgba(255,255,255,.7);
+            bottom:2.5%;
+            display: none;
+            height: 95%;
+            left:2.5%;
+            margin:0 0 0 0;
+            padding:0;
+            position: absolute;
+            right:2.5%;
+            top:2.5%;
+            width: 95%;  
+            z-index: 10;   
+        }
+            .rulesOptHead { background:#444; box-shadow:0px 5px 10px rgba(0,0,0,.5); color:#fff; }
+            #frame { color:#666; font-family: "georgia"; padding:3em; text-align: center; }
+                #frame a { color:#444; }
+        #frame { overflow-x: scroll; -webkit-overflow-scrolling:touch; overflow-y: none; height: 50%; border-bottom: 1px solid #e8e8e8; }
+        
+        .fullScreenReminder { display:none; }
+
+        #lightbox .selectBtns { height:auto; width:inherit; margin: 5% auto; text-align: center; }
+        .selectBtns .acceptBtn { 
+            background: white; 
+            border: 6px solid #f3dda1;
+            box-shadow: 0px 0px 20px rgba(0,0,0,.2);
+            color: #666;
+            float:none;
+            height:70%;
+            margin:auto;
+            padding:1em 2em; 
+            text-align: center;   
+            text-transform: uppercase;
+            width:auto; 
+        }
+
+
+    /* Intro */
+    #movieBox video { height:504px; width:900px; }
+    #intro .bgimgs { display:none; }
+
+        #intro .logo, #intro .chaselogo { display:none; }
+            #intro #introHyatt {
+                background:url("../img/introHyattLogo-x2.png");
+                background-repeat:no-repeat;
+                background-size:136px 49px; 
+                background-position:center center;
+                display:block;
+                height:49px; 
+                margin:1em auto 1em auto;
+                padding:0;
+                text-indent:-9999px;
+                width:100%;                 
+            }
+            #intro #introChaseLarge { 
+                background:url("../img/introChaseLogoLarge-x2.png");
+                background-repeat:no-repeat;
+                background-size:428px 172px; 
+                background-position:center center;
+                display:block;
+                height:172px; 
+                margin:2em auto auto auto;
+                padding:0;
+                text-indent:-9999px;
+                width:100%; 
+            }
+
+            #intro .videoNavInfo { color:#666; font-style:italic; font-size:.75em; margin:1em auto; width:auto; }
+            #intro .controlsWide .legalCopy { font-family: "proxima_nova_rgregular"; margin-top:1em; text-align: center; }
+
+            #intro .step3 .copyBlock, #intro .step4 .copyBlock { margin:1em auto; padding:1em; position:relative; width:80%; }
+            #intro .step3 .copyBlock p, #intro .step4 .copyBlock p { font-size:1.25em; }
+
+            #intro .step3 .trunks { height:157px; top:80%; width:510px; }
+
+            #intro .step4 .start { height:91px; left:auto; margin:auto; margin-bottom:-6%; position:relative; width:202px; }
+ 
+    /* Destination Screens  */
+
+    #imageSlides #intro, 
+    #imageSlides #newyork .f1,
+    #imageSlides #newyork .f2,
+    #imageSlides #london .f1,
+    #imageSlides #london .f2,
+    #imageSlides #london .f3,
+    #imageSlides #london .f4,
+    #imageSlides #paris .f1,
+    #imageSlides #paris .f2,
+    #imageSlides #paris .f3,
+    #imageSlides #paris .f4,      
+    #imageSlides #dubai .f1,
+    #imageSlides #dubai .f2,
+    #imageSlides #dubai .f3,
+    #imageSlides #dubai .f4,
+    #imageSlides #dubai .f5,
+    #imageSlides #dubai .f6,
+    #imageSlides #dubai .f7,    
+    #imageSlides #hongkong .f1,
+    #imageSlides #hongkong .f2,
+    #imageSlides #hongkong .f3,
+    #imageSlides #hongkong .f4,
+    #imageSlides #hongkong .f5,
+    #imageSlides #hongkong .f6,
+    #imageSlides #hongkong .f7,
+    #imageSlides #spa .f1,
+    #imageSlides #spa .f2,
+    #imageSlides #spa .f3,
+    #imageSlides #spa .f4,
+    #imageSlides #spa .f5,
+    #imageSlides #sydney .f1,
+    #imageSlides #sydney .f2,
+    #imageSlides #sydney .f3,
+    #imageSlides #sydney .f4,
+    #imageSlides #sydney .f5,
+    #imageSlides #sydney .f6,
+    #imageSlides #saopaolo .f1,
+    #imageSlides #saopaolo .f2,
+    #imageSlides #saopaolo .f3,
+    #imageSlides #saopaolo .f4,
+    #imageSlides #saopaolo .f5,
+    #imageSlides #saopaolo .f6,
+    #imageSlides #saopaolo .f7,
+    #imageSlides #saopaolo .f8,
+    #imageSlides #tokyo .f1,
+    #imageSlides #tokyo .f2,
+    #imageSlides #tokyo .f3,
+    #imageSlides #tokyo .f4,
+    #imageSlides #tokyo .f5,
+    #imageSlides #tokyo .f6, 
+    #imageSlides #lasvegas .f1,
+    #imageSlides #lasvegas .f2,
+    #imageSlides #lasvegas .f3,
+    #imageSlides #lasvegas .f4,
+    #imageSlides #lasvegas .f5,
+    #imageSlides #lasvegas .f6,
+    #imageSlides #lasvegas .f7,
+    #imageSlides #lasvegas .f8,
+    #imageSlides #lasvegas .f9,
+    #imageSlides #chicago .f1,
+    #imageSlides #chicago .f2,
+    #imageSlides #chicago .f3 { 
+        background-position:center center;
+        bottom:0; 
+        left:0; 
+        position:absolute; 
+        right:0; 
+        top:0;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;         
+    }
+
+    #imageSlides #restaurant .f1 .londonShow .restCover,
+    #imageSlides #restaurant .f2 .londonShow .restCover,
+    #imageSlides #restaurant .f3 .londonShow .restCover,
+    #imageSlides #restaurant .f4 .londonShow .restCover,
+    #imageSlides #restaurant .f5 .londonShow .restCover,
+    #imageSlides #restaurant .f6 .londonShow .restCover,   
+    #imageSlides #restaurant .f7 .londonShow .restCover,
+    #imageSlides #restaurant .f1 .parisShow .restCover,
+    #imageSlides #restaurant .f2 .parisShow .restCover,
+    #imageSlides #restaurant .f3 .parisShow .restCover,
+    #imageSlides #restaurant .f4 .parisShow .restCover,
+    #imageSlides #restaurant .f5 .parisShow .restCover,
+    #imageSlides #restaurant .f6 .parisShow .restCover,     
+    #imageSlides #restaurant .f7 .parisShow .restCover, 
+    #imageSlides #spa .f1 .dubaiShow .spaCover,
+    #imageSlides #spa .f2 .dubaiShow .spaCover,
+    #imageSlides #spa .f3 .dubaiShow .spaCover,
+    #imageSlides #spa .f4 .dubaiShow .spaCover,
+    #imageSlides #spa .f5 .dubaiShow .spaCover,
+    #imageSlides #spa .f1 .hongkongShow .spaCover,
+    #imageSlides #spa .f2 .hongkongShow .spaCover,
+    #imageSlides #spa .f3 .hongkongShow .spaCover,
+    #imageSlides #spa .f4 .hongkongShow .spaCover,
+    #imageSlides #spa .f5 .hongkongShow .spaCover {
+        background-position:center center;
+        bottom:0; 
+        left:0; 
+        display:block;
+        height:100%;
+        position:absolute; 
+        right:0; 
+        top:0;
+        width:100%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;           
+    }
+
+    /*
+     *  Had to set the z-index on iPad for restaurant and spa slides since the img
+     *  we are hiding is in a span tag
+     */
+
+    #imageSlides #spa .f1 .display, 
+    #imageSlides #spa .f2 .display, 
+    #imageSlides #spa .f3 .display, 
+    #imageSlides #spa .f4 .displayTable, 
+    #imageSlides #spa .f5 .display, 
+    #imageSlides #restaurant .f1 .display, 
+    #imageSlides #restaurant .f2 .display, 
+    #imageSlides #restaurant .f3 .display, 
+    #imageSlides #restaurant .f4 .display, 
+    #imageSlides #restaurant .f5 .display, 
+    #imageSlides #restaurant .f6 .display,
+    #imageSlides #restaurant .f6 .displayTable, 
+    #imageSlides #restaurant .f7 .display { 
+        position:absolute; 
+        top:25%; 
+        z-index:900 !important; 
+    }
+
+    #intro { 
+        background:url("../img/destinations/introScreen-x2.jpg") no-repeat; 
+    }
+
+
+    /* New York */
+    #imageSlides #newyork .f1 { background:url("../img/destinations/nycScreen1-x2.jpg") no-repeat; }
+    #imageSlides #newyork .f2 { background:url("../img/destinations/nycHotel-x2.jpg") no-repeat; }
+
+    /* London */
+    #imageSlides #london .f1 { background:url("../img/destinations/londonScreen1-x2.jpg") no-repeat; }
+    #imageSlides #london .f2 { background:url("../img/destinations/londonRoom-x2.jpg") no-repeat; }
+    #imageSlides #london .f3 { background:url("../img/destinations/redHead-x2.jpg") no-repeat; } 
+    #imageSlides #london .f4 { background:url("../img/destinations/londonRoom-x2.jpg") no-repeat; }
+
+    /* Restaurant London */
+    #imageSlides #restaurant .f1 .londonShow .restCover,
+    #imageSlides #restaurant .f2 .londonShow .restCover { 
+        background:url("../img/destinations/londonRestaurant-x2.jpg") no-repeat; 
+    }
+
+    #imageSlides #restaurant .f3 .londonShow .restCover { background:url("../img/destinations/dubaiScreen1-x2.jpg") no-repeat; }
+    #imageSlides #restaurant .f4 .londonShow .restCover,
+    #imageSlides #restaurant .f5 .londonShow .restCover,
+    #imageSlides #restaurant .f6 .londonShow .restCover { 
+        background:url("../img/destinations/dubaiRoom-x2.jpg") no-repeat; 
+    }
+    #imageSlides #restaurant .f7 .londonShow .restCover { background:url("../img/destinations/bellmanRedHead-x2.jpg") no-repeat; }
+
+    /* Paris */
+    #imageSlides #paris .f1 { background:url("../img/destinations/parisScreen1-x2.jpg") no-repeat; }
+    
+    #imageSlides #paris .f2,
+    #imageSlides #paris .f4 { 
+        background:url("../img/destinations/parisRoom.jpg") no-repeat; 
+    }
+
+    #imageSlides #paris .f3 { background:url("../img/destinations/redHead-x2.jpg") no-repeat; }
+
+    /* Restaurant Paris */
+    #imageSlides #restaurant .f1 .parisShow .restCover,
+    #imageSlides #restaurant .f2 .parisShow .restCover { 
+        background:url("../img/destinations/parisRestaurant-x2.jpg") no-repeat; 
+    }
+    #imageSlides #restaurant .f3 .parisShow .restCover { background:url("../img/destinations/honkKongScreen1-x2.jpg") no-repeat; }
+    #imageSlides #restaurant .f4 .parisShow .restCover,
+    #imageSlides #restaurant .f5 .parisShow .restCover,
+    #imageSlides #restaurant .f6 .parisShow .restCover { 
+        background:url("../img/destinations/honkKongRoom-x2.jpg") no-repeat; 
+    }
+    #imageSlides #restaurant .f7 .parisShow .restCover { background:url("../img/destinations/bellmanRedHead-x2.jpg") no-repeat; }
+
+    /* Hong Kong */
+    #imageSlides #hongkong .f1 { background:url("../img/destinations/honkKongScreen1-x2.jpg") no-repeat; }
+    
+    #imageSlides #hongkong .f2,
+    #imageSlides #hongkong .f3,
+    #imageSlides #hongkong .f4,
+    #imageSlides #hongkong .f5 { 
+        background:url("../img/destinations/honkKongRoom-x2.jpg") no-repeat; 
+    }
+
+    #imageSlides #hongkong .f6,
+    #imageSlides #hongkong .f7 { 
+        background:url("../img/destinations/honkKongRestaurant-x2.jpg") no-repeat; 
+    }   
+
+    #hongkong .displayTable { top:25.25%; }
+
+    /* HongKong Spa */
+    #imageSlides #spa .f1 .hongkongShow .spaCover{ background:url("../img/destinations/honkKongSpa1-x2.jpg") no-repeat; }
+    #imageSlides #spa .f2 .hongkongShow .spaCover { background:url("../img/destinations/honkKongSpa2-x2.jpg") no-repeat; }
+    #imageSlides #spa .f3 .hongkongShow .spaCover { background:url("../img/destinations/spaRedHead-x2.jpg") no-repeat; }
+    #imageSlides #spa .f4 .hongkongShow .spaCover, #imageSlides #spa .f5 .hongkongShow .spaCover { 
+        background:url("../img/destinations/honkKongSpa2-x2.jpg") no-repeat; 
+    }
+
+    /* Dubai */
+    #imageSlides #dubai .f1 { background:url("../img/destinations/dubaiScreen1-x2.jpg") no-repeat; }
+    #imageSlides #dubai .f2,
+    #imageSlides #dubai .f3,
+    #imageSlides #dubai .f4,
+    #imageSlides #dubai .f5, 
+    #imageSlides #dubai .f7 { 
+        background:url("../img/destinations/dubaiRoom-x2.jpg") no-repeat;       
+    }       
+
+    #imageSlides #dubai .f6 { 
+        background:url("../img/destinations/dubaiRestaurant-x2.jpg") no-repeat; }
+
+    #dubai .displayTable { top:25.25%; width:70%; } 
+
+    /* Dubai Spa */
+    #imageSlides #spa .f1 .dubaiShow .spaCover{ background:url("../img/destinations/dubaiSpa1-x2.jpg") no-repeat; }
+    #imageSlides #spa .f2 .dubaiShow .spaCover { background:url("../img/destinations/dubaiSpa1-x2.jpg") no-repeat; }
+    #imageSlides #spa .f3 .dubaiShow .spaCover { background:url("../img/destinations/spaRedHead-x2.jpg") no-repeat; }
+    #imageSlides #spa .f4 .dubaiShow .spaCover, #imageSlides #spa .f5 .dubaiShow .spaCover { 
+        background:url("../img/destinations/dubaiSpa2-x2.jpg") no-repeat; 
+    }
+
+    /* Sydney */
+    #imageSlides #sydney .f1 { background:url("../img/destinations/sydneyScreen1-x2.jpg") no-repeat; }      
+    #imageSlides #sydney .f2, 
+    #imageSlides #sydney .f3, 
+    #imageSlides #sydney .f4, 
+    #imageSlides #sydney .f5,
+    #imageSlides #sydney .f6 { 
+        background:url("../img/destinations/sydneyRoom-x2.jpg") no-repeat; 
+    }  
+
+    #sydney .displayTable { top:25.25%; }
+
+    /* Tokyo */
+    #imageSlides #tokyo .f1 { background:url("../img/destinations/tokyoScreen1-x2.jpg") no-repeat; }      
+    #imageSlides #tokyo .f2, 
+    #imageSlides #tokyo .f3 { 
+        background:url("../img/destinations/tokyoRoom-x2.jpg") no-repeat; 
+    }  
+    #imageSlides #tokyo .f4, 
+    #imageSlides #tokyo .f5,
+    #imageSlides #tokyo .f6 { background:url("../img/destinations/tokyoRedHead-x2.jpg") no-repeat; }  
+
+    /* Sao Paulo */
+    #imageSlides #saopaolo .f1 { background:url("../img/destinations/saoPauloScreen1-x2.jpg") no-repeat; }      
+    #imageSlides #saopaolo .f2, 
+    #imageSlides #saopaolo .f3, 
+    #imageSlides #saopaolo .f4, 
+    #imageSlides #saopaolo .f5,
+    #imageSlides #saopaolo .f6,
+    #imageSlides #saopaolo .f7,
+    #imageSlides #saopaolo .f8 { 
+        background:url("../img/destinations/saoPauloRoom-x2.jpg") no-repeat; 
+    }  
+
+    #saopaolo .displayTable { top:25.25%; }
+
+    /* Las Vegas */
+    #imageSlides #lasvegas .f1 { background:url("../img/destinations/lasVegasScreen1-x2.jpg") no-repeat; }
+    #imageSlides #lasvegas .f2,
+    #imageSlides #lasvegas .f3,
+    #imageSlides #lasvegas .f4,
+    #imageSlides #lasvegas .f5 { 
+        background:url("../img/destinations/lasVegasRoom-x2.jpg") no-repeat;     
+    }         
+
+    #imageSlides #lasvegas .f6,
+    #imageSlides #lasvegas .f7 { 
+        background:url("../img/destinations/lasVegasRestaurant-x2.jpg") no-repeat; 
+    }
+
+    #imageSlides #lasvegas .f8,
+    #imageSlides #lasvegas .f9 { 
+        background:url("../img/destinations/lasVegasRedHead-x2.jpg") no-repeat;        
+    }  
+
+    #lasvegas .displayTable { top:25.25%; } 
+
+    /* Chicago */
+    #imageSlides #chicago .f1 { background:url("../img/destinations/chicagoScreen1-x2.jpg") no-repeat; }
+    #imageSlides #chicago .f2,
+    #imageSlides #chicago .f3 { 
+        background:url("../img/destinations/chicagoLobby-x2.jpg") no-repeat; 
+    }
+
+
+        #imageSlides #newyork .f1 img, 
+        #imageSlides #newyork .f2 img,
+        #imageSlides #london .f1 img,
+        #imageSlides #london .f2 img,
+        #imageSlides #london .f3 img,
+        #imageSlides #london .f4 img,
+        #imageSlides #paris .f1 img,
+        #imageSlides #paris .f2 img,
+        #imageSlides #paris .f3 img,
+        #imageSlides #paris .f4 img,        
+        #imageSlides #dubai .f1 img,
+        #imageSlides #dubai .f2 img,
+        #imageSlides #dubai .f3 img,
+        #imageSlides #dubai .f4 img,
+        #imageSlides #dubai .f5 img,
+        #imageSlides #dubai .f6 img,
+        #imageSlides #dubai .f7 img,
+        #imageSlides #hongkong .f1 img,
+        #imageSlides #hongkong .f2 img,
+        #imageSlides #hongkong .f3 img,
+        #imageSlides #hongkong .f4 img,
+        #imageSlides #hongkong .f5 img,
+        #imageSlides #hongkong .f6 img,
+        #imageSlides #hongkong .f7 img,
+        #imageSlides #spa .f1 img,
+        #imageSlides #spa .f2 img,
+        #imageSlides #spa .f3 img,
+        #imageSlides #spa .f4 img,
+        #imageSlides #spa .f5 img,
+        #imageSlides #sydney .f1 img,
+        #imageSlides #sydney .f2 img,
+        #imageSlides #sydney .f3 img,
+        #imageSlides #sydney .f4 img,
+        #imageSlides #sydney .f5 img,
+        #imageSlides #sydney .f6 img,
+        #imageSlides #saopaolo .f1 img,
+        #imageSlides #saopaolo .f2 img,
+        #imageSlides #saopaolo .f3 img,
+        #imageSlides #saopaolo .f4 img,
+        #imageSlides #saopaolo .f5 img,
+        #imageSlides #saopaolo .f6 img,
+        #imageSlides #saopaolo .f7 img,
+        #imageSlides #saopaolo .f8 img,
+        #imageSlides #tokyo .f1 img,
+        #imageSlides #tokyo .f2 img,
+        #imageSlides #tokyo .f3 img,
+        #imageSlides #tokyo .f4 img,
+        #imageSlides #tokyo .f5 img,
+        #imageSlides #tokyo .f6 img,
+        #imageSlides #lasvegas .f1 img,
+        #imageSlides #lasvegas .f2 img,
+        #imageSlides #lasvegas .f3 img,
+        #imageSlides #lasvegas .f4 img,
+        #imageSlides #lasvegas .f5 img,
+        #imageSlides #lasvegas .f6 img,
+        #imageSlides #lasvegas .f7 img,
+        #imageSlides #lasvegas .f8 img,
+        #imageSlides #lasvegas .f9 img,
+        #imageSlides #chicago .f1 img,
+        #imageSlides #chicago .f2 img,
+        #imageSlides #chicago .f3 img { 
+            display:none; 
+        }
+
+        #imageSlides #spa .f1 .dubaiShow .spaCover img,
+        #imageSlides #spa .f2 .dubaiShow .spaCover img,
+        #imageSlides #spa .f3 .dubaiShow .spaCover img,
+        #imageSlides #spa .f4 .dubaiShow .spaCover img,
+        #imageSlides #spa .f5 .dubaiShow .spaCover img,
+        #imageSlides #spa .f1 .hongkongShow .spaCover img,
+        #imageSlides #spa .f2 .hongkongShow .spaCover img,
+        #imageSlides #spa .f3 .hongkongShow .spaCover img,
+        #imageSlides #spa .f4 .hongkongShow .spaCover img,
+        #imageSlides #spa .f5 .hongkongShow .spaCover img,        
+        #imageSlides #restaurant .f1 .londonShow .restCover img,
+        #imageSlides #restaurant .f2 .londonShow .restCover img,
+        #imageSlides #restaurant .f3 .londonShow .restCover img,
+        #imageSlides #restaurant .f4 .londonShow .restCover img,
+        #imageSlides #restaurant .f5 .londonShow .restCover img,
+        #imageSlides #restaurant .f6 .londonShow .restCover img,
+        #imageSlides #restaurant .f7 .londonShow .restCover img,
+        #imageSlides #restaurant .f1 .parisShow .restCover img,
+        #imageSlides #restaurant .f2 .parisShow .restCover img,
+        #imageSlides #restaurant .f3 .parisShow .restCover img,
+        #imageSlides #restaurant .f4 .parisShow .restCover img,
+        #imageSlides #restaurant .f5 .parisShow .restCover img,
+        #imageSlides #restaurant .f6 .parisShow .restCover img,
+        #imageSlides #restaurant .f7 .parisShow .restCover img,        
+        #imagesSlides #spa img {
+            display:none;
+        }
+
+        #imageSlides #london .f2 img.calculateImg,
+        #imageSlides #paris .f2 img.calculateImg,
+        #imageSlides #hongkong .f5 img.calculateImg,
+        #imageSlides #hongkong .f6 img.calculateImg,       
+        #imageSlides #dubai .f5 img.calculateImg,
+        #imageSlides #dubai .f6 img.calculateImg,
+        #imageSlides #sydney .f2 img.calculateImg,
+        #imageSlides #saopaolo .f7 img.calculateImg,
+        #imageSlides #tokyo .f2 img.calculateImg,
+        #imageSlides #tokyo .f5 img.calculateImg,
+        #imageSlides #lasvegas .f5 img.calculateImg,
+        #imageSlides #chicago .f2 img.calculateImg { 
+            display:inline-block; 
+        }
+
+        #imagesSlides #restaurant .f2 img.calculateImg,
+        #imagesSlides #restaurant .f6 img.calculateImg {
+            display:inline-block;
+        }
+
+        #imageSlides #spa .f4 .displayTable table.spaTable tbody tr td.col2 img,
+        #imageSlides #spa .f4 .displayTable table.spaTable tbody tr td.col4 img,
+        #imageSlides #spa .f4 .displayTable table.spaTable tbody tr td.col6 img {
+            display:block !important;
+        }
+
+    /* Las Vegas */
+    #lasvegas sup { font-size:70%; }
+
+    /* Reveal */
+    #reveal .controlsWide { background:rgba(0,0,0,.3) !important; padding-top:.5em !important; }
+    #reveal .controlsWide[style] {top:auto !important;}
+    #reveal .controlsWide .backBtn { margin-left:1em; }
+    #reveal .controlsWide .forwardBtn { margin-right:1em; }
+
+    #reveal .part2 img { width: 80%; margin: 0 auto; }
+    #reveal .part2 .display { color: #FFF; text-align: center; font-size: 98%; }
+    #reveal .part2 img.pin { width:40%; margin: 0 auto; display: block; }
+    #reveal .part2 img.tk { position: absolute; bottom: 7%; left: 20%; }
+    #reveal .part2 a { position: absolute; left: 30%; bottom: -5%; color: white; font-style: italic; }
+    .prizeEmphasis { height: 1em; margin: 0; font-size: 2em; font-style: italic; display: block; font-weight: 600; text-transform: none; line-height: .8em; }
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}

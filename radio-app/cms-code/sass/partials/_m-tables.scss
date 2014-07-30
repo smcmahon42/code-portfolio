@@ -1,0 +1,75 @@
+// GRAY TABLE STYLES -------------
+table.m-grayProgressTable {
+  $colors: (
+    lighten($primary-color, 20),
+    lighten($primary-color, 25), 
+    lighten($primary-color, 30),
+    lighten($primary-color, 35),
+    lighten($primary-color, 40),
+    lighten($primary-color, 45),
+    lighten($primary-color, 50),
+    lighten($primary-color, 55)
+  );
+  margin: 10px 0 0 0;
+
+  td, th {
+    padding: 5px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+  }//td, th 
+
+  thead {
+    tr { border-bottom: 1px solid lighten($primary-color, 70); }
+    @for $i from 1 through length($colors) {
+       th:nth-of-type(#{$i}) {
+           background: nth($colors, $i);
+       }
+    }
+  }//thead
+
+  tbody {
+    tr { border-bottom: 1px solid lighten($primary-color, 10); }
+    tr:last-child { border-bottom: none; }
+    @for $i from 1 through length($colors) {
+       td:nth-of-type(#{$i}) {
+           background: nth($colors, $i);
+       }
+    }
+    tr.selected {
+      background-color: shade($blue, 40);
+      td {
+        color: $primary-color;
+        background: lighten($yellow, 63);
+        vertical-align: top;
+      }
+    }
+  }//tbody
+
+  @include mx-breakPoints(lg) { min-width: 40%; }
+  @include mx-breakPoints(md) { min-width: 60%; }
+  @include mx-breakPoints(sm) { width: 100%; }
+}// table.grayProgress
+
+
+//Table Row lists --------------
+table.m-displayTableRows {
+  width: 100%;
+  tr {
+      padding: 10px;
+      background: lighten($yellow, 63);
+      border: 1px solid lighten($primary-color, 60);
+      border-top: 1px solid lighten($primary-color, 70);
+      border-bottom: 1px solid lighten($primary-color, 50);
+    th {
+      color: shade($primary-text-color, 15);
+      font-weight: 300;
+    }
+    td, th {
+      padding: 5px;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

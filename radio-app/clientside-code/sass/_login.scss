@@ -1,0 +1,293 @@
+.login {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: transparent url(../../../img/landing-3.jpg) no-repeat center top;
+  background-size: cover;
+}
+
+.login form {
+  position: relative;
+  width: 300px;
+  height: auto;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.login form[login-failed="true"] {
+  -webkit-animation: login-failed 400ms 1 ease-out;
+}
+
+@-webkit-keyframes login-failed {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  20%, 60% {
+    -webkit-transform: translate3d(-15%, 0, 0);
+  }
+  40% {
+    -webkit-transform: translate3d(20%, 0, 0);
+  }
+}
+
+.login label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  display: none;
+}
+
+.welcome {
+  color: #A7A7A7;
+  position: absolute;
+  top: 35px;
+  bottom: 30px;
+  width: 100%;
+  padding: 0px 0px 0px 20px;
+}
+
+.welcome h2 {
+  text-decoration: underline;
+}
+
+.welcome ol,
+.welcome ul {
+  padding: 0 0 0 20px;
+}
+
+/**
+ *  Sign In
+ */
+#signin-header-wrap {
+  width: 100%;
+  background: #333333 url(../../../img/bg-header.png) repeat-x;
+}
+
+#signin-header {
+  position: relative;
+  max-width: 960px;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+#signin-logo {
+  float: left;
+  width: 463px;
+  margin: 0 -146px;
+  background: transparent url(../../../img/logo-m.png) no-repeat;
+}
+
+#signin-logo a {
+  display: block;
+  width: 171px;
+  height: 50px;
+  margin-left: 146px;
+  text-indent: -999px;
+}
+
+#signup {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.875em;
+  font-weight: 300;
+  text-align: center;
+  color: #fff;
+}
+
+.signup {
+  float: left;
+  padding: 11px 0;
+}
+
+#signup button {
+  float: left;
+  margin: 0;
+  margin-left: 25px;
+}
+
+button.btn-gold {
+  padding: 8px 15px;
+  font-size: 15px;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #CF9128;
+}
+
+#LoginForm h2 {
+  margin: -10px 0 24px;
+  text-align: center;
+}
+
+.login input[type="text"],
+.login input[type="email"],
+.login input[type="password"] {
+  font-size: 15px;
+  font-weight: 300;
+  position: relative;
+  color: #fff;
+  padding: 18px 15px 18px 30px;
+  border: 0;
+  margin: 0 -30px 3px;
+  width: 300px;
+  height: auto;
+  outline: none;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-font-smoothing: antialiased;
+}
+
+.login input[type="text"].focused,
+.login input[type="email"].focused,
+.login input[type="password"].focused {
+  color: #fff;
+}
+
+.login button[type="submit"],
+.login input[type="submit"] {
+  margin-top: 20px;
+  padding: 15px 35px;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  font-size: 17px;
+  color: #b40b1a;
+  cursor: pointer;
+  text-shadow: none;
+  -webkit-font-smoothing: antialiased;
+  background: #fff;
+}
+
+.login p.button-concealer {
+  margin-top: 20px;
+  padding: 15px 35px;
+  border: 0;
+  font-size: 17px;
+  text-shadow: none;
+}
+
+.login p.button-concealer span {
+  padding-left: 25px;
+  background: url("../../img/login-spinner.gif") left 50% no-repeat;
+}
+
+.login button[type="submit"]:active,
+.login input[type="submit"]:active {
+  background: #494949;
+}
+
+/* login form */
+
+.login input.fancyform[type="checkbox"],
+.login input.fancyform[type="radio"] {
+  display: none;
+}
+
+.login input.fancyform[type="radio"] + label span.fancyradio {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  background: transparent url(../../../img/check_radio.png) left top no-repeat;
+  cursor: pointer;
+}
+
+.login input.fancyform[type="radio"]:checked + label span.fancyradio {
+  background: transparent url(../../../img/check_radio.png) -32px top no-repeat;
+}
+
+.login input.fancyform[type="radio"] + label span {
+  font-size: 13px;
+  color: #999;
+}
+
+.login input.fancyform[type="checkbox"] + label span.fancyradio {
+  display: inline-block;
+  margin: -4px 5px 0 0;
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  background: url(../../../img/check_radio.png) transparent -64px top no-repeat;
+  cursor: pointer;
+}
+
+.login input.fancyform[type="checkbox"]:checked + label span.fancyradio {
+  background: url(../../../img/check_radio.png) transparent -96px top no-repeat;
+}
+
+.login input.fancyform[type="checkbox"] + label span {
+  font-size: 0.8125em;
+  color: #999;
+}
+
+.login-error {
+  display: block;
+  font-size: 13px;
+  margin: 0 0 10px 0;
+  color: #b60c1a;
+  text-align: center;
+}
+
+.form-actions {
+  text-align: center;
+}
+
+.form-remember-me {
+  margin-top: 15px;
+}
+
+.form-remember-me label {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.form-links {
+  text-align: center;
+  margin-top: 20px;
+  color: #b60c1a;
+}
+
+.form-links a {
+  font-weight: normal;
+}
+
+.form-links output {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+a.ios, a.android {
+  display: inline-block;
+  width: 165px;
+  background-size: contain;
+}
+
+a.ios {
+  margin: 0 10px 0 0;
+}
+
+a.ios img, a.android img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media all and (max-width: 699px) {
+  .login {
+    position: relative;
+  }
+}

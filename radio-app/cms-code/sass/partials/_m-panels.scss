@@ -1,0 +1,33 @@
+//Sub Navigation Background --------------
+.m-panel-roundedTopCorners {
+	padding: 10px;
+	background: lighten( $primary-color, 70 );
+	border: 1px solid lighten( $primary-color, 60 );
+	border-bottom: 1px solid lighten( $primary-color, 40 );
+	@include border-radius(5px 5px 0 0);
+}
+.m-panel-roundedAllCorners { 
+	padding: 10px;
+	background: lighten( $primary-color, 70 );
+	border: 1px solid lighten( $primary-color, 60 );
+	border-bottom: 1px solid lighten( $primary-color, 40 );
+	@include border-radius(0 0 5px 5px);
+}
+.m-panel-roundedBottomCorners { 
+	padding: 10px;
+	background: lighten( $primary-color, 70 );
+	border: 1px solid lighten( $primary-color, 60 );
+	border-bottom: 1px solid lighten( $primary-color, 40 );
+	border-top: 1px solid white;
+	@include border-radius(0 0 5px 5px);
+}
+
+// General Display Background --------------
+.m-panel-squareAllCorners { 
+	padding: 10px;
+	background: lighten($primary-color, 70);
+	border: 1px solid lighten($primary-color, 60);
+	border-top: 1px solid white;
+	border-bottom: 1px solid lighten($primary-color, 40);
+}
+

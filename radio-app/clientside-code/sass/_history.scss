@@ -1,0 +1,214 @@
+//=> HTML relation
+//=>  /inc/history/*
+
+/**
+ *	History Viewport
+ */
+.history-controller {
+  background-color: $bg-light;
+  border-top: 5px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+  @include background-image(linear-gradient( $bg-light, darken($bg-light, 10%)));
+}
+
+[history-nav] {
+  margin-top: 15px;
+}
+
+[search-sort-history] {
+  padding-top: 0;
+  width: 80%;
+  margin: 0 auto 10px auto;
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+  label {
+    display: none;
+  }
+}
+
+[search-history] {
+  float: left;
+  display: block;
+  width: 58%;
+  height: auto;
+  padding-right: 10px;
+  position: static;
+  text-align: right;
+}
+
+[sort-history] {
+  float: left;
+  display: block;
+  width: 42%;
+  height: auto;
+  padding-left: 10px;
+  position: static;
+  text-align: left;
+}
+
+[history-nav] {
+  ul {
+    list-style: none;
+    margin: 0 4px 20px 0;
+    padding-left: 0;
+    text-align: center;
+  }
+  li {
+    -webkit-appearance: none;
+    display: inline-block;
+    font: 300 12px Arial,Helvetica,sans-serif;
+    line-height: 1;
+    padding: 10px 16px 9px;
+    margin-left: -4px;
+    background: #ececec;
+    background: -webkit-linear-gradient(#e8e8e8, #c3c3c3);
+    color: #656565;
+    border-width: 1px 1px 1px 0;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.33);
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.1), 0px 2px 3px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+  }
+}
+
+[history-list] {
+  position: absolute;
+  top: 70px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+}
+
+section[history-list] {
+  min-width: inherit;
+}
+
+[history-nav] li.active {
+  background: #fff;
+  color: #000;
+}
+
+li.listener {
+  &:first-child {
+    border-left: 1px solid rgba(0, 0, 0, 0.33);
+    -webkit-border-top-left-radius: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+    -moz-border-radius-bottomleft: 6px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+  &:last-child {
+    -webkit-border-top-right-radius: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+    -moz-border-radius-topright: 6px;
+    -moz-border-radius-bottomright: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+}
+
+[search-history] {
+  [search-control-set] {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  [search-query] {
+    font-size: 15px;
+    margin: 0;
+    width: 100%;
+    padding: 8px 20px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  button[search-submit] {
+    background: transparent;
+    border: none;
+    color: #332C2A;
+    font-size: 25px;
+    text-shadow: none;
+    box-shadow: none;
+    padding: 0;
+    width: 1em;
+    height: 1em;
+    top: 5px;
+    right: 5px;
+  }
+  [search-control-set] {
+    button[search-clear] {
+      display: none;
+    }
+    [search-spinner] {
+      top: 6px;
+      right: 85px;
+    }
+  }
+}
+
+/* Listening History List */
+#Listen [track-list-item] {
+  width: 100%;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+#Listen [box-density="medium"],
+#Listen [track-secondary-info],
+#Listen [track-list] .list-item-rating {
+  position: static;
+  float: left;
+  width: 33.333%;
+  min-height: 68px;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/*Rated Artists and Tracks */
+
+#HistoryRatedArtist,
+#HistoryRatedTrack {
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  [list-item-label] {
+    top: 19px;
+    @include box-shadow(0px 5px 5px 0px rgba(0, 0, 0, 0.7));
+    z-index: 2;
+  }
+  article {
+    width: 50%;
+    float: left;
+    padding: 0 20px 20px 20px;
+    border-right: 1px solid black;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  [box-density="medium"] {
+    padding: 10px 10px 0px 10px;
+  }
+  [track-album-info] {
+    margin-bottom: 5px;
+  }
+}
+
+#HistoryRatedArtistHeader,
+#HistoryRatedArtistHeader {
+  top: 20px !important;
+}
+
+#Track [history-list] .list,
+#Artist [history-list] .list {
+  top: 140px;
+}

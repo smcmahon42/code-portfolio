@@ -1,0 +1,9 @@
+ul#navbar li ul li a div.cost-top  { left:55px; }
+
+/* Images that may be transparent should not have alpha applied */
+.circle img {
+	zoom: 1;
+	-ms-filter: none;
+	filter: none;
+	opacity: 1.0;
+}

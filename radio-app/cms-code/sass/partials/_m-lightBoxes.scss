@@ -1,0 +1,79 @@
+// REMATCH LIGHTBOX -------------
+.match-dialog {
+  position: fixed;
+  display: block;
+  left: 0%; top: 0%; height: 100%; right: 0%;
+  background: rgba(0,0,0, 0.75);
+  z-index: 100;
+}
+
+.m-lightboxWrapper {
+  width: 90%;
+  margin: 15px auto 0 auto;
+  h1 {
+    color: #000000;
+    font-size: 1.3em;
+    margin-bottom: 5px;
+    padding: 0 0 7px 0;
+    border-bottom: 1px solid $primary-color;
+  }
+  header {
+    @include clearfix();
+    label, span {
+      font-family: $font-secondary;
+      margin: 3px 0;
+      display: inline-block;
+    }
+    label {
+      font-weight: 700;
+    }
+    .displayInfo {
+      float: left;
+      width: 50%;
+    }
+    form {
+      float: left;
+      width: 50%;
+      h2 {
+        color: #000000;
+        font-size: 1.1em;
+        margin: 5px 0;
+      }
+      article {
+        margin:2px 0; 
+      }
+      button {
+        margin-top: 10px;
+      }
+      label {
+        min-width: 50px;
+      }
+    }
+  }//header
+  .results {
+    overflow-y: scroll;
+    max-height: 250px;
+    button.leave-unmatched {
+      margin-top: 10px;
+    }
+    .player {
+      width: 200px;
+      margin: 10px auto; 
+      audio {
+        width: 100%;
+      }
+    }
+  }//results
+  .album-artist {
+    display: block;
+    text-transform: uppercase;
+    font-size: 10px;
+  }//.album-artist
+  table.candidates {
+    width: 100%; margin: 0;
+  }//table.candidates
+  th.artist { width: 30%; }
+  th.title  { width: 30%; }
+  th.album  { width: 30%; }
+
+}//m-lightboxWrapper

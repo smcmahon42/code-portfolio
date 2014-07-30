@@ -1,0 +1,241 @@
+#NonMusicSegment {
+
+  .isPublishedBtn {
+    background-color: $green;
+    color: white;
+    padding: 5px 5px;
+  }
+
+  .isNotPublishedBtn {
+    background-color: lighten($red, 10);
+    color: white;
+    padding: 5px 5px;
+  }
+
+
+  .uploadFileSuccess {
+    background-color: $green;
+    color: white;
+  }
+
+  .uploadFileError {
+    background-color: $red;
+    color: white;
+  }
+
+
+}
+
+#SegmentUploadDisplay {
+
+  background-color: lighten($primary-color, 50);    
+  display: inline-block;
+  @include clearfix();
+  @include border-radius();
+
+  h2 {
+    color: $black;
+    padding: 10px;
+    margin: 0;
+    border-bottom: 1px solid $primary-color;
+  }//h2
+
+  li {
+
+    list-style: none;
+    label {
+      float: left;
+      font-size: 0.95rem;
+      margin: 5px 5px 5px 0;
+      width: 65px;
+    }//label  
+
+    &:last-child {
+      width: 290px;
+      button {
+        float: right;
+      }//button
+    }//last-child
+
+  }//li
+
+  input {
+    width: 220px;
+  }//input
+
+  button {
+    padding: 6px 8px;
+  }//button
+
+  span.disclaimer {
+    display: block;
+    font-size: 0.7em;
+    margin:5px 0 5px 70px;
+    font-style: italic;
+  }
+
+  .addDefaultImg {
+    display: none;
+  }
+
+  .uploadTextWrapper,
+  .fileUploadWrapper {
+    padding: 10px;
+    @include clearfix();
+  }
+
+  .uploadTextWrapper {
+    border-top: 1px solid lighten($primary-color, 65);
+  }
+
+  .fileUploadWrapper {
+    display: none;
+    label {
+      float: none;
+      width: 60px;
+      display: inline-block;
+    }//label
+  }
+
+  .imageDisplayColumn {
+    min-width: 150px;
+  }
+
+}//#SegmentUploadDisplay
+
+
+#SegmentGlobalOptons {
+
+  background-color: lighten($primary-color, 50);
+  float: right;
+  margin-bottom: 15px;
+  @include border-radius();
+
+  h2 {
+    color: $black;
+    padding: 10px;
+    margin: 0;
+    border-bottom: 1px solid $primary-color;
+  }
+
+  label, span {
+    font-size: 0.95rem;
+  }
+
+  input {
+    width: 30px;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .globalOptions {
+    padding: 10px;
+  }
+
+  .globalOptions {
+    border-top: 1px solid lighten($primary-color, 65);
+  }
+
+}
+
+#NonMusicSegment {
+
+  span.segmentTitle { 
+    display: block;
+    font-size: 0.90rem;
+    line-height: 1.1rem;
+  }
+
+  span.segmentSubTitle { 
+    display: block;
+    font-size: 0.80rem;
+    line-height: 1rem;
+  }
+
+}//#NonMusicSegment
+
+#SegmentRowDisplay {
+
+  .m-displayColumnTitle,
+  .m-nonMusicSegmentList {
+    li { padding: 10px; }
+    li.segment-title { width : 25%; }
+    li.segment-image { width : 20%; }
+    li.segment-audio { width : 30%; }
+    li.segment-publishBtn { width : 12%; }
+    li.segment-deleteBtn { width : 7%; }
+    li.segment-editBtn { width : 6%; }
+  }
+
+  .m-nonMusicSegmentList {
+    padding: 0;
+    list-style: none;
+    li {
+    float: left;
+    }
+  }
+
+  .audioLocation {
+    width: 100%;
+  }
+
+  .imageDisplay {
+    margin-top: 15px;
+    width: 100%;
+    img {
+      max-width: 100%;
+      //max-width: 250px;
+    }//img
+  }
+
+  .segment-edit {
+    display: none;
+    background-color: lighten($primary-color, 50);
+    width: 100%;
+
+    h2 {
+      color: $black;
+      padding: 10px 10px 10px 0;
+      margin: 0;
+      border-bottom: 1px solid $primary-color;
+    }//h2
+    
+    form { width: 100%; 
+      li { padding: 0; }
+      li.editTitles { width : 20%; }
+      li.editImageAudio { width : 40%; }
+      li.editSave { width : 20%; }
+      
+    }
+    label {
+      display: block;
+      margin: 10px 0 3px 0;
+      font-size: 0.95rem;
+    }
+    input {
+      margin-left: 0;
+      width: 80%;
+    }
+    input[type="text"]{
+      padding: 7px;
+    }
+
+    .editSave {
+      position: relative;
+      height: 120px;
+      button {
+        position: absolute;
+        left: 0;
+        //top: 0;
+        bottom: 0;
+        height: 30px;
+        width: 50px;
+      }
+    }
+
+  }//.segment-edit 
+
+}//#SegmentRowDisplay
+

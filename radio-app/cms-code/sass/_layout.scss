@@ -1,0 +1,485 @@
+/********************************************************************************
+ * layouts styles
+ *******************************************************************************/
+
+/* 
+Development Warning Message ----------------------------------------------------------- */
+
+#environment-warning {
+  position: absolute;
+  top: 5px; left: 50%;
+  width: 200px; margin-left: -100px;
+  padding: 5px;
+  background: #ffffff;
+  border: 1px solid red;
+  border-radius: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* 
+HEADER STYLES ----------------------------------------------------------- */
+
+.header-container,
+.footer-container,
+.main aside {
+  @include background-image(
+    linear-gradient(black,
+      lighten(black, 10) 40%, 
+      lighten(black, 15) 60%, 
+      black)
+  );
+}
+
+.pageHeader {
+  min-height:75px;
+  width:100%;
+}
+
+.pageTitle {
+  margin:0 auto;
+  padding:0 20px;
+  max-width:986px;
+}
+
+.main-container h1,
+#LoginForm h2 {
+  font-size: 1.15em;
+  line-height: 1.45em;
+  font-weight: 300;
+  color: lighten($moongrey, 50);
+  padding: 12px;
+  background: url(/img/bg-pageTitle.png) 0 -25px repeat-x;
+  height: 50px;
+}
+
+#ng-contentWrapper {
+  padding: 15px 1%;  
+}
+
+/* 
+LAYOUT STYLES ----------------------------------------------------------- */
+
+body.lock {
+  overflow: hidden;
+}
+
+// ADD TRACK SET SEARCH --------------
+#AddTrackSearch {
+  margin-top: 15px;
+  font-size: 0.8em;
+  background: 
+  label {
+    display: block;
+    margin: 5px 0;
+  }
+  button {
+    margin: 5px 0;
+    display: block;
+  }
+  form {
+    width: 250px;
+    margin-bottom: 20px;
+    h5 {
+      font-size: 1.3em;
+      font-weight: 700;
+      padding-bottom: 3px;
+      border-bottom: 1px solid lighten($moongrey, 30);
+      margin-bottom: 5px;
+    }
+    input, label {
+      display: block;
+      margin-bottom: 5px;
+      width: 100%;
+      @include border-radius();
+    }
+    button {
+      margin-top: 10px;
+    }
+  }
+}
+
+
+//TRACK FILTER FORM -------------
+.track-set-filter {
+  font-size: 0.8em;
+  input, select {
+    margin: 0 5px;
+  }
+  ul {
+    @include clearfix();
+    li {
+      min-height: 20px;
+      @include breakpoint(lg) { float: left; }
+      @include breakpoint(md) { float: left; }
+      @include breakpoint(sm) { float: none; margin: 5px 0; }
+      input, select {
+        @include breakpoint(sm) { margin-left: 1px; }
+      }
+    }    
+  }
+}//.track-set-filter
+
+// ADD TRACK SETS EDIT TRACK --------------
+#AddTrackForm {
+  margin: 15px 0;
+  h3 {
+    color: darken($moongrey, 20);
+    font-size: 1.1em;
+    margin-bottom: 5px; 
+  }
+  header {
+    margin-bottom: 10px;
+    label, span {
+      font-family: $font-condensed;
+      margin: 3px 0;
+      display: inline-block;
+    }
+    label {
+      font-weight: 700;
+    }
+  }
+  form {
+    border: none;
+    display: inline-block;
+  }
+  @include TrackForms;
+}//AddTrackForm
+
+
+// ADD TRACK SETS EDIT TRACK --------------
+#EditTrackForm {
+  float: left;
+  width: 90%;
+  margin-top: 15px;
+  @include TrackForms;
+}
+
+
+// BUCKET RATIO TABLE -----------
+.ratios {
+    h3 {
+      color: darken($moongrey, 20);
+      font-size: 1.1em;
+    }
+    h4 {
+      margin: 5px 0 0 0;
+      font-size: 0.9em;
+    }
+}//.ratios
+
+.notice {
+  font-style: italic;
+  font-size: 0.75em;
+}
+
+//Artist Search -----------
+#artist-output {
+  img {
+    width: 20px;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+[unmatched-albums-filter] {
+  @include clearfix();
+  span {
+      display: block;
+      float: left;
+      margin: 0 2px 3px 0;
+      a {
+        font-size: 0.85em;
+        display: inline-block;
+        border: 1px solid #ccc;
+        background: white;
+        padding:4px 0;
+        margin: 0;
+        width: 21px;
+        text-align: center;
+        text-decoration: none;
+        @include border-radius();
+        &:hover {
+          color: white;
+          background: $moongrey;
+        }
+      }
+  }
+}
+
+#unmatched-albums {
+  table {
+    width: 100%;
+    td:nth-child(1){width: 15%; }
+    td:nth-child(2){width: 10%; }
+    td:nth-child(3){width: 33%; }
+    td:nth-child(4){width: 33%; }
+    td { 
+      text-align: left; 
+      font-size: 0.85em; 
+      button {
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+#user-dsplay {
+  table {
+    width: 100%;
+    td:nth-child(1){width: 35%; }
+    td:nth-child(2){width: 65%; }
+    td { 
+      font-size: 0.85em; 
+    }
+  }
+}
+
+#user-level {
+  table {
+    width: 100%;
+    td:nth-child(1){width: 35%; }
+    td:nth-child(2){width: 65%; }
+    td { 
+      font-size: 0.85em; 
+    }
+  }
+}
+
+
+//UNMATCHED USER RATED TRACKS ------------
+[ng-controller="UnmatchedUserRatedTrackController"] {
+  .m-subnavBG-top {
+    p {
+      color: lighten($moongrey, 20);
+      margin: 5px 0;
+      font-size: 0.85em; 
+      line-height: 1.25em;
+    }
+  }
+  .m-toggleRadio {
+    li {
+      margin: 15px 0;
+      h5 {
+        margin-bottom: 10px;
+      }
+    }
+    li:nth-child(1){
+      margin-top: 0;
+    }
+    li:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+//ALBUM ARTWORK ---------------
+#album-container {
+  float: none;
+  margin: auto;
+  overflow: hidden;
+  @include breakpoint(lg) { width: 93%; }
+  @include breakpoint(md) { width: 100%; }
+  @include breakpoint(sm) { width: 90%; }
+  @include breakpoint(x-sm) { width: 50%; }
+  .m-single-album {
+    @include breakpoint(lg) { width: 23%; }
+    @include breakpoint(md) { width: 21%; }
+    @include breakpoint(sm) { width: 80%; }
+    @include breakpoint(x-sm) { width: 100%; margin-left: 0; }
+    [album-title] {
+      margin: 30px 0 0 0;
+    }
+  }
+}//album-container
+
+
+//USER DASHBOARD STATS DISPLAY ------------
+#userDashboard-stats {
+  $l-amount : 20; //lighten percentage
+  margin: 0;
+  @include clearfix();
+  li {
+    display: inline-block;
+    float: left;
+    margin: 0 20px 0 0;
+    border: 1px solid lighten($moongrey, 60);
+    padding: 10px;
+    @include border-radius();
+    @include breakpoint(sm) { float: none; display:block; margin:0 0 5px 0; }
+    .duration {
+      font-size: 0.9em;
+      font-family: $font-condensed;
+      color: lighten($moongrey, $l-amount);
+    }//duration
+    .number {
+      font-size: 3em;
+      font-family: $font-condensed;
+      color: lighten($moongrey, $l-amount);
+    }//number
+    .type {
+      font-size: 1.3em;
+      font-family: $font-condensed;
+      margin: 4px 0;
+      color: lighten($moongrey, $l-amount);
+    }//type
+    .comparison {
+      font-size: 1.3em;
+      font-family: $font-condensed;
+      font-weight: 700;
+      &.rising { color: $green; }
+      &.falling { color: $red; }
+      &.stagnant { color: $blue; }
+      span {
+        color: lighten($moongrey, $l-amount);
+        font-family: $font-condensed;
+        font-weight: 300;
+      }//span
+    }//comparison
+  }//li
+  li:last-child {
+    margin: 0;
+  }//li:last-child
+}//userDashboard-stats
+
+
+
+//USER DASHBOARD GRAPHICS DISPLAY ------------
+#displayGraphs {
+  width: 100%;
+  @include clearfix();
+  .displayUserGraph {
+    width: 49%;
+    float: left;
+    clear: left;
+    @include breakpoint(lg) { min-width: 49%; }
+    @include breakpoint(md) { min-width: 100%; float: none; }
+    @include breakpoint(sm) { width: 100%; }
+  }//displayUserGraph
+  article {
+    height: 300px;
+    width: 100%;
+  }
+  .userGraph1 {
+    margin-bottom: 15px;
+  }//userGraph1
+  .displayUserList {
+    width: 49%;
+    height: 615px;
+    overflow-y: scroll;
+    float: right;
+    @include breakpoint(lg) { min-width: 49%; }
+    @include breakpoint(md) { 
+      min-width: 100%; float: none; height: 200px; margin-bottom: 20px; }
+    @include breakpoint(sm) { width: 100%; }
+    h3 {
+      margin: 0 0 10px 0;
+    }//h3
+  }//displayUserList
+}//displayGraph
+
+
+
+//USER PLAYLIST DISPLAY ------------
+#showPastEntries {
+  color: lighten($moongrey, 30);
+  font-family: $font-condensed;
+  line-height: 0.9em;
+}//showPastEntries
+
+
+//USER PLAYLIST DISPLAY ------------
+#LoginForm {
+  margin: auto;
+  padding: 20px;
+  background: white;
+  @include breakpoint(lg) {width: 500px;}
+  @include breakpoint(md) {width: 500px;}
+  @include breakpoint(sm) {width: 400px;}
+  @include breakpoint(x-sm) {width: 300px;}
+  @include border-radius();
+  @include box-shadow(#999 0 0 10px -2px);
+  .inputBlock {
+    width: 70%;
+    margin: 10px auto;
+    @include clearfix();
+    label { 
+      padding-top: 10px;
+      display: inline-block;
+      float: left;
+      font-weight: 300;
+      @include breakpoint(sm) { 
+        float: none; 
+        display: block;
+      }
+    }
+    input {
+      width: 60%;
+      float: right;
+      padding: 10px;
+      @include breakpoint(sm) { 
+        float: none; 
+        display: block;
+        width: 100%;
+        margin-top: 10px; 
+      }
+    }
+  }
+  .form-actions {
+    width: 70%;
+    margin: auto;
+    @include clearfix();
+    button {
+      float: right;
+      padding: 10px;
+    }
+  }
+}
+
+#productManager {
+  .upload {
+    display: inline-block;
+    margin-top: 15px;
+    @include clearfix();
+    li {
+      list-style: none;
+      display: block;
+      margin: 5px 0;
+      @include clearfix();
+      label {
+        float: left;
+        font-size: 1rem;
+        margin: 5px;
+        width: 50px;
+      }//label
+      input {
+        float: left;
+        width: 250px;
+      }//input
+    }// li
+    button {
+      display: block;
+      float: right;
+    }//button
+  }//.upload
+  audio {
+    width: 200px;
+  }
+}// #productManager
+
+
+//Pie Chart Styles for User Playlists section
+#playListPieCharts {
+  @include clearfix();
+  #bucketPieChart, #playingFromPieChart, #ratingPieChart {
+    float: left;
+    width: 33%;
+    @include breakpoint(sm) { float: none; width:100%; }
+  }  
+}
+
+
+
+

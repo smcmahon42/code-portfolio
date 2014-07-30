@@ -1,0 +1,79 @@
+@mixin breakpoint-width($point) {
+  @if $point == small {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @else if $point == big {
+    @media (min-width: 1023px) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-height($point) {
+  //taller then 605
+  @if $point == tall {
+    @media only screen and (min-height: 605px) {
+      @content;
+    }
+  }
+  //shorter then 605
+  @if $point == short {
+    @media only screen and (max-height: 605px) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-both($width, $height) {
+  // 1. 768w x 120h
+  @if $width == small and $height == short {
+    @media (max-width: 1023px) and (max-height: 605px) {
+      @content;
+    }
+    //@media (max-width: 769px) and (max-height: 693px) { @content; }
+  }
+  //2. 10024w x 120h (landscape ipad)
+  @if $width == small and $height == tall {
+    @media (max-width: 1023px) and (min-height: 605px) {
+      @content;
+    }
+    // @media (max-width: 769px) and (min-height: 692px) { @content; }
+  }
+  //3. 768w x 300h
+  @if $width == large and $height == short {
+    @media (min-width: 1023px) and (max-height: 605px) {
+      @content;
+    }
+    //@media (min-width: 768px) and (max-height: 693px) { @content; }
+  }
+  //3. 1024w x 300h
+  @if $width == large and $height == tall {
+    @media (min-width: 1023px) and (min-height: 605px) {
+      @content;
+    }
+    //@media (min-width: 768px) and (min-height: 692px) { @content; }
+  }
+}
+
+// 1. 120h x 768w
+// 2. 120h x 10024w (landscape ipad)
+// 3. 300h x 768w
+// 4. 300h x 1024w (full size)
+
+// Example:
+// #track-info [track-detail] {
+//   @include breakpoint-both(small, short) {
+//     color: red;
+//   }
+//   @include breakpoint-both(large, short) {
+//     color: orange;
+//   }
+//   @include breakpoint-both(large, tall) {
+//     color: green;
+//   }
+//   @include breakpoint-both(small, tall) {
+//     color: blue;
+//   }
+// }

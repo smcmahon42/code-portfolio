@@ -1,0 +1,327 @@
+//=> HTML relation
+//=>  /inc/mixer.html /inc/request.html
+
+.request-viewer .inside {
+  background-color: $bg-light;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+  @include background-image(linear-gradient($bg-light, darken($bg-light, 10%)));
+}
+
+/* ------------------------------------------------------------------------ */
+
+/**
+ *	Search Viewport
+ */
+[search-welcome] {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 0;
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.8em;
+  font-weight: 300;
+  h2 {
+    margin-top: 0;
+  }
+}
+
+[search-screen],
+[search-suggestions-screen] {
+  opacity: 0;
+  -webkit-transform: translateY(120px);
+  -webkit-transition: 0.2s all linear;
+  pointer-events: none;
+}
+
+[search-view-mode="none"] [search-screen],
+[search-view-mode="prelim"] [search-screen],
+[search-view-mode="prelim"] [search-suggestions-screen] {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  pointer-events: auto;
+}
+
+[search-view-mode="prelim"] [search-screen] {
+  top: 35px;
+  z-index: 5;
+  margin-top: 0;
+}
+
+[search-view-mode="list"] [search-screen],
+[search-view-mode="detail"] [search-screen],
+[search-view-mode="list"] [search-suggestions-screen],
+[search-view-mode="detail"] [search-suggestions-screen] {
+  display: none;
+}
+
+[search-screen][search-in-progress="true"] {
+  top: 10%;
+}
+
+/*[search-view-mode="prelim"] [search-query] {
+  width: 100%;
+}*/
+[search-screen] {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  right: 0;
+  margin: 0;
+  text-align: center;
+}
+
+[search-control-set] {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+[search-control-set] [search-spinner] {
+  position: absolute;
+  left: 0;
+  top: 115px;
+  right: 0;
+  color: rgba(255, 255, 255, 0.33);
+  text-align: center;
+}
+
+[search-control-set] [search-spinner-indicator] {
+  display: block;
+  font: 0/0 a;
+  position: relative;
+  width: 60px;
+  height: 35px;
+  margin: 20px auto 0;
+  color: transparent;
+  text-align: center;
+}
+
+//-- Spinner -- //
+@-webkit-keyframes vpulse {
+  0%, 100% {
+    -webkit-transform: translateY(10px);
+    background-color: #db1f5c;
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+    background-color: #ff5b33;
+  }
+}
+
+
+@-moz-keyframes vpulse {
+  0%, 100% {
+    -moz-transform: translateY(10px);
+    background-color: #db1f5c;
+  }
+  50% {
+    -moz-transform: translateY(-10px);
+    background-color: #ff5b33;
+  }
+}
+
+
+@keyframes vpulse {
+  0%, 100% {
+    transform: translateY(10px);
+    background-color: #db1f5c;
+  }
+  50% {
+    transform: translateY(-10px);
+    background-color: #ff5b33;
+  }
+}
+
+
+[search-spinner-indicator] > i {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 2px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  -webkit-animation: vpulse 1s ease-in-out infinite;
+  -moz-animation: vpulse 1s ease-in-out infinite;
+  animation: vpulse 1s ease-in-out infinite;
+}
+
+[search-spinner-indicator] > i:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+[search-spinner-indicator] > i:nth-child(3) {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+[search-spinner-indicator] > i:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+[search-spinner-indicator] > i:nth-child(5) {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+[search-control-set] label {
+  display: none;
+}
+
+[search-query] {
+  width: 100%;
+  font-family: inherit;
+  font-weight: 100;
+  font-size: 30px;
+  padding: 15px 20px;
+  color: #000;
+  outline: 0;
+  border: 1px solid #372722;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  @include border-radius(35px);
+  @include background-image(linear-gradient(white, #d2d2d2));
+  @include box-shadow(inset 0px 3px 5px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(255, 255, 255, 0.1));
+}
+
+.request-note {
+  opacity: .75;
+  font-size: 1.2em;
+}
+
+[search-control-set] input::-webkit-input-placeholder {
+  color: #000 !important;
+}
+
+[search-control-set] input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #000 !important;
+}
+
+[search-control-set] input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #000 !important;
+}
+
+[search-control-set] input:-ms-input-placeholder {
+  color: #000 !important;
+}
+
+[search-in-progress="true"] [search-query] {
+  opacity: 0.5;
+}
+
+[search-control-set] ::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.27);
+}
+
+button[search-submit] {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 28px;
+  width: 50px;
+  height: 50px;
+  @include border-radius(27px);
+}
+
+[search-control-set] button[search-clear] {
+  font-size: 20px;
+  font-weight: 300;
+  position: absolute;
+  top: 23px;
+  right: 70px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  line-height: 1em;
+  background: rgba(0, 0, 0, 0.15);
+  color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  text-align: center;
+  text-shadow: none;
+}
+
+[track-results-list] {
+  position: absolute;
+  top: 60px;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+}
+
+[artist-results-list] {
+  position: absolute;
+  top: 86px;
+  bottom: 10px;
+  right: 0;
+  width: 28%;
+}
+
+[track-results-list] .list,
+[artist-results-list] .list,
+[history-list] .list {
+  position: absolute;
+  top: 41px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  background: #18110F;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.45);
+}
+
+[artist-results-list] [navigation-list] {
+  width: 80%;
+  margin: 15px auto;
+}
+
+/* Search Results */
+[search-suggestions-screen] {
+  position: absolute;
+  top: 160px;
+  bottom: 10px;
+  left: 80px;
+  right: 80px;
+}
+
+[search-results-header] {
+  position: relative;
+}
+
+[search-results-header] h1 {
+  font-weight: 100;
+  font-size: 40px;
+}
+
+[search-results-header] h1 {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+  margin: 0 20px 0 0;
+}
+
+[search-results-header] menu {
+  position: absolute;
+  top: 55%;
+  right: 0;
+  margin: -16px 0 0;
+}
+
+/*--Artist loading--*/
+
+.artist-detail-loading {
+  top: 30%;
+  position: absolute;
+  left: 50%;
+  margin-left: -118px;
+}

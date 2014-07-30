@@ -1,0 +1,211 @@
+// ADD TRACK SET SEARCH --------------
+#Tracksets-addTrackSearchForm { 
+  margin-top: 15px;
+  font-size: 0.8em;
+  background: 
+  label {
+    display: block;
+    margin: 5px 0;
+  }
+  button {
+    margin: 5px 0;
+    display: block;
+  }
+  form {
+    width: 250px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: lighten($primary-color, 50);
+    @include border-radius();
+    @include box-shadow( lighten(black, 70) 0 0 15px 0px );
+    h5 {
+      font-size: 1.3em;
+      font-weight: 700;
+      padding-bottom: 3px;
+      border-bottom: 1px solid lighten($primary-color, 30);
+      margin-bottom: 5px;
+    }
+    input, label {
+      display: block;
+      margin-bottom: 5px;
+      width: 100%;
+      @include border-radius();
+    }
+    button {
+      margin-top: 10px;
+    }
+  }
+}
+
+// ADD TRACK SETS EDIT TRACK --------------
+#Tracksets-addTrackForm { 
+  margin: 15px 0;
+  h3 {
+    color: darken($primary-text-color, 20);
+    font-size: 1.1em;
+    margin-bottom: 5px; 
+  }
+  header {
+    margin-bottom: 10px;
+    label, span {
+      font-family: $font-secondary;
+      margin: 3px 0;
+      display: inline-block;
+    }
+    label {
+      font-weight: 700;
+    }
+  }
+  form {
+    border: none;
+    display: inline-block;
+    padding: 10px;
+    background: lighten($primary-color, 50);
+    @include border-radius();
+    @include box-shadow( lighten(black, 70) 0 0 15px 0px );
+  }//form
+  h5 {
+    display: inline-block;
+    font-size: 1em;
+    color: $moongrey;
+    width: 53px;
+    font-size: 0.9em;
+  }//h5
+  .m-toggleRadio {
+    display: inline-block;
+    margin: 5px 0;
+  }
+  article {
+    label {
+      display: inline-block;
+      width: 50px;
+      font-size: 0.9em;
+    }
+    input {
+      margin: 5px 0;
+    }
+    &.weight input {
+      @include border-radius();
+    }
+    &.buttons {
+      margin-top: 10px;
+    }
+  }//article
+}//AddTrackForm
+
+// ADD TRACK SETS EDIT TRACK --------------
+#Tracksets-editTrackForm { 
+  float: left;
+  width: 90%;
+  margin-top: 15px;
+  padding: 10px;
+  background: lighten($primary-color, 50);
+  @include border-radius();
+  @include box-shadow( lighten(black, 70) 0 0 15px 0px ); 
+  h5 {
+    display: inline-block;
+    font-size: 1em;
+    color: $moongrey;
+    width: 53px;
+    font-size: 0.9em;
+  }//h5
+  .m-toggleRadio {
+    display: inline-block;
+    margin: 5px 0;
+  }
+  article {
+    label {
+      display: inline-block;
+      width: 50px;
+      font-size: 0.9em;
+    }
+    input {
+      margin: 5px 0;
+    }
+    &.weight input {
+      @include border-radius();
+    }
+    &.buttons {
+      margin-top: 10px;
+    }
+  }//article
+}
+
+// BUCKET RATIO TABLE -----------
+#Tracksets-ratios { 
+    h3 {
+      color: darken($primary-text-color, 20);
+      font-size: 1.1em;
+    }
+    h4 {
+      margin: 5px 0 0 0;
+      font-size: 0.9em;
+    }
+}//.ratios
+
+#Tracksets-footerNotice {
+  font-style: italic;
+  font-size: 0.75em;
+}
+
+.percent-loaded {
+  span {
+    display: block;
+    &.left { float: left; }
+    &.right { float: right; }
+  }
+  overflow: hidden;
+}
+
+#mediaNetTabs {
+  .tab-content {
+    padding: 5px;
+    border: 1px solid lighten($primary-text-color, 50);
+    display: inline-block;
+    width: 50%;
+    @include border-right-radius();
+    @include border-bottom-left-radius();
+  }
+}
+
+#trackSetEdit{
+  padding: 15px;
+  border-bottom: 1px solid lighten($primary-text-color, 50);
+  min-height: 550px;
+  li { 
+    list-style: none;
+    margin-bottom: 15px;
+    width: 50%;
+    &::after {
+      content:"";    
+      height: 1px;
+      width: 50%;
+      display: block;
+      margin-top:10px;
+      background: -moz-linear-gradient(left, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 35%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.4)), color-stop(35%,rgba(0,0,0,0.4)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(left, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 35%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(left, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 35%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(left, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 35%,rgba(0,0,0,0) 100%); /* IE10+ */
+      background: linear-gradient(to right, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 35%,rgba(0,0,0,0) 100%); /* W3C */
+    }
+  }
+  label {
+    display: block;
+    margin-bottom:10px;
+  }
+  input {
+    display: block;
+    margin: 5px 0;
+    &[type='radio']{
+      display:inline-block;
+      margin-right: 10px;
+    }
+  }
+
+}
+.trackSetTitles {}
+.trackSetRow {}
+
+
+

@@ -1,0 +1,39 @@
+.tabs-system {
+
+	ul {
+		margin: 0;
+		@include clearfix();
+		li {
+			float: left;
+			padding: 5px 10px;
+			margin-right: 3px; 
+			border: 1px solid #ccc;
+			background: white;
+			@include border-radius( 5px 5px 0 0 );
+			a {
+				color: lighten($primary-text-color, 20);
+				font-weight: 300;
+				font-size: 0.9em;
+				text-decoration: none;
+			}
+			&.active {
+				background: #666;
+				a {
+					color: white;
+					font-weight: 300;
+					font-size: 0.9em;
+				}
+			}
+		}//.li
+	}//.tabs
+
+	.tab-content {
+		.tab-pane, .hide {
+			display: none;
+		}
+		.active {
+			display: block;
+		}
+	}//.tab-content
+
+}

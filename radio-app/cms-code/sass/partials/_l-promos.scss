@@ -1,0 +1,30 @@
+#Promos { //#Promos
+  .upload {
+    display: inline-block;
+    margin-top: 15px;
+    @include clearfix();
+    li {
+      list-style: none;
+      display: block;
+      margin: 5px 0;
+      @include clearfix();
+      label {
+        float: left;
+        font-size: 1rem;
+        margin: 5px;
+        width: 50px;
+      }//label
+      input {
+        float: left;
+        width: 250px;
+      }//input
+    }// li
+    button {
+      display: block;
+      float: right;
+    }//button
+  }//.upload
+  audio {
+    width: 200px;
+  }
+}// #productManager

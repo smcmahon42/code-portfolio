@@ -1,0 +1,123 @@
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.clearfix:before,.clearfix:after {
+  display:table;
+  content:" ";
+}
+
+.clearfix:after {
+  clear:both;
+}
+
+.clearfix {
+  *zoom:1;
+}
+
+/********************************************************************************
+ * base styles
+ *******************************************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font-family: $font-primary;
+  color: $primary-text-color;
+  font-size:1em;
+}
+
+* {
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+::-moz-selection, ::selection {
+  background:#b3d4fc;
+  text-shadow:none;
+}
+
+body {
+  background: url(/img/bg-body.png) repeat;
+
+}
+
+hr {
+  display:block;
+  margin:1em 0;
+  padding:0;
+  height:1px;
+  border:0;
+  border-top:1px solid #ccc;
+}
+
+fieldset {
+  margin:0;
+  padding:0;
+  border:0;
+}
+
+textarea {
+  resize:vertical;
+}
+
+#{headings()}{
+  font-family: $font-primary;
+  font-weight: normal;
+  color: lighten($primary-text-color, 20);
+}
+
+input {
+  color: lighten($primary-text-color, 15);
+  border: 1px solid lighten($primary-color, 40);
+  padding: 5px;
+  @include border-radius();
+}
+input[type='checkbox']{
+  padding: 0;
+}
+
+a {
+  color: $blue;
+  font-family: $font-primary;
+  cursor: pointer;
+}
+
+button {
+  color: lighten($primary-text-color, 50);
+  cursor: pointer;
+  background: $primary-color;
+  border: 1px solid lighten($primary-color, 10);
+  font-size: 0.8em;
+  padding: 2px 5px;
+  @include border-radius();
+  &.save {
+    background: shade($blue, 20);
+    color: white;
+    border: none;
+    padding: 5px;
+  }
+  &.delete {
+    background: shade($red, 20);
+    color: white;
+    border: none;
+    padding: 5px;
+  }
+}
+
+// TOGGLE BUTTONS --------------
+.m-toggleRadio { //radioButtons
+  @include mx-buttons-radioToggle;
+}
+  
+

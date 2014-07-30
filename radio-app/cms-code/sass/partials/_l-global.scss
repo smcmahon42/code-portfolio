@@ -1,0 +1,230 @@
+/********************************************************************************
+ * layouts styles
+ *******************************************************************************/
+
+/* 
+Development Warning Message ----------------------------------------------------------- */
+
+#environment-warning {
+  position: absolute;
+  top: 5px; left: 50%;
+  width: 200px; margin-left: -100px;
+  padding: 5px;
+  background: #ffffff;
+  border: 1px solid red;
+  border-radius: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* 
+HEADER STYLES ----------------------------------------------------------- */
+
+.header-container,
+.footer-container,
+.main aside {
+  @include background-image(
+    linear-gradient(black,
+      lighten(black, 10) 40%, 
+      lighten(black, 15) 60%, 
+      black)
+  );
+}
+
+.pageHeader {
+  min-height:75px;
+  width:100%;
+}
+
+.pageTitle {
+  margin:0 auto;
+  padding:0 20px;
+  max-width:986px;
+}
+
+.main-container h1,
+#LoginForm h2 {
+  font-size: 1.15em;
+  line-height: 1.45em;
+  font-weight: 300;
+  color: lighten($primary-text-color, 50);
+  padding: 12px;
+  background: url(/img/bg-pageTitle.png) 0 -25px repeat-x;
+  height: 50px;
+}
+
+#ng-contentWrapper {
+  padding: 15px 1%;
+}
+
+/* 
+LAYOUT STYLES ----------------------------------------------------------- */
+
+body.lock { // locks scrolling when lightbox is active
+  overflow: hidden;
+}
+
+.externalWrapperContent {
+
+  section, article, div {
+    margin-left: 15px;
+  }//section, article, div
+  h2, h3, h4, h5 {
+    margin:15px 0 15px 15px;
+    color: $black;
+    font-size: 1.3rem;
+  }//h2, h3, h4, h5
+  p {
+    font-size: 0.9rem;
+    margin:8px 0 8px 15px;
+  }//p
+  a {
+    text-decoration: underline;
+  }//a
+  ul {
+    margin:8px 0 8px 15px;
+    list-style: none;
+  }//ul
+  li {
+    list-style: none;
+    margin:5px 0;
+  }//li
+
+}
+
+//Animated Gif Loader ------------------
+.loader {
+  width: 100px;
+  margin: 20px auto;
+}
+
+/* 
+LOGIN STYLES ----------------------------------------------------------- */
+
+//LOGIN ERRORS
+.login-error {
+  background: lighten($red, 40);
+  border: 1px solid shade($red, 20);
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+  @include border-radius();
+  p {
+    color: shade($red, 20);
+    font-size: 1.2em;
+  }
+}
+
+//LOGIN Display
+#LoginForm { 
+  margin: auto;
+  padding: 20px;
+  background: white;
+  @include mx-breakPoints(lg) {width: 500px;}
+  @include mx-breakPoints(md) {width: 500px;}
+  @include mx-breakPoints(sm) {width: 400px;}
+  @include mx-breakPoints(x-sm) {width: 300px;}
+  @include border-radius();
+  @include box-shadow(#999 0 0 10px -2px);
+  .inputBlock {
+    width: 70%;
+    margin: 10px auto;
+    @include clearfix();
+    label { 
+      padding-top: 10px;
+      display: inline-block;
+      float: left;
+      font-weight: 300;
+      @include mx-breakPoints(sm) { 
+        float: none; 
+        display: block;
+      }
+    }
+    input {
+      width: 60%;
+      float: right;
+      padding: 10px;
+      @include mx-breakPoints(sm) { 
+        float: none; 
+        display: block;
+        width: 100%;
+        margin-top: 10px; 
+      }
+    }
+  }
+  .form-actions {
+    width: 70%;
+    margin: auto;
+    @include clearfix();
+    button {
+      float: right;
+      padding: 10px;
+    }
+  }
+}
+
+/* 
+Primary Navigation ----------------------------------------------------------- */
+
+.primary-navigation {
+  ul {
+    margin: 0;
+    padding: 0;
+    @include mx-breakPoints(lg) {
+      margin-left: 10px;
+    }
+    @include mx-breakPoints(sm) {
+      margin-left: 0px;
+    }
+    li {
+
+        @include mx-breakPoints(lg) { 
+          display: inline-block;
+          margin: 0 0.1em;
+        }
+        @include mx-breakPoints(sm) {
+          display: block;
+          margin: 0 0.5em;
+        }
+
+      a {
+        @include border-radius();
+        @include box-shadow(black 0 0 5px 0px inset);
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        font-size: 0.80em;
+        padding: 8px 10px;
+        margin: 8px 0;
+        border: 1px solid #3e3e3e;
+  
+        &:hover {
+          background-color: #2e2e2e;
+        }
+      }//a
+    }//li
+  }//ul
+}//nav.primary
+
+/* 
+logOut Navigation ----------------------------------------------------------- */
+
+.logOut {
+  background-color: #323132;
+  padding: 5px;
+  @include pie-clearfix;
+    li {
+      display: inline-block;
+      float: right;
+      a {
+        font-size: 0.75em;
+        color: darken(white, 20);
+        display: inline-block;
+        padding: 8px 10px;
+        margin: 2px;
+        @include box-shadow(black 0 0 5px 0px inset);
+        @include border-radius();
+      }//a
+    }//li
+
+}//nav.logOut

@@ -1,0 +1,561 @@
+/*Track info headPlayer parent
+===============================================*/
+[data-layout="minimized"] #track-info [track-detail] {
+  position: relative;
+  margin-top: 10px;
+  height: 120px;
+}
+
+[data-layout="minimized"] #track-info .inside {
+  padding: 0;
+  @include breakpoint-width(small) {
+    background: url(../img/headPlayer/headPlayerBG_small.jpg);
+  }
+
+  @include breakpoint-width(big) {
+    background: url(../img/headPlayer/headPlayerBG.jpg);
+  }
+}
+
+/*Album Cover
+===============================================*/
+[data-layout="minimized"] [track-detail] [album-cover] {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+  padding: 7px;
+  @include background-image(linear-gradient(#404040 0%, black 100%));
+}
+
+[data-layout="minimized"] .background-art {
+  display: none;
+}
+
+/*Orange Girl Logo
+===============================================*/
+[data-layout="minimized"] #track-info [track-detail] .girlLogo {
+  display: none;
+}
+
+/*Track Infromation / Description
+===============================================*/
+[data-layout="minimized"] #track-info [track-detail] [track-identity] {
+  width: 400px;
+  position: relative;
+  z-index: 2;
+  width: 235px;
+  margin-left: 110px;
+  [track-title] {
+    position: relative;
+    display: inline-block;
+    color: #FFF;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 0.9em;
+    max-width: 225px;
+    padding: 0px 10px 0 0;
+    img {
+      position: absolute;
+      right: 0;
+      top: 5px;
+      width: 5px;
+    }
+    //img
+ 
+  }
+  //[track-title]
+  [track-album-info] {
+    span {
+      color: #868586;
+      display: inline-block;
+      line-height: 1em;
+      font-size: 0.8em;
+    }
+    .track-year {
+      display: block;
+      margin: 2px 0 0 0;
+      display: block;
+    }
+  }
+  [track-sources] {
+    span:nth-child(1) {
+      color: #FFF;
+      padding-top: 0px;
+      font-size: 0.8em;
+      font-weight: normal;
+    }
+    span {
+      color: #868586;
+      display: inline-block;
+      font-size: 0.8em;
+    }
+    span .by-name {
+      color: #868586;
+      font-size: 1em;
+      font-weight: normal;
+    }
+  }
+  //[track-sources]
+}
+
+//#track-info [track-detail] [track-identity]
+
+[data-layout="minimized"] [track-album-info] {
+  margin-top: -3px;
+}
+
+[data-layout="minimized"] [track-sources] {
+  margin-top: 9px;
+}
+
+/*Timer Progress
+===============================================*/
+[data-layout="minimized"] #track-info [track-detail] [track-timer] {
+  position: absolute;
+  font-size: 0.8em;
+  @include breakpoint-both(large, short) {
+    top: 76px;
+    right: 250px;
+    text-align: right;
+    width: 100px;
+    margin: 0px;
+  }
+
+  @include breakpoint-both(large, tall) {
+    top: 76px;
+    right: 250px;
+    text-align: right;
+    width: 100px;
+    margin: 0px;
+  }
+
+  @include breakpoint-both(small, short) {
+    display: none;
+  }
+
+  @include breakpoint-both(small, tall) {
+    display: none;
+  }
+
+  .timeElapsed {
+    display: inline;
+    position: absolute;
+    z-index: 2;
+    left: -40px;
+    top: 0px;
+  }
+  .timeDuration {
+    display: inline;
+    position: absolute;
+    z-index: 2;
+    right: -40px;
+    top: 0px;
+  }
+  .progressbar {
+    background-color: transparent;
+    height: 3px;
+    display: block;
+    width: 100%;
+    position: relative;
+    top: 2px;
+  }
+  .elapsed {
+    position: absolute;
+    left: 0px;
+    top: 5px;
+    width: 0px;
+    z-index: 4;
+    height: 3px;
+    background-color: #aca7ad;
+    border-radius: 2px;
+  }
+  .seekable {
+    position: absolute;
+    left: 0px;
+    top: 5px;
+    width: 0px;
+    z-index: 3;
+    height: 3px;
+    background-color: #000;
+  }
+  .bufferMessage {
+    position: absolute;
+    display: block;
+    left: 0px;
+    top: 13px;
+    width: 200px;
+    font-size: 11px;
+    line-height: 14px;
+    height: 14px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    text-align: left;
+  }
+}
+
+/*Ratings Toggle & Ratings Controler Parent
+===============================================*/
+[data-layout="minimized"] .rating-controls {
+  background: url(../img/headPlayer/playerBG.png) 0 0 repeat-x;
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  @include breakpoint-both(large, short) {
+    width: 1024px;
+    height: 50px;
+    bottom: 10px;
+  }
+
+  @include breakpoint-both(large, tall) {
+    width: 1024px;
+    height: 50px;
+    bottom: 10px;
+  }
+
+  @include breakpoint-both(small, short) {
+    width: 768px;
+    height: 50px;
+    bottom: 10px;
+  }
+
+  @include breakpoint-both(small, tall) {
+    width: 768px;
+    height: 50px;
+    bottom: 10px;
+  }
+
+  .rating-toggle {
+    font-size: 0.8em;
+    display: inline-block;
+    position: relative;
+    border: 1px solid #000;
+    width: 200px;
+    height: 32px;
+    margin: 0;
+    position: absolute;
+    top: -50px;
+    left: 350px;
+    @include border-radius;
+    input {
+      width: 49.95%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      border: 0px;
+      padding: 0px;
+      margin: 0px;
+      color: #FFF;
+      text-transform: uppercase;
+      &.on {
+        border: 1px solid #000;
+        @include background-image(linear-gradient(#969696 0%, #595959 13%, #2a2a2a 80%));
+      }
+      &.off {
+        border: 1px solid #282728;
+        background: #000;
+      }
+    }
+    .trackBtn {
+      left: 0px;
+      @include border-left-radius(5px);
+    }
+    .artistBtn {
+      right: 0px;
+      @include border-right-radius(5px);
+    }
+  }
+  //rating-toggle
+  .infoBtn {
+    display: none;
+  }
+  //infoBtn
+  .buttonDivider {
+    display: none;
+  }
+  //buttonDivider
+}
+
+//.rating-controls
+
+/* Player Options for Time Machine and Guily Pleasures
+===============================================*/
+[data-layout="minimized"] .playerOptions {
+  position: absolute;
+  width: 100%;
+  max-width: 10%;
+  top: -49px;
+  left: 595px;
+  input {
+    width: 50%;
+    height: 30px;
+    border: 2px solid #000;
+    margin: 0;
+    float: left;
+    display: block;
+  }
+  input:first-child {
+    @include border-left-radius(5px);
+    @include background-image(url(../img/headPlayer/timeMachineIcon.png), linear-gradient(#b65be0 0%, #4b1961 80%));
+    background: {
+      repeat: no-repeat;
+      position: center center;
+    };
+    border-right: none;
+  }
+  input:last-child {
+    @include border-right-radius(5px);
+    @include background-image(url(../img/headPlayer/guiltyPleasuresIcon.png), linear-gradient(#f76c51 0%, #881e09 80%));
+    background: {
+      repeat: no-repeat;
+      position: center center;
+    };
+  }
+}
+
+//playerOptions
+
+/* Feedback Button
+===============================================*/
+[data-layout="minimized"] [report-issue] {
+  position: absolute;
+  z-index: 5;
+  width: 75px;
+  background: #282627;
+  color: #838386;
+  @include border-radius;
+  text-align: center;
+  top: 10px;
+  right: 10px;
+}
+
+/* Artist / Track Rating Buttons
+===============================================*/
+
+[data-layout="minimized"] #track-info .track-schedule,
+[data-layout="minimized"] #track-info .artist-schedule {
+  width: 100%;
+  font-size: 1em;
+  label {
+    display: none;
+  }
+  .description {
+    display: none;
+  }
+}
+
+//#track-info .artist-schedule
+
+[data-layout="minimized"] #track-info [artist-reference],
+[data-layout="minimized"] #track-rate-wrapper {
+  position: absolute;
+  top: 60px;
+  left: 270px;
+  width: 30%;
+  top: 8px;
+  left: 350px;
+  width: 26.5%;
+}
+
+// #track-info [artist-reference]
+
+[data-layout="minimized"] #track-rate-wrapper {
+  z-index: 4;
+}
+
+[data-layout="minimized"] #track-info [artist-reference] {
+  z-index: 3;
+}
+
+[data-layout="minimized"] ul.segmented-options {
+  padding: 0;
+  margin: 0;
+}
+
+[data-layout="minimized"] ul.segmented-options li {
+  display: block;
+  font-size: 15px;
+  line-height: 1;
+  float: left;
+  margin: 0;
+  width: 16.6%;
+  padding: 8px 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-radius: 0;
+  text-align: center;
+  @include background-image(linear-gradient(#969696 0%, #595959 13%, #2a2a2a 80%));
+}
+
+[data-layout="minimized"] ul.segmented-options li:first-child {
+  @include border-left-radius;
+}
+
+[data-layout="minimized"] ul.segmented-options li:last-child {
+  @include border-right-radius;
+}
+
+[data-layout="minimized"] ul.segmented-options li.rated {
+  //color: rgb(43,43,43);
+}
+
+[data-layout="minimized"] ul.segmented-options li:hover {
+  @include background-image(linear-gradient(#1f1f20 0%, #595959 13%, #1f1f20 80%));
+}
+
+[data-layout="minimized"] ul.segmented-options li.lit {
+  color: #000;
+}
+
+[data-layout="minimized"] #track-info li.rating0.lit,
+[radio-scheduler] [track-list] li.rating0.lit,
+[radio-scheduler] .artist-schedule li.rating0.lit,
+[radio-scheduler] .track-schedule li.rating0.lit {
+  background-image: url(../img/headPlayer/rating-light-x.png);
+  box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.75), 0px -1px 6px 0px red;
+}
+
+[data-layout="minimized"] #track-info .rated li.rating1.lit,
+[track-list] .rated li.rating1.lit,
+.artist-schedule .segmented-options li.rating1.lit,
+.track-schedule .segmented-options li.rating1.lit {
+  background-image: url(../img/headPlayer/rating-light-1.png);
+  box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.75), 0px -1px 6px 0px #ff6a00;
+}
+
+[data-layout="minimized"] #track-info .rated li.rating2.lit,
+[track-list] .rated li.rating2.lit,
+.artist-schedule .segmented-options li.rating2.lit,
+.track-schedule .segmented-options li.rating2.lit {
+  background-image: url(../img/headPlayer/rating-light-2.png);
+  box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.75), 0px -1px 6px 0px #ffd400;
+}
+
+[data-layout="minimized"] #track-info .rated li.rating3.lit,
+[track-list] .rated li.rating3.lit,
+.artist-schedule .segmented-options li.rating3.lit,
+.track-schedule .segmented-options li.rating3.lit {
+  background-image: url(../img/headPlayer/rating-light-3.png);
+  box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.75), 0px -1px 6px 0px #bfff00;
+}
+
+[data-layout="minimized"] #track-info .rated li.rating4.lit,
+[track-list] .rated li.rating4.lit,
+.artist-schedule .segmented-options li.rating4.lit,
+.track-schedule .segmented-options li.rating4.lit {
+  background-image: url(../img/headPlayer/rating-light-4.png);
+  box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.75), 0px -1px 6px 0px #55ff00;
+}
+
+[data-layout="minimized"] #track-info .rated li.rating5.lit,
+[track-list] .rated li.rating5.lit,
+.artist-schedule .segmented-options li.rating5.lit,
+.track-schedule .segmented-options li.rating5.lit {
+  background-image: url(../img/headPlayer/rating-light-5.png);
+  box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.75), 0px -1px 6px 0px #00ff80;
+}
+
+/* Play / Playback Buttons
+===============================================*/
+
+[data-layout="minimized"] #cannotSkip {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #000;
+  color: #000;
+  @include background-image(radial-gradient(10px 10px, #c3c3c8 9px, #1d1d1e 15px));
+  @include border-radius(50px);
+}
+
+//Play / Playback Buttons Short
+[data-layout="minimized"] {
+  [playback-buttons] {
+    position: absolute;
+    right: 35px;
+    top: 50%;
+    width: 120px;
+    height: 40px;
+    margin: -20px 0 0 -60px;
+  }
+  [playback-buttons] a,
+  [playback-buttons] span {
+    display: block;
+    font: 0/0 a;
+    position: relative;
+    float: left;
+    width: 60px;
+    height: 40px;
+    margin: 0;
+    color: transparent;
+  }
+  [playback-buttons] a:after,
+  [playback-buttons] span:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 30px;
+    height: 18px;
+    margin: -8px 0 0 -15px;
+    background: url(../img/headPlayer/control-sprite.png) no-repeat 0 0;
+  }
+  [playback-buttons] a[disabled]:after,
+  [playback-buttons] span[disabled]:after {
+    opacity: 0.4;
+  }
+  #PlayButton,
+  #PauseButton,
+  #PlayPauseButton {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  #PlayButton:after,
+  #PlayPauseButton.play:after {
+    background-position: -6px -12px;
+  }
+  #PauseButton:after,
+  #PlayPauseButton.pause:after {
+    background-position: -45px -12px;
+  }
+  #SkipButton {
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  #SkipButton:after {
+    background-position: -86px -12px;
+  }
+  [playback-skip-capacity] {
+    padding: 1px 1px 2px 1px;
+    margin: 0;
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    li {
+      float: left;
+      clear: both;
+      list-style: none;
+      width: 19px;
+      height: 6px;
+      margin: 0;
+      padding: 0;
+      background: url(../img/headPlayer/indicatorOffSmall.png) no-repeat;
+    }
+    li.on {
+      background: url(../img/headPlayer/indicatorOnSmall.png) no-repeat;
+    }
+  }
+  #cannotSkip {
+    top: 5px;
+    right: -20px;
+    margin: 0px;
+    padding-top: 1px;
+    border: 1px solid #000;
+  }
+}

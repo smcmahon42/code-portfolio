@@ -1,0 +1,195 @@
+<section ng-controller="PromosSegmentCtrl">
+
+	<h1>Promos</h1>
+
+	<article id="ng-contentWrapper">
+
+	<nav class="m-panel-roundedTopCorners">
+	  <ul id="user-nav" class="m-secondary-navigation">
+
+	  	<li class="active">Promos</li>
+	  	<li><a href="#/segments/tips">Tips and Hints</a></li>
+	    <li><a href="#/segments/greetings">Greetings</a></li>
+	  </ul>
+	</nav>
+
+	<div id="NonMusicSegment">
+
+		<section class="m-panel-squareAllCorners">
+
+			<form id="SegmentGlobalOptons" >
+
+				<h2>Global Options</h2>
+				<section class="globalOptions">
+					<li>
+						<label>Time between segments</label>
+						<input 
+						name="timeBetweenSegments" 
+						value="{{globalOptionsList.promoFrequency}}"
+						ng-model="globalOption.promoFrequency" ng-change="editGlobalOptions()" /> <span>min.</span>
+					</li>
+				</section>
+
+			</form>
+
+			<form id="SegmentUploadDisplay" name="SegmentsUploadForm">
+
+				<h2>Add a Promo</h2>
+				<section class="uploadTextWrapper" >
+					<li>
+						<label>Title</label>
+						<input type="text" ng-model="segmentForm.title">
+					</li>
+					<li>
+						<label>Sub-Title</label>
+						<input type="text" ng-model="segmentForm.subtitle">
+					</li>
+
+					<li>
+						<button class="save" ng-click="setSegmentData()" >Add Audio/Image</button>
+					</li>
+				</section>
+				
+				<section class="fileUploadWrapper">
+					<li>
+						<span class="disclaimer">If you do not have an image click the "+ Default Image" button.</span>
+						<label>Image</label>
+						<span id="imageFileLocation">
+							<input type="file" name="imageLocation" class="imageuploadsys" 
+							onchange="angular.element(this).scope().uploadSegmentFileQueue(this)">
+						</span>
+						<button class="delete" alt="Reset Image Upload" ng-click="uploadSegmentFileReset('image')">
+							<i class="fa fa-undo"></i>
+					    </button>
+						<button class="addDefaultImg" alt="Add a Default Image" ng-click="addDefaultImage()">
+							<i class="fa fa-plus"></i> Default Image
+						</button>
+					</li>
+					<li>
+						<span class="disclaimer">The audio file must be an .mp3</span>
+						<label>Audio</label>
+						<span id="audioFileLocation">
+						  	<input type="file" name="audioLocation" class="audiouploadsys" 
+						  	onchange="angular.element(this).scope().uploadSegmentFileQueue(this)">
+						</span>
+					  	<button class="delete" alt="Reset Audio Upload" ng-click="uploadSegmentFileReset('audio')">
+					  		<i class="fa fa-undo"></i>
+					  	</button>
+					</li>
+					<li>
+						<button class="save" ng-click="uploadSegmentFile()">Upload</button>
+					</li>
+				</section>
+				
+			</form>
+			
+		</section>
+
+		<div id="SegmentRowDisplay" ng-show="segmentDataList.length > 0">
+			
+			<section class="m-displayColumnTitle">
+				<li class="segment-title">Name</li>
+				<li class="segment-image">Image</li>
+				<li class="segment-audio">Audio</li>
+				<li class="segment-publishBtn">Published</li>
+				<li class="segment-deleteBtn">Delete</li>
+				<li class="segment-editBtn">Edit</li>
+			</section>
+
+			<section class="m-entry m-nonMusicSegmentList" ng-repeat="segmentData in segmentDataList | orderObjectBy:'id':true">
+				
+				<li class="segment-title">
+					<span class="segmentTitle">{{segmentData.title}}</span>
+					<span class="segmentSubTitle">{{segmentData.subtitle}}</span>				
+				</li>
+
+				<li class="segment-image">
+					<section class="imageDisplayColumn">
+						<button ng-click="displayImage=!displayImage">Image Preview</button>
+						<div class="imageDisplay" ng-show="displayImage" >
+							<img ng-src="{{segmentData.image_location}}" alt="{{segmentData.title}} Image">
+						</div>
+					</section>
+				</li>
+				
+				<li class="segment-audio">
+					<section class="audioColumn">
+						<audio class="audioLocation" controls ng-src="{{segmentData.audio_location}}">
+						</audio>
+					</section>
+				</li>
+				
+				<li class="segment-publishBtn">
+					<button class="nutral" 
+					ng-click="updatePublishType(this);" 
+					ng-show="segmentData.is_published" >ON</button>
+					<button class="warning" 
+					ng-click="updatePublishType(this);" 
+					ng-show="!segmentData.is_published" >OFF</button>
+				</li>
+				
+				<li class="segment-deleteBtn">
+					<button class="delete" ng-click="deleteSegmentData(segmentData.id)"><i class="fa fa-trash-o fa-lg"></i></button>
+				</li>
+				
+				<li class="segment-editBtn">
+					<button class="nutral" ><i class="fa fa-pencil-square-o fa-lg"></i></button>
+				</li>
+				
+				<li class="segment-edit">
+					<form>
+						
+						<h2>Edit Segment</h2>
+
+						<li class="editTitles">
+							<label>Title</label>
+							<input type="text" name="title" ng-model="segmentData.title">
+							<label>Sub-Title</label>
+							<input type="text" name="subtitle" ng-model="segmentData.subtitle">
+						</li>
+
+						<li class="editImageAudio">
+
+							<label>Image Upload</label>
+								
+							<section class="editImageUpload">
+								<span>
+									<input type="file" name="imageLocation" class="imageuploadsys" 
+									onchange="angular.element(this).scope().editSegmentFileQueue(this)">
+								</span>
+								<button class="delete" alt="Reset Image Upload" 
+								onclick="angular.element(this).scope().editSegmentFileReset(this, 'image')">
+									<i class="fa fa-undo"></i>
+							    </button>
+						    </section>
+
+							<label>Audio Upload</label>
+							
+							<section class="editAudioUpload">
+								<span>
+							  		<input type="file" name="audioLocation" class="audiouploadsys" 
+							  		onchange="angular.element(this).scope().editSegmentFileQueue(this)">
+								</span>
+							  	<button class="delete" alt="Reset Audio Upload" 
+							  	onclick="angular.element(this).scope().editSegmentFileReset(this, 'audio')">
+							  		<i class="fa fa-undo"></i>
+							  	</button>
+						  	</section>
+
+						</li>
+
+						<li class="editSave">
+							<button class="save" ng-click="editSegment(this)">Save</button>		
+						</li>
+					</form>
+				</li>
+
+			</section><!-- m-nonMusicSegmentList -->
+		</div><!-- #segmentRowDisplay -->
+
+	</div> <!-- #productManager -->
+
+	</article> <!-- #ng-contentWrapper -->
+
+</section>
+
