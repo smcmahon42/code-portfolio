@@ -1,0 +1,341 @@
+@charset "utf-8";
+/* =================================================================== */
+/* =================            @FONT-FACE             =============== */
+/* =================================================================== */
+@font-face {
+    font-family:'Virgin_America_Black';
+    src:url('/common/font/virgin_america_black-webfont.eot');
+    src:url('/common/font/virgin_america_black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/common/font/virgin_america_black-webfont.woff') format('woff'),
+         url('/common/font/virgin_america_black-webfont.ttf') format('truetype'),
+         url('/common/font/virgin_america_black-webfont.svg#virgin_americablack') format('svg');
+    font-weight:normal;
+    font-style:normal;}
+@font-face {
+    font-family:'Virgin_America_Bold';
+    src:url('/common/font/virgin_america_bold-webfont.eot');
+    src:url('/common/font/virgin_america_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/common/font/virgin_america_bold-webfont.woff') format('woff'),
+         url('/common/font/virgin_america_bold-webfont.ttf') format('truetype'),
+         url('/common/font/virgin_america_bold-webfont.svg#virgin_americabold') format('svg');
+    font-weight:normal;
+    font-style:normal;}
+@font-face {
+    font-family:'Virgin_America_Light';
+    src:url('/common/font/virgin_america_light-webfont.eot');
+    src:url('/common/font/virgin_america_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/common/font/virgin_america_light-webfont.woff') format('woff'),
+         url('/common/font/virgin_america_light-webfont.ttf') format('truetype'),
+         url('/common/font/virgin_america_light-webfont.svg#virgin_americalight') format('svg');
+    font-weight:normal;
+    font-style:normal;}
+@font-face {
+    font-family:'Virgin_America_Regular';
+    src:url('/common/font/virgin_america_reg-webfont.eot');
+    src:url('/common/font/virgin_america_reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/common/font/virgin_america_reg-webfont.woff') format('woff'),
+         url('/common/font/virgin_america_reg-webfont.ttf') format('truetype'),
+         url('/common/font/virgin_america_reg-webfont.svg#virgin_americaregular') format('svg');
+    font-weight:normal;
+    font-style:normal;}
+@font-face {
+	font-family:'Pakt Condensed Bold';
+	src:url('/common/font/paktcondensedbold-webfont.eot');
+	src:url('/common/font/paktcondensedbold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/common/font/paktcondensedbold-webfont.woff') format('woff'),
+		url('/common/font/paktcondensedbold-webfont.ttf') format('truetype'),
+		url('/common/font/paktcondensedbold-webfont.svg#pakt_condensedbold') format('svg');
+	font-weight:normal;
+	font-style:normal;}
+
+
+/* =================================================================== */
+/* =================           GLOBAL RESETS           =============== */
+/* =================================================================== */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, 
+b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {margin:0; padding:0; vertical-align:baseline;}
+
+body {background:#fff; color:#fff; font:18px 'Virgin_America_Regular', Verdana, Arial, Helvetica, sans-serif;}
+h1, h2, h3 {font-weight:normal;}
+h1 {font-size:21px; padding-bottom:18px;}
+h2 {font-size:16px;}
+h3 {font-size:14px;}
+
+input, textarea, select {border:1px solid #ccc;}
+input:focus, textarea:focus, select:focus {border:1px solid #000;}
+input [type=text] {}
+
+p {padding-bottom:20px;}
+ul, ol {padding:0 0 15px 20px;}
+ol.rules {padding:0 0 15px 45px;}
+	ol.rules li {padding-bottom:20px;}
+	ol.rules p {padding-bottom:12px;}
+	ol.rules table {padding-bottom:16px;}
+
+a, li a {color:#fff; outline:none;}
+img {border:none;}
+
+article, aside, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block;}
+
+/*
+SHORTCUTS _______________________________________________________________ */
+.clear {clear:both; height:0; overflow:hidden; width:100%;}
+.hidden {display:none;}
+.hr {background:#ddd1d7; clear:both; height:1px; margin:15px 0;}
+	#sidebar .hr {width:288px;}
+
+
+/* TEMP _______________________________________________________________ */
+#section_wrapper .page_wrapper {display:none;}
+.btn {background:#f00; color:#fff; font-weight:bold; text-align:center;}
+
+/* TEMP END _______________________________________________________________ */
+
+
+/* =================================================================== */
+/* ================         BASE LAYOUT ELEMENTS        ============== */
+/* =================================================================== */
+#bkgnd {position:fixed; top:0; left:0; min-width:100%; min-height:100%;}
+	.bgwidth {width:100%;}
+	.bgheight {height:100%;}
+
+#master {margin:0 auto; position:relative; width:1000px;}
+
+#header {position:relative;}
+#game_logo {padding:14px 0 2px;}
+#logo {position:absolute; right:49px; top:72px;}
+
+#main {overflow:hidden;}
+.page_wrapper.current {min-height:478px; overflow:hidden;}
+
+#section_wrapper {float:left; padding-left:8px; width:616px;}
+#sidebar {float:right; padding-right:8px; width:336px;}
+	#sidebar p {padding:0 34px 20px 0;}
+
+#footer {background:url(../img/sprite/page_elements.png) no-repeat 0 -180px;  margin:10px 0 0; padding:30px 0 20px;}
+#footer nav {overflow:hidden;}
+#footer nav ul {list-style-type:none; padding:0; /* width:630px; */}
+#footer nav li {border-left:1px solid; display:block; float:left; font-size:13px; padding:0 10px;}
+	#footer nav li.first {border:none;}
+#footer nav li a {color:#fff;}
+#footer #social_share {float:right; min-width:240px;}
+
+/*
+GAME BUTTONS _________________________________________________________________ */
+.btn {cursor:pointer; height:52px; width:303px;}
+#playgameBtn {background:url(../img/icon/btn_play_the_game.png) no-repeat;}
+#selectSix {background:url(../img/icon/btn_get_going.png) no-repeat;}
+#submit_choice, #submit_dd_choice {background:url(../img/icon/btn_submit.png) no-repeat; height:51px; width:302px;}
+#next_question {background:url(../img/icon/btn_next_question.png) no-repeat; display:none;}
+#registerBtn {background:url(../img/icon/btn_enter_now.png) no-repeat; cursor:pointer; height:52px; margin:10px auto 0; padding-right:15px; width:303px;}
+#play_again {background:url(../img/icon/btn_play_again.png) no-repeat; height:51px; width:302px;}
+#double_down {background:url(../img/icon/btn_double_down.png) no-repeat; height:51px; width:302px;}
+#keep_offer {background:url(../img/icon/btn_keep_offer.png) no-repeat; height:51px; width:302px;}
+
+/*
+LANDING PAGE _________________________________________________________________ */
+.reward_wrapper {margin:40px 0 20px;}
+.reward_wrapper img, .epicPrize img, .dailyPrize img {width:280px;}
+
+.game_cell_home {float:left; font:70px 'Pakt Condensed Bold', 'Virgin_America_Regular', Verdana, Arial, Helvetica, sans-serif; height:94px; line-height:94px; position:relative; text-align:center; width:102px;}
+
+/*
+PICK PARTNERS _____________________________________________________________ */
+#partner_wrapper {overflow:hidden;}
+.partner {float:left; margin:0 20px 20px 0; overflow:hidden; width:100px;}
+
+#partner_wrapper .partner {cursor:pointer; height:120px; margin-bottom:35px;}
+	#partner_wrapper .partner img {display:block; margin:auto;}
+#partner_wrapper .partner .selectPartner {font-size:.8em; margin:auto; width:93px;}
+	#partner_wrapper .partner .selectPartner span {background:url(../img/icon/checkboxs.png) no-repeat; margin:0 5px -4px 0; display:inline-block; height:22px; width:22px;}
+
+ul#pickedWrapper {margin-top:12px; padding:0;}
+ul#pickedWrapper li {display:inline-block; height:90px; list-style:none; width:150px;}
+ul#pickedWrapper li img {display:block; margin:0 auto;}
+
+.partner_tip {font-size:16px;}
+
+/*
+GAME PAGE _________________________________________________________________ */
+#game_board {min-height:612px;}
+.game_row {overflow:hidden;}
+.game_cell {float:left; font:70px 'Pakt Condensed Bold', 'Virgin_America_Regular', Verdana, Arial, Helvetica, sans-serif; height:94px; line-height:94px; position:relative; text-align:center; width:102px;}
+	.correct_badge {/*background:url(../img/icon/bingo_dot.png) no-repeat 50% 50%;*/ height:90px; left:0; position:absolute; top:2px; width:102px;}
+	.correct_badge img {height:100%;}
+	.incorrect span {display:block;}
+
+#answers_wrapper {margin-bottom:20px;}
+#answers_wrapper ul {list-style-type:none; margin:0; padding:0;}
+#answers_wrapper li {cursor:pointer; overflow:hidden;}
+	#answers_wrapper li.selected, #answers_wrapper li.hover {background:url(../img/sprite/page_elements.png) no-repeat;}
+	#answers_wrapper li.correct_choice {color:#fff !important;}
+
+#answers_wrapper li .icon {background:url(../img/icon/rightWrongAnswer.png) no-repeat -20px 0; float:left; height:20px; margin:5px 15px 5px 5px; width:20px;}
+	#answers_wrapper li.selected .icon {background-position:-40px 0;}
+	#answers_wrapper li.wrong_choice .icon {background-position:0 0;}
+	#answers_wrapper li.correct_choice .icon {background-position:-60px 0;}
+
+##answers_wrapper li .txt {float:left; margin:5px 5px 5px 0; min-height:27px; width:291px;}
+
+/*
+SUCCESS PAGE _________________________________________________________________ */
+#success #content_wrapper h1 {margin-bottom:-50px;}
+#success #content_wrapper p {margin:0 60px 0 160px;}
+
+.awarded_offer {overflow:hidden;}
+.awarded_offer .partner_offer {float:left;}
+.awarded_offer #partner_offer_desc {font-size:16px; padding:28px 30px 0 104px;}
+
+#register .awarded_offer #partner_offer_desc {font-size:1.5em; padding:28px 30px 15px 104px; border-bottom: 1px solid white;}
+
+/*
+DOUBLE DOWN PAGE _________________________________________________________________ */
+#doubledown #content_wrapper {text-align:center;}
+#choice_response {margin-top:30px;}
+	#choice_response img {display:none;}
+
+/*
+LOGO/SCROLL CONTAINER _________________________________________________________________ */
+#scroll_wrapper {background:url(../img/sprite/scroll_container.png) no-repeat; height:458px; padding:10px 4px 10px 10px; overflow:auto; width:552px;}
+#scroll_wrapper.short {background-position:-658px 0; height:342px;}
+
+.mCSB_container {margin:0 38px 0 12px; overflow:hidden; width:auto;}
+	.mCSB_container.mCS_no_scrollbar {margin-right:0;}
+
+.mCustomScrollBox .mCSB_scrollTools {height:100%; right:0; top:0; width:31px;}
+.mCSB_scrollTools .mCSB_draggerContainer {bottom:0; height:auto; left:0; margin:12px 0; position:absolute; right:0; top:0;}
+
+.mCSB_scrollTools .mCSB_dragger {background:url(../img/sprite/scroll_container.png) no-repeat -617px 0; cursor:pointer; height:44px; width:100%;}
+	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {height:100%; width:100%px;}
+
+.mCSB_scrollTools .mCSB_buttonUp, .mCSB_scrollTools .mCSB_buttonDown {background:url(../img/sprite/scroll_container.png) no-repeat -576px 0; cursor:pointer; display:block; height:26px; overflow:hidden; position:relative;}
+	.mCSB_scrollTools .mCSB_buttonDown {background-position:-576px -36px; margin-top:-52px; top:100%;}
+
+#logo_wrapper {margin-bottom:40px; overflow:hidden;}
+
+/*
+REGISTER _________________________________________________________________ */
+/* .articleCopy p {font-size:0.8em;} */
+.articleCopy p a {color:#fff;}
+#registerForm {width:85%; background:url(../img/formBackground.png); padding:5%; overflow:hidden;}
+.registerBar {min-height:660px;} 
+.registerBar a {color:#fff;}
+
+#register_wrapper {float:left; width:610px;}
+#register_wrapper .epicPrize {display:inline-block;}
+#register_wrapper .dailyPrize {display:inline-block;}
+.mainInputs input {background:#492330; border:1px solid #fff; color:#89656f; font-size:.8em; height:35px; margin-bottom:15px; padding-left:5%; padding-right:5%; width:90%;}
+.mainInputs input.alert {border:1px solid #f00;}
+
+.accountLinks {border-bottom:1px solid #fff; height:40px; margin-bottom:10px; padding:0; width:100%;}
+.accountLinks li.linksBorder {background:#fff; height:15px; margin:5px 10px 0 10px; width:1px;}
+.accountLinks li {float:left; list-style:none; margin:0; padding:0;}
+.accountLinks li a {color:#fff; font-size:.7em;}
+
+.checkbox {background:url(../img/icon/checkboxs.png) -22px 0 no-repeat; cursor:pointer; height:22px; margin-right:5px; width:22px;}
+
+.check1 {margin-bottom:10px;}
+.check1, .check2 {overflow:hidden; padding:0;}
+.check1 li, .check2 li {float:left; list-style:none; margin:0;}
+li.checkText {font-size:.8em; width:190px;}
+.check1 li a, .check2 li a {color:#fff; font-size:.75em; margin-left:5px;}
+#checkbx1, #checkbx2 {float:left; width:30px;}
+
+#gifload {display:none; margin:25px 0 0 50px;}
+
+/*
+PRIZES _________________________________________________________________ */
+.group:before, .group:after {content:""; display:table;}
+.group:after {clear:both;}
+.group {zoom:1; /* For IE 6/7 (trigger hasLayout) */ }
+
+.prizesContent {padding:18px 29px;}
+#master.prizesMaster {width:890px;}
+.prizeHeader {margin:0 0 10px;}
+.prizesMain {margin:0 10px;}
+.prizesLogo {width:580px;}
+.prizesElevate {width:285px;}
+.headerBorder {background:url(../img/sprite/page_elements.png) no-repeat bottom; display:block; height:20px;}
+.prizeSection {background:url(/common/img/prizesBG.png);}
+.prizesHeader {background:url(/common/img/prizesHeaderBG.png) repeat-x; height:82px; padding:18px 22px 0;}
+.prizesHeadImg {left:-8px; position:relative; top:-13px;}
+.prizesHeadText {font-family:'Virgin_America_Light', Verdana, Arial, Helvetica, sans-serif; font-size:1.8em; font-weight:normal; text-transform:uppercase;}
+.headerTextWrap {display:block; margin:-69px 0 0 116px;}
+.prizesHeadSubText {font-family:'Virgin_America_Light', Verdana, Arial, Helvetica, sans-serif; font-size:21px; font-weight:normal; margin:5px 7px; padding:0;}
+.prizesTopContent {margin:0 0 20px;}
+.fewIdeas {float:left; width:325px;}
+.fewIdeasHeader {border-bottom:1px solid #cd1336; font-size:17px; margin:0 0 16px; padding:0 0 13px; text-transform:uppercase;}
+.fewIdeasList {font-family:'Virgin_America_Light', Verdana, Arial, Helvetica, sans-serif; font-size:23px; font-weight:normal; list-style:none; margin:0; padding:0;}
+.idea {background:url(/common/img/prizeIdeasDash.png) no-repeat 0 .5em; font-size:15px; line-height:1.5em; margin:12px 0; padding:0 0 0 9px;}
+.prizesMap {float:right; margin:20px 0 0;}
+.tableBold {margin:0 0 0 22px;}
+.prizesTableContent {font-family:'Virgin_America_Light', Verdana, Arial, Helvetica, sans-serif; font-size:15px; font-weight:normal;}
+.prizesTableContent table {border-collapse:collapse; width:100%;}
+.prizesTableContent th {border-bottom:1px solid #cd1336; font-size:12px; padding:0 0 7px 5px; text-align:left; text-transform:uppercase;}
+.prizesTableContent td {border-bottom:1px solid #cd1336; height:80px; position:relative; vertical-align:middle;}
+td.logo {text-align:center;}
+td.prize {width:390px; padding:0 0 0 20px;}
+.prizesCellBorder {border-left:1px solid #fff; float:left; height:60px; margin:0 9px;}
+.date .prizesCellBorderLeft {float:left; height:60px; margin:0 9px;}
+.date .prizesCellBorder {float:right;}
+#footer.prizesFoot nav li {padding:0 7px;}
+
+/* Table */
+#tbl_prize_detail {border-collapse:collapse; font-size:16px; margin-bottom:20px; width:100%;}
+#tbl_prize_detail th {border-bottom:2px solid #ddd1d7; font-size:18px; font-weight:bold; padding:2px 2px 4px;}
+#tbl_prize_detail td {border-bottom:1px solid #ddd1d7; padding:2px; text-align:center;}
+	#tbl_prize_detail .no_border td {border-bottom:none;}
+	#tbl_prize_detail .col_prize {border-right:1px solid #ddd1d7; padding-right:10px; text-align:left; width:800px;}
+	#tbl_prize_detail .col_qty {text-align:center;}
+	#tbl_prize_detail .col_arv {border-left:1px solid #ddd1d7; text-align:right;}
+
+/*
+CONTACT US _________________________________________________________________ */
+#contactUsForm h2 {font-size:1.5em;}
+#contactUsForm #messageAlert p {font-size:1em;}
+#contactUsForm {height:400px; margin:52px auto 20px; width:860px;}
+#contactUsForm .formLeft {float:left; width:344px;}
+#contactUsForm .formRight {float:left; width:500px;}
+#contactUsForm input, #contactUsForm #contactText {background:#6a304d; border:1px solid #fff; color:#fff;}
+#contactUsForm label {display:inline-block; width:100%;}
+#contactUsForm label span {color:red; font-size:.7em; margin-left:10px;}
+#contactUsForm input {font-size:1em; height:35px; margin-bottom:5px; width:286px;}
+#contactUsForm #contactText {font-size:1em; font-family:'Virgin_America_Regular', Verdana, Arial, Helvetica, sans-serif; height:166px; padding:5px; width:485px;}
+#contactUsForm .formLeft #submitContact {background:url(../img/icon/contactSubmit.png) no-repeat; cursor:pointer; height:51px; margin:10px 0 0 -7px; width:300px;}
+
+/*
+LIGHTBOX _________________________________________________________________ */
+#lightbox {background:#4a142f; display:none; -webkit-border-radius:10px; border-radius:10px; z-index:9999; -webkit-box-shadow:5px 5px 30px -10px #000; box-shadow:5px 5px 30px -10px #000; min-height:400px; position:absolute; top:160px; width:1000px;}
+#lightbox #boxCloseBtn {background:url(../img/closeBtn.png) no-repeat; cursor:pointer; float:right; height:38px; margin:3px 3px 0 0; width:38px;}
+
+#frame p.ligtboxMsg {margin:30px auto 0; text-align:center; width:80%;}
+
+
+/* =================================================================== */
+/* =================             IE CUSTOM             =============== */
+/* =================================================================== */
+.ie {}
+.ie7 {}
+.ie8 {}
+.ie9 {}
+
+
+
+
+/* =================================================================== */
+/* =================           MOBILE DEVICES           =============== */
+/* =================================================================== */
+/*
+TABLET DEVICE ______________________________________________________________ */
+@media only screen and (max-width: 1024px) {
+
+#game_logo {height:140px !important; margin-top:-18px; padding:0;}
+	#game_logo img {height:140px; padding-left:20px;}
+#logo {position:absolute; right:49px; top:40px;}
+
+#game_board {min-height:612px;}
+.game_cell {height:90px; line-height:90px;}
+
+}
+
