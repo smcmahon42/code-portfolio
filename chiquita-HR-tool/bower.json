@@ -1,0 +1,26 @@
+{
+  "name": "CHQ App",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.11.1",
+    "es5-shim": "latest",
+    "angular": "~1.2.26",
+    "angular-ui-router": "latest",
+    "angular-resource": "latest",
+    "angular-cookies": "latest",
+    "angular-base64": "latest",
+    "angular-sanitize": "latest",
+    "requirejs": "latest",
+    "requirejs-text": "latest",
+    "html5shiv": "latest",
+    "respond" : "latest",
+    "angulartics" : "latest"
+  }
+}

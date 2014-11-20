@@ -1,0 +1,124 @@
+<div id="p2" class="pageWrap yellowFrame">
+
+    <h1>Tell us a few things:</h1>
+
+    <ul class="parent">
+      <ol class="q1">
+        <p>1. Select Coverage:</p>
+        <ul class="choosePlan displayLarge">
+
+          <li class="plan1">
+
+            <input type="radio" id="single_plan" value="single" ng-model="user.page2.planType">
+            <label for="single_plan">
+              <span></span>
+              <section>
+                <img src="images/single.jpg">
+                <article>Single</article>
+              </section>
+            </label>
+            
+          </li>
+          <!-- single -->
+
+          <li class="plan2">
+
+            <input type="radio" id="employee-children" value="employee-children" ng-model="user.page2.planType">
+            <label for="employee-children">
+              <span></span>
+              <section>
+                <img src="images/employee-child.jpg">
+                <article>Employee <br>+ Child(ren)</article>
+              </section>
+            </label>
+            
+          </li>
+          <!-- employee-children -->
+
+          <li class="plan3">
+
+            <input type="radio" id="employee-spouse" value="employee-spouse" ng-model="user.page2.planType">
+            <label for="employee-spouse">
+              <span></span>
+              <section>
+                <img src="images/employee-spouse.jpg">
+                <article>Employee <br>+ Spouse</article>
+              </section>
+            </label>
+            
+          </li>
+          <!-- employee-spouse -->
+
+          <li class="plan4">
+
+            <input type="radio" id="employee-family" value="employee-family" ng-model="user.page2.planType">
+            <label for="employee-family">
+              <span></span>
+              <section>
+                <img src="images/employee-family.jpg">
+                <article>Employee <br>+ Family</article>
+              </section>
+            </label>
+            
+          </li>
+          <!-- employee-family -->
+
+        </ul>
+
+        <article class="displayMediumSmall selectPlanType">
+          <select ng-model="user.page2.planType" ng-options="pType.type as getAssocType(pType) for pType in pTypes">
+            <option value="" >-- Coverage Level --</option>
+          </select>
+        </article>
+
+      </ol>
+
+      <ol class="q2">
+        <p>2. My spouse has other health coverage available through their employer:</p>
+
+        <div class="checkboxs">
+          <li class="yes">
+            <input type="radio" id="partnerHasCoverageTrue" value="true"  ng-model="user.page2.partnerHasCoverage" > 
+            <label for="partnerHasCoverageTrue"><span></span>Yes</label>
+          </li>
+          <li class="no">
+            <input type="radio" class="red" id="partnerHasCoverageFalse" value="false" ng-model="user.page2.partnerHasCoverage" > 
+            <label for="partnerHasCoverageFalse"><span></span>No</label>
+          </li>
+        </div>
+
+      </ol>
+      
+      <ol class="q3">
+        <p>3. If I enroll in the Consumer Driven Health Plan I will contribute pre-tax to a Health Savings Account.</p>
+
+        <div class="checkboxs">
+          <li class="yes">
+            <input type="radio" id="cdhpEnrollTrue" value="true" ng-change="checkQuestion()" ng-model="user.page2.cdhpEnroll" > 
+            <label for="cdhpEnrollTrue"><span></span>Yes</label>
+          </li>
+          <li class="no">
+            <input type="radio" class="red" id="cdhpEnrollFalse" value="false" ng-change="checkQuestion()" ng-model="user.page2.cdhpEnroll" > 
+            <label for="cdhpEnrollFalse"><span></span>No</label>
+          </li>
+        </div>
+
+      </ol>
+
+      <div class="popup" ng-show="user.page2.cdhpEnroll">
+        <img src="images/arrowYellow.jpg" alt="yellowArrow">
+        <p>I will contribute <input type="number" ng-model="user.page2.hraBal" id="hraBal" ng-keyup="checkAmount()" placeholder="$ Amount"> to my Health Savings Account in 2015 and the company will contribute [$500/$1,000] in 2015.</p>
+      </div>
+
+    </ul>
+
+    <div class="navigation">
+      <input  type="submit" class="btn" name="submitPage1" ng-click="lastPage(1)" value="&laquo; Back">
+      <input  type="button" class="btn resetBtn" ng-click="resetprogram()" value="Reset Form">
+      <input type="submit" class="btn" name="submitPage2" ng-click="nextPage(3)" value="next &raquo;">
+    </div>
+    
+</div>
+
+
+

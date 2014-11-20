@@ -9,6 +9,17 @@ Below is a summary of each project and what my participation was.
 
 NOTE: I removed images and videos from the files to make the download faster. 
 
+
+## Chiquita Decision tool App
+
+This tool was used for employees to guide their decision on what type of health care they wish to have in the following fiscal year. The tool asked you a series of questions and did a calculation based on those questions, which in turn delivered you costs for health care of that year. My roll was to build out this application start to finish using SASS and Angular JS making it a responsive web app in 7 days time. 
+
+        * SASS
+        * Angular JS
+        * Grunt JS
+        * JQuery
+
+
 ## Gamestem Min App
 
 Gamestem is an internal project developed at Mindspace that generated outcomes and actions that had to do with gamificaiton. My roll was to build out the CSS3, HTML5 and JavaScript parts to make it have animation and flow. The PHP actions were built by another developer. This is one of the most simplistic, straightforward applications I have built.

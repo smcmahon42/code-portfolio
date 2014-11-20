@@ -1,0 +1,52 @@
+.greeting,  #welcomeForm {
+	background-color: #FFF;
+}
+.btn {
+	padding-top: 10px;
+	padding-bottom: 10px
+}
+.navigation .resetBtn {
+	height: 39px;
+}
+#breadCrumbs .on {
+	color: #FFF;
+}
+
+
+
+input[type="radio"] {
+    display: inline-block;
+    margin: 0px;
+}
+input[type="radio"] + label span {
+    display: none;
+}
+input[type="radio"]:checked + label span {
+    background: none;
+}
+input[type="radio"].red:checked + label span {
+    background: none;
+}
+
+
+
+#p2 .section2of4 span {
+    display: none;
+}
+#p2 .section4of4 input {
+    width: 200px;
+}
+#p2 .choosePlan li label span {
+	display: none;
+}
+#p2 .choosePlan input[type="radio"] {
+	display: block;
+	float: left;
+	margin-top: 10px;
+}
+#p2 .popup {
+	background: #FCB728;
+}
+#p4 .moreinfo {
+	height: 39px;
+}

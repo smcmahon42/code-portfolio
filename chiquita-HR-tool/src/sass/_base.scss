@@ -1,0 +1,436 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background: #FFF;
+	height: 100%;
+}
+
+body {
+	background: #FFF;
+	height: 100%;
+}
+
+.ng-hide {
+	display: none;
+}
+
+#chiquitaMobile {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	@include breakpoint(med) {
+		display: none;
+	};
+	@include breakpoint(large) {
+		display: none;
+	};
+
+	img {
+		max-width: 100%;
+	}
+}
+
+#templateWrapper {
+	position: relative;
+	
+	@include breakpoint(small) {
+		width : 100%;
+		height : 100%;
+	};
+	@include breakpoint(med) {
+		width: 100%;
+		height: 100%;
+	};
+	@include breakpoint(large) {
+		overflow: hidden;
+		width: 1025px;
+		min-height: 750px;
+		margin: auto;
+		//border: 1px solid #075ca6;
+	};
+}//templateWrapper
+
+//Full size background image
+#bg {
+	position: fixed; 
+	top: -50%; 
+	left: -50%; 
+	width: 200%; 
+	height: 200%;
+	@include breakpoint(small) {
+		display: none;
+	}
+	@include breakpoint(large) {
+		position: absolute;
+	}
+	img {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		right: 0; 
+		bottom: 0; 
+		margin: auto; 
+		min-width: 50%;
+		min-height: 50%;
+	}
+}
+
+#fullsizeLogo {
+	position: relative;
+	z-index: 1;
+	
+	@include breakpoint(small) {
+		display: none;
+	};
+	@include breakpoint(med) {
+		width: 30%;
+	};
+	@include breakpoint(large) {
+		width: 27%;
+	};
+	img {
+		max-width: 100%;
+	}
+}
+
+#chiquitaBrand {
+	position: absolute;
+	top: 5%;
+	right: 6%;
+	z-index: 1;
+	
+	@include breakpoint(small) {
+		display: none;
+	};
+	@include breakpoint(med) {
+		width: 30%;
+	};
+	@include breakpoint(large) {
+		width: 30%;
+	};
+	img {
+		max-width: 100%;
+	}
+}
+
+#templateInject {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#breadCrumbs {
+	visibility: hidden;
+	position: absolute;
+	
+	left:50%;
+	display: inline-block;
+	margin-left:-40px; //need to have this controled by JS
+	z-index: 2;
+	@include breakpoint(small) {
+		display: none !important;
+	};
+	@include breakpoint(med) {
+		top: 92.5%;
+	};
+	@include breakpoint(large) {
+		top: 92.5%;
+	};
+
+	.progression {
+		width: 50px;
+		height: 50px;
+		padding: 10px;
+		margin: 0 30px 0 0; 
+		float: left;
+		display: inline-block;
+		text-align: center;
+		list-style: none;
+		color: #FFF;
+		font-size: 1.35em;
+		line-height: 1.5em;
+		//border: 2px solid #FFF;
+		font-family: $font-secondary;
+		@include border-radius(25px);
+		//@include single-text-shadow;
+		//@include box-shadow( darken($shadow-color, 30%)  0px 7px 15px);
+	}
+	.off {
+		@include breadcrumb-off(
+			$breadcrumb-not-complete, 
+			darken($breadcrumb-not-complete, 20%) 
+		);
+	}
+	.on {
+		@include breadcrumb-off(
+			$breadcrumb-complete, 
+			darken($breadcrumb-complete, 30%) 
+		);
+	}
+}//breadCrumbs
+
+#breadCrumbs.interior {
+	bottom: 0.5%;
+	top: inherit;
+}
+
+#progressionLine {
+	width: 100%;
+	height: 5px;
+	background: $breadcrumb-not-complete;
+	position: absolute;
+	bottom: 20px;
+	z-index: -1;
+	overflow: hidden;
+	.prog {
+		width: 80px;
+		height: 5px;
+		display: block;
+		background: $breadcrumb-complete;
+	}
+}//progressionLine
+
+.btn {
+	height: 39px;
+	background: $primary-color;
+	font-weight: 700;
+	font-size: 15px;
+	font-family: $font-secondary;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #FFF;
+	border: none;
+	cursor: pointer;
+	border-bottom: 2px solid darken($primary-color, 20%);
+	@include border-radius(5px);
+	@include background-image(linear-gradient($primary-color, darken($primary-color, 30%)));
+
+	@include breakpoint(small) {
+		width: 29%;
+		font-size: 0.85em;
+	};
+	@include breakpoint(med) {
+		padding: 0;
+		padding-right: 20px;
+		padding-left: 20px;
+	};
+	@include breakpoint(large) {
+		padding: 0;
+		padding-right: 20px;
+		padding-left: 20px;
+	};
+}//btn
+
+.navigation {
+	// position: absolute;
+	// right: 10px;
+	// bottom: 40px;
+	margin-top: 15px;
+	float: right;
+
+	@include breakpoint(small) {
+		width: 100%;
+	};
+
+	.resetBtn {
+		height: 39px;
+		background: $primary-color;
+		border-bottom: 2px solid darken($primary-color, 20%);
+		@include breakpoint(small) {
+			width: 38.5%;
+		};
+		@include breakpoint(med) {
+			padding: 0;
+			padding-right: 20px;
+			padding-left: 20px;
+		};
+		@include breakpoint(large) {
+			padding: 0;
+			padding-right: 20px;
+			padding-left: 20px;
+		};
+	}
+}//navigation
+
+.progressionHead {
+	h1 {
+		margin: 40px auto 0;
+		font-size: 2.25em;
+		color: $secondary-color;
+		font-family: $font-primary;
+	}
+	h2 {
+		color: $tertiary-color;
+		font-family: $font-primary;
+		font-size: 1.6em;
+		line-height: 1.8em;
+		width: 470px;
+	}
+}//progressionHead
+
+.popup {
+	//display: none;
+	clear:both;
+	font-family: $font-primary;
+	line-height: 1.4em;
+	font-size: 1.45em;
+	color: #FFF;
+	@include background-image(linear-gradient(#ffc325, #f99e31));
+	padding: 20px;
+	width: 95%;
+	@include border-radius(5px);
+}//popup
+
+form p,
+.largeFont,
+.question li  {
+	font-family: $font-secondary;
+	line-height: 1.4em;
+	font-size: 1.5em;
+}
+label {
+	font-family: $font-secondary;
+}
+
+.formList {
+	padding: 10px;
+	width: 40px;
+	height: 40px;
+	border-bottom: 2px solid darken($secondary-color, 20%);
+	background: $secondary-color;
+	color: #FFF;
+	text-align: center;
+	line-height: 1.25em;
+	font-size: 1em;
+	font-weight: 400;
+	font-family: $font-secondary;
+	@include border-radius(20px);
+}//formList
+
+input[type="radio"] {
+    display:none;
+}
+
+input[type="radio"] + label span {
+    display:inline-block;
+    width:25px;
+    height:25px;
+    margin:-6px 4px 0 0;
+    vertical-align:middle;
+    background:url(../images/radio_sheet.png) left top no-repeat;
+    cursor:pointer;
+}
+
+input[type="radio"]:checked + label span {
+    background:url(../images/radio_sheet.png) -26px top no-repeat;
+}
+
+input[type="radio"].red:checked + label span {
+    background:url(../images/radio_sheet.png) -52px top no-repeat;
+}
+
+.disclaimer {
+	font-size: 12px;
+	text-align: left;
+	display: inline-block;
+	width: 100%;
+}
+
+.yellowFrame {
+	border: 5px solid #FBE60F;
+	//position: absolute;
+	//top: 19%;
+	//left: 2%;
+	margin: 15.5% auto 0 auto;
+	width: 96%;
+	overflow: hidden;
+	//max-height: 600px;
+	padding: 10px 10px 10px 10px;
+	@include border-radius(20px);
+
+	@include breakpoint(small) {
+		border: none;
+		margin: 18.5% auto 0 auto;
+	};
+
+	h1 {
+		color: $primary-color;
+		font-family: $font-primary;
+		font-size: 25px;
+		font-weight: 700;
+	}
+}
+
+.displaySmall {
+	@include breakpoint(small) {
+		display: block;
+	};
+	@include breakpoint(med) {
+		display: none;	
+	};
+	@include breakpoint(large) {
+		display: none;	
+	};
+}
+
+.displayMediumSmall {	
+	@include breakpoint(small) {
+		display: block;	
+	};
+	@include breakpoint(med) {
+		display: block;
+	};
+	@include breakpoint(large) {
+		display: none;	
+	};
+}
+
+.displayMedium {	
+	@include breakpoint(small) {
+		display: none;	
+	};
+	@include breakpoint(med) {
+		display: block;
+	};
+	@include breakpoint(large) {
+		display: block;
+	};
+}
+
+.displayLargeMedium {	
+	@include breakpoint(small) {
+		display: none;	
+	};
+	@include breakpoint(med) {
+		display: block;
+	};
+	@include breakpoint(large) {
+		display: block;
+	};
+}
+
+.displayLarge {	
+	@include breakpoint(small) {
+		display: none;	
+	};
+	@include breakpoint(med) {
+		display: none;
+	};
+	@include breakpoint(large) {
+		display: block;
+	};
+}
+
+input {
+    -webkit-appearance: none;
+}
+
+

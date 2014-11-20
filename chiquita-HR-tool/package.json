@@ -1,0 +1,30 @@
+{
+  "name": "decision-tool",
+  "version": "0.0.1",
+  "description": "decision tool",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+   "grunt-cli": "latest"
+  },
+  "dependencies": {
+    "bower": "latest",
+    "grunt": "latest",
+    "grunt-bower-requirejs": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-compass": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-requirejs": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest"
+  },
+  "author": "Sean McMahon <sean@fieroagency.com>",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}

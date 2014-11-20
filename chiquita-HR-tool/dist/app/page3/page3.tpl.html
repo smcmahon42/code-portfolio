@@ -1,0 +1,74 @@
+<div id="p3" class="pageWrap yellowFrame">
+    
+  <form>
+
+    <h1>4. How often do you expect to use your medical plan in 2015?
+     Select Light, Moderate or Frequent Usage Estimate*</h1>
+
+    <ul class="light planUse">
+      <li class="radio">
+        <input type="radio" ng-change="chooseLevel('light')" id="lightUser" value="light"  ng-model="user.page3.userType"> 
+        <label for="lightUser"><span></span>Light User</label>
+         <input type="submit" class="btn displaySmall" ng-click="showHide('light')" value="{{buttonDisplay.light}}">
+      </li>
+      <ul>
+        <li>1 routine physical</li>
+        <li>2 PCP office visits</li>
+        <li>1 blood test</li>
+        <li>2 generic retail prescriptions</li>
+      </ul>
+    </ul>
+
+    <ul class="med planUse">
+      <li class="radio">
+        <input type="radio" ng-change="chooseLevel('med')" value="moderate" id="mediumUser" ng-model="user.page3.userType"> 
+        <label for="mediumUser"><span></span>Moderate User</label>
+        <input type="submit" class="btn displaySmall" ng-click="showHide('med')" value="{{buttonDisplay.med}}">
+      </li>
+      <ul>
+        <li>1 routine physical</li>
+        <li>3 PCP office visits</li>
+        <li>2 specialist office visits</li>
+        <li>3 blood tests</li>
+        <li>1 X-ray</li>
+        <li>1 emergency room visit</li>
+        <li>2 generic retail prescriptions</li> 
+        <li>2 brand name retail prescriptions</li>
+        <li>2 brand name mail order prescriptions</li>
+      </ul>
+    </ul>
+
+    <ul class="heavy planUse">
+      <li class="radio">
+        <input type="radio" id="heavyUser" ng-change="chooseLevel('frequent')" ng-model="user.page3.userType" value="frequent" >
+        <label for="heavyUser"><span></span>Frequent User</label>
+        <input type="submit" class="btn displaySmall" ng-click="showHide('heavy')" value="{{buttonDisplay.heavy}}">
+      </li>
+      <ul>
+        <li>1 routine physical</li>
+        <li>6 PCP office visits</li>
+        <li>7 specialist office visits</li>
+        <li>10 blood test</li>
+        <li>1 X-ray</li>
+        <li>1 MRI scan</li>
+        <li>1 emergency room visit</li>
+        <li>1 inpatient admission</li>
+        <li>8 generic retail prescriptions</li>
+        <li>4 brand name retail prescriptions</li>
+        <li>4 brand name mail order prescriptions</li>
+      </ul>
+
+    </ul>
+
+  <p class="disclaimer">*Healthcare services and cost used in this tool are based on national averages.</p>
+
+  </form>
+
+  <div class="navigation">
+    <input type="submit" class="btn" ng-click="lastPage(2)" value="&laquo; Back">
+    <input  type="button" class="btn resetBtn" ng-click="resetprogram()" value="Reset Form">
+    <input type="submit" class="btn" ng-click="nextPage(4)" value="next &raquo;">
+  </div>
+
+</div>
+

@@ -1,0 +1,59 @@
+#final {
+	overflow: hidden;
+	.col1 {
+		@include breakpoint(small) {
+			width: 100%;
+		};
+		@include breakpoint(med) {
+			width: 59%;
+			position: absolute;
+			left: 37px;
+			top: 5%;
+			padding-right: 10px;
+		};
+		@include breakpoint(large) {
+			width: 59%;
+			position: absolute;
+			left: 37px;
+			top: 10%;
+			padding-right: 10px;
+		};
+
+		h1 {
+			margin: 40px auto 15px auto;
+			font-size: 55px;
+			color: $primary-color;
+			font-family: $font-primary;
+			@include breakpoint(small) {
+				margin: 18px auto 15px auto;
+			};
+		}
+		p {
+			font-size: 21px;
+			line-height: 28px;
+			margin: auto;
+			color: $primary-color;
+			font-family: $font-primary;
+			padding-right: 6%;
+		}
+	}
+	.col2 {
+		width: 33%;
+		position: absolute;
+		right: 40px;
+		bottom: -3px;
+		img {
+			width: 100%;
+		}
+	}
+
+}
+#final.yellowFrame {
+	position: relative;	
+	@include breakpoint(med) {
+		height: 70%;
+	};
+	@include breakpoint(large) {
+		height: 70%;
+	};
+}

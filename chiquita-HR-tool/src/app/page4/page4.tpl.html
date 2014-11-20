@@ -1,0 +1,82 @@
+<div id="p4" class="pageWrap yellowFrame">
+
+  <div class="progressionHead">
+    <h1>You’re almost done!</h1>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <td class="copy">&nbsp;</td>
+        <td>CDHP</td>
+        <td>PPO</td>
+      </tr>
+    </thead>
+    <tbody>
+
+
+      <tr>
+        <td class="copy">
+        Healthcare cost based on selected level of use
+        <small>(takes into account deductibles and out-of-pocket maximums)</small>
+        </td>
+        <td>{{calc.cdhp.healthcareLevelUse | currency}}</td>
+        <td>{{calc.ppo.healthcareLevelUse | currency}}</td>
+      </tr>
+      <tr>
+        <td class="copy">
+        HSA Fund
+        <small>(Employee contributions plus company contributions)</small>
+        </td>
+        <td><u>{{calc.cdhp.hsaFund | currency}}</u></td>
+        <td><u>N/A</u></td>
+      </tr>
+      <tr class="line blue">
+        <td class="copy">Your estimated out-of-pocket costs for care</td>
+        <td>{{calc.cdhp.oopCareCost | currency}}</td>
+        <td>{{calc.ppo.oopCareCost | currency}}</td>
+      </tr>
+
+
+
+      <tr>
+        <td class="copy">Annual paycheck contribution</td>
+        <td>{{calc.cdhp.annualPayCont | currency}}</td>
+        <td>{{calc.ppo.annualPayCont | currency}}</td>
+      </tr>
+      <tr>
+        <td class="copy">Spouse annual surcharge</td>
+        <td><u>{{calc.cdhp.spouseCharge | currency}}</u></td>
+        <td><u>{{calc.ppo.spouseCharge | currency}}</u></td>
+      </tr>
+      <tr class="line blue">
+        <td class="copy">Your estimated total out-of-pocket cost</td>
+        <td class="oop">{{calc.cdhp.oopCost | currency}}<sup>*</sup></td>
+        <td class="oop">{{calc.ppo.oopCost | currency}}<sup>*</sup></td>
+      </tr>
+
+
+
+      <tr class="blue">
+        <td class="copy">Remaining HSA balance for beginning of 2016</td>
+        <td>{{calc.cdhp.remainingBalance | currency}}</td>
+        <td>&nbsp;</td>
+      </tr>
+
+      <tr class="last">
+        <td colspan="3">
+          <p class="disclaimer">*The comparison of out-of-pocket costs are illustrative and may vary based on your own  specific utilization.</p>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+  
+
+  <div class="navigation lastpage">
+    <input id="pg7BtnBack" type="submit" class="btn" name="submitPage7" ng-click="lastPage(3)" value="&laquo; Back">
+    <input  type="button" class="btn resetBtn" ng-click="resetprogram()" value="Reset Form">
+    <input  type="button" class="btn moreinfo" ng-click="newWindow()" value="Click to Complete &raquo;">
+  </div>
+
+</div>

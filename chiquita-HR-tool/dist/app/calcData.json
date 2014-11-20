@@ -1,0 +1,310 @@
+[{
+	"cdhp" : {
+		"single" : {
+			"cost-use" : {
+				"light" : 400,
+				"moderate" : 1750,
+				"frequent" : 4000
+			},
+			"employer-hsa" : {
+				"light" : 500,
+				"moderate" : 500,
+				"frequent" : 1000
+			},
+			"employee-hsa" : {
+				"light" : 0,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"total-annual" : {
+				"light" : 500,
+				"moderate" : 500,
+				"frequent" : 500
+			},
+			"estimated-oop" : {
+				"light" : 0,
+				"moderate" : 1250,
+				"frequent" : 3500
+			},
+			"annual-paycheck" : {
+				"light" : 496,
+				"moderate" : 496,
+				"frequent" : 496
+			},
+			"remaing-balance" : {
+				"light" : 100,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"spouse" : 0
+		},
+		"employee-spouse" : {
+			"cost-use" : {
+				"light" : 700,
+				"moderate" : 2900,
+				"frequent" : 6700
+			},
+			"employer-hsa" : {
+				"light" : 1000,
+				"moderate" : 1000,
+				"frequent" : 1000
+			},
+			"employee-hsa" : {
+				"light" : 0,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"total-annual" : {
+				"light" : 1000,
+				"moderate" : 1000,
+				"frequent" : 1000
+			},
+			"estimated-oop" : {
+				"light" : 0,
+				"moderate" : 1900,
+				"frequent" : 5700
+			},
+			"annual-paycheck" : {
+				"light" : 1041,
+				"moderate" : 1041,
+				"frequent" : 1041
+			},
+			"remaing-balance" : {
+				"light" : 300,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"spouse" : 1200
+		},
+		"employee-children" : {
+			"cost-use" : {
+				"light" : 500,
+				"moderate" : 2300,
+				"frequent" : 5300
+			},
+			"employer-hsa" : {
+				"light" : 1000,
+				"moderate" : 1000,
+				"frequent" : 1000
+			},
+			"employee-hsa" : {
+				"light" : 0,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"total-annual" : {
+				"light" : 1000,
+				"moderate" : 1000,
+				"frequent" : 1000
+			},
+			"estimated-oop" : {
+				"light" : 0,
+				"moderate" : 1300,
+				"frequent" : 4300
+			},
+			"annual-paycheck" : {
+				"light" : 892,
+				"moderate" : 892,
+				"frequent" : 892
+			},
+			"remaing-balance" : {
+				"light" : 500,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"spouse" : 0
+		},
+		"employee-family" : {
+			"cost-use" : {
+				"light" : 800,
+				"moderate" : 3500,
+				"frequent" : 8000
+			},
+			"employer-hsa" : {
+				"light" : 1000,
+				"moderate" : 1000,
+				"frequent" : 1000
+			},
+			"employee-hsa" : {
+				"light" : 0,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"total-annual" : {
+				"light" : 1000,
+				"moderate" : 1000,
+				"frequent" : 1000
+			},
+			"estimated-oop" : {
+				"light" : 0,
+				"moderate" : 2500,
+				"frequent" : 7000
+			},
+			"annual-paycheck" : {
+				"light" : 1487,
+				"moderate" : 1487,
+				"frequent" : 1487
+			},
+			"remaing-balance" : {
+				"light" : 200,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"spouse" : 1200
+		}
+	},
+	"ppo" : {
+		"single" : {
+			"cost-use" : {
+				"light" : 300,
+				"moderate" : 1500,
+				"frequent" : 4000
+			},
+			"employer-hsa" : {
+				"light" : 0,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"employee-hsa" : {
+				"light" : 0,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"total-annual" : {
+				"light" : 0,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"estimated-oop" : {
+				"light" : 300,
+				"moderate" : 1500,
+				"frequent" : 4000
+			},
+			"annual-paycheck" : {
+				"light" : 1355,
+				"moderate" : 1355,
+				"frequent" : 1355
+			},
+			"remaing-balance" : {
+				"light" : 0,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"spouse" : 0
+		},
+		"employee-spouse" : {
+			"cost-use" : {
+				"light" : 500,
+				"moderate" : 2500,
+				"frequent" : 6700
+			},
+			"employer-hsa" : {
+				"light" : 0,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"employee-hsa" : {
+				"light" : 0,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"total-annual" : {
+				"light" : 0,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"estimated-oop" : {
+				"light" : 500,
+				"moderate" : 2500,
+				"frequent" : 6700
+			},
+			"annual-paycheck" : {
+				"light" : 2846,
+				"moderate" : 2846,
+				"frequent" : 2846
+			},
+			"remaing-balance" : {
+				"light" : 0,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"spouse" : 1200
+		},
+		"employee-children" : {
+			"cost-use" : {
+				"light" : 400,
+				"moderate" : 2000,
+				"frequent" : 5300
+			},
+			"employer-hsa" : {
+				"light" : 0,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"employee-hsa" : {
+				"light" : 0,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"total-annual" : {
+				"light" : 0,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"estimated-oop" : {
+				"light" : 400,
+				"moderate" : 2000,
+				"frequent" : 5300
+			},
+			"annual-paycheck" : {
+				"light" : 2440,
+				"moderate" : 2440,
+				"frequent" : 2440
+			},
+			"remaing-balance" : {
+				"light" : 0,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"spouse" : 0
+		},
+		"employee-family" : {
+			"cost-use" : {
+				"light" : 600,
+				"moderate" : 3000,
+				"frequent" : 8000
+			},
+			"employer-hsa" : {
+				"light" : 0,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"employee-hsa" : {
+				"light" : 0,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"total-annual" : {
+				"light" : 0,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"estimated-oop" : {
+				"light" : 600,
+				"moderate" : 3000,
+				"frequent" : 8000
+			},
+			"annual-paycheck" : {
+				"light" : 4066,
+				"moderate" : 4066,
+				"frequent" : 4066
+			},
+			"remaing-balance" : {
+				"light" : 0,
+				"moderate" : 0,
+				"frequent" : 0
+			},
+			"spouse" : 1200
+		}
+	}
+}]

@@ -1,0 +1,162 @@
+#p2 {
+
+	h1 {
+		margin-bottom: 20px;
+	}
+	ul  {
+		margin: 0;
+		padding: 0;
+		
+		float: left;
+		ol {
+			// list-style: decimal;
+			// list-style-position: inside;
+			margin: 10px 0;
+			float: left;
+			//clear: left;
+			width: 100%;
+			p {
+				color: $primary-color;
+				font-family: $font-primary;
+				font-weight: 700;
+				font-size: 19px;
+				//clear: left;
+				float: left;
+				display: block;
+			}
+		}
+	}
+
+	.q1 p {
+		float: none;
+	}
+	.q2 p, .q3 p {
+		width: 70%;
+		@include breakpoint(small) {
+			width: 100%;
+		};
+	}
+
+	.choosePlan {
+		li {
+			float: left;
+			display: block;
+			padding: 10px;
+			margin-right: 40px;
+			label span {
+				margin-top: 30px;
+				margin-right: 10px;
+				display: block;
+				float: left;
+			}
+			label section {
+				display: block;
+				float: left;
+			}
+			label article {
+				color: $primary-color;
+				font-family: $font-primary;
+				font-weight: 400;
+				font-size: 19px;
+				font-style: italic;
+			}
+		}
+		.plan4 {
+			margin-right: 0;
+		}
+	}
+
+	.checkboxs {
+		float: right;
+		margin: 1px 1% 0 0;
+
+		@include breakpoint(small) {
+			clear: left;
+			float: left;
+			margin: 15px 0;
+		};
+
+		li {
+			float: left;
+			color: $primary-color;
+			font-family: $font-primary;
+			font-weight: 400;
+			font-size: 19px;
+		}
+		.yes {
+			margin-right: 35px;
+		}
+	}
+
+	.popup {
+		position: relative;
+		margin-top: 15px;
+		line-height: 25px;
+		font-size: 20px;
+		padding: 15px;
+		float: left;
+		width: 100%;
+		img {
+			position: absolute;
+			top: -32px;
+			right: 108px;
+			width: 65px;
+
+			@include breakpoint(small) {
+				right: 0;
+				left: 8px;	
+			};
+		}
+
+		input[type=number]::-webkit-inner-spin-button,
+		input[type=number]::-webkit-outer-spin-button {
+		    -webkit-appearance: none;
+		    margin: 0;
+		}
+		input[type=number] {
+		    -moz-appearance:textfield;
+		}
+
+		input {
+			padding: 3px;
+			font-size: 14px;
+			color: #FFF;
+			background-color: #f68f26;
+			border: 1px solid #f68f26;
+			-webkit-box-shadow:inset 0 0 10px 0 darken(#f68f26, 35%);
+			box-shadow:inset 0 0 10px 0 darken(#f68f26, 35%);
+			@include border-radius(5px);
+		}
+		::-webkit-input-placeholder { /* WebKit browsers */
+		    color:    #FFF;
+		}
+		:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		   color:    #FFF;
+		   opacity:  1;
+		}
+		::-moz-placeholder { /* Mozilla Firefox 19+ */
+		   color:    #FFF;
+		   opacity:  1;
+		}
+		:-ms-input-placeholder { /* Internet Explorer 10+ */
+		   color:    #FFF;
+		}
+	}
+
+	.error {
+		border: 3px solid red !important;
+	}
+
+	.plan3 {
+		@include breakpoint(med) {
+			clear: left;
+		};
+	}
+
+	.selectPlanType select {
+		margin-top: 10px;
+	}
+
+}
+
+

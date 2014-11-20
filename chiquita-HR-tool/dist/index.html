@@ -1,0 +1,75 @@
+<!doctype html>
+<html xmlns:ng="http://angularjs.org" ng-app>
+
+	<head>
+
+	    <!--[if lte IE 8]>
+	      <script>
+	        document.createElement('ng-include');
+	        document.createElement('ng-pluralize');
+	        document.createElement('ng-view');
+	        document.createElement('ui-view');
+
+	        // Optionally these for CSS
+	        document.createElement('ng:include');
+	        document.createElement('ng:pluralize');
+	        document.createElement('ng:view');
+	      </script>
+	    <![endif]-->
+
+	    <meta charset="UTF-8">
+		<title>Chiquita</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		
+		<link rel="stylesheet" type="text/css" media="all" href="css/main.css" />
+
+		<!--[if lte IE 9]>
+		<link rel="stylesheet" href="css/ie.css">
+		<script src="vendor/respond/dest/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body ng-controller="mainController">
+		
+		<div id="templateWrapper" ng-class="{ 'welcome' : backgroundWelcome == true, 'main' : backgroundWelcome == false}">
+
+			<div id="bg" ng-show="backgroundWelcome">
+			  <img src="images/largeBackground.jpg" alt="family at tabel image">
+			</div>
+
+			<div id="fullsizeLogo">
+				<img src="images/chiquitaLogo.png" alt="Chiquita Logo">
+			</div>
+
+			<div id="chiquitaBrand">
+				<img src="images/chiquitaBrands.png" alt="Chiquita Brands">
+			</div>
+
+			<div id="chiquitaMobile">
+				<img src="images/mobileHeader.gif" alt="Chiquita Brands">
+			</div>
+			
+			<div id="templateInject" class="container" ui-view></div><!-- #templateInject -->
+
+			<div id="breadCrumbs" ng-class="{ 'interior' : backgroundWelcome == false, 'main' : backgroundWelcome == true}">
+				<div id="progressionLine">
+					<span class="prog"></span>
+				</div>
+			</div><!-- #breadCrumbs -->
+
+		</div><!-- #templateWrapper -->
+	    
+		<script data-main="app/main.js" src="vendor/requirejs/require.js"></script>
+
+		<script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			  ga('create', 'UA-xxxxxxx-1', 'auto', { 'cookieDomain' : 'none' });
+		</script>
+
+	</body>
+
+</html>
