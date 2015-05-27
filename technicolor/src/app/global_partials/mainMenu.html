@@ -1,0 +1,28 @@
+<div id="mainMenu"
+	 class="mainMenu-animation " 
+	 ng-class="{'expandMenu': stateChange.isMenuOpen, expandMenutrivia: stateChange.isTechnitriviaOpen}" >
+	
+	<section class="chapterNavWrapper">
+
+		<section 
+			ng-repeat="chapt in chapterMap"
+			ng-if="chapt.chapterUrlName != 'fin'"
+			class="chapterNav" 
+			id="menu-{{chapt.chapterUrlName}}">
+			
+			<h2><a ui-sref-opts="{reload: true}" ui-sref="{{chapt.chapterUrlName}}({ id:'{{chapt.chapterUrlName}}-init' })">{{chapt.chapterShortName}}</a></h2>
+			
+			<ul>
+				<li ng-repeat="section in chapt.sections">
+					<a ui-sref-opts="{reload: true}" ng-class="{'activeLink': stateChange.uiState.toParamId == '{{section.link}}'}" 
+					   ui-sref="{{chapt.chapterUrlName}}({ id:'{{section.link}}' })" >
+						{{section.text}}
+					</a>
+				</li>
+			</ul>
+
+		</section>
+
+	</section>
+
+</div>

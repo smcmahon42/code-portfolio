@@ -1,0 +1,10 @@
+CACHE MANIFEST
+
+CACHE:
+libs/preload.js
+libs/libsPackage.js
+libs/video-js/video.js
+libs/angularPackage.js
+
+NETWORK:
+*

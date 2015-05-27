@@ -1,0 +1,62 @@
+#preloader {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.9);
+	opacity: 1;
+	padding-bottom: 100px;
+	position: fixed;
+	z-index: 101;
+}
+
+.strips-container {
+  width: 410px;
+  height: 73px;
+  margin: auto;
+  background-image: url(../images/preload-images/technicolor-logo-colors.png);
+  background-repeat: no-repeat;
+  .strip    { 
+    opacity: 0;
+    // display: block;
+    // float: left;
+  }
+}
+
+#preload-position {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+.preload-container {
+  position: relative;
+  top: 40.5%;
+  width: 414px;
+  margin: auto;
+  -webkit-transform: scale(0.6);
+  transform: scale(0.6);
+
+	h2 { 
+    font-size: 5em; 
+    margin-bottom: -7px;
+  }
+
+  p {
+		font-size: 2.5em;
+    margin-top: 50px;
+  }
+
+  .logo-text {
+		color: white;
+    font-family: 'Myriad Pro';
+    text-align: center;
+  }
+
+  .tagline {
+    .feelthewonder {
+      margin-top: 30px;
+    }
+  }
+
+}

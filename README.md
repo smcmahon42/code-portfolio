@@ -10,6 +10,21 @@ Below is a summary of each project and what my participation was.
 NOTE: I removed images and videos from the files to make the download faster. 
 
 
+## Technicolor 100 Year Story
+
+For Technicolor's 100th year anniversary, the company wanted a fun and unique way to illustrate to their employees where they came from, where the company is now, and where they are heading. The project was presented to me as basically a glorified slide show. As lead developer, I choose the technology to drive the project, managed the git repo merges, and crafted the framework to make it easier for other developers also working on the project.
+
+The challenges were less technological, and had more to do about resources. My team was an offshore group, where we communicated through video and chat. Although they were well versed in coding and had great communication skills, they did not have a lot of experience. This resulted in long nights and weekends on my end, as well as cutting corners to recover the timeline. In the end, the product was a success. The only thing I regret was not having the time to refactor several angular js services and directives to make them more DRY. 
+
+You can find a demo of this site at: technicolor100.fieroagency.com
+
+        * SASS
+        * Angular JS
+        * Grunt JS
+        * GSAP
+        * Preload JS
+
+
 ## Chiquita Decision Tool App
 
 This tool was used for employees to guide their decision on what type of health care they wish to have in the following fiscal year. The tool asked you a series of questions and did a calculation based on those questions, which in turn delivered you costs for health care of that year. My roll was to build out this application start to finish using SASS and Angular JS making it a responsive web app in 7 days time. 

@@ -1,0 +1,371 @@
+[
+    {
+        "firstName": "Caroline",
+        "lastName": "Baillard",
+        "imgName": "Caroline_Baillard",
+        "title": "Technology Area Leader",
+        "talentType": "technology",
+        "division": "Media Computing Lab – Augmented & Immersive Technology Area",
+        "urlLink": "http://www.technicolor.com/en/caroline-baillard?location=1548"
+    },
+    {
+        "firstName": "Valter",
+        "lastName": "Drazic",
+        "imgName": "Valter_Drazic",
+        "title": "Principal Scientist",
+        "talentType": "technology",
+        "division": "Media Computing Lab – Computational Imaging Technology Area",
+        "urlLink": "http://www.technicolor.com/en/valter-drazic"
+    },
+    {
+        "firstName": "Julien",
+        "lastName": "Fleureau",
+        "imgName": "Julien_Fleureau",
+        "title": "Senior Scientist",
+        "talentType": "technology",
+        "division": "Media Computing Lab – Augmented & Immersive Technology Area",
+        "urlLink": "http://www.Technicolor.Com/En/Julien-Fleureau?Location=3305"
+    },
+    {
+        "firstName": "Pascal",
+        "lastName": "Lecocq",
+        "imgName": "Pascal_Lecocq",
+        "title": "Researcher",
+        "talentType": "technology",
+        "division": "Media Computing Lab – Augmented & Immersive Technology Area",
+        "urlLink": "http://www.Technicolor.Com/En/Pascal-Lecocq?Location=3305"
+    },
+    {
+        "firstName": "Neus",
+        "lastName": "Sabater",
+        "imgName": "Neus_Sabater",
+        "title": "Researcher",
+        "talentType": "technology",
+        "division": "Media Computing Lab – Computational Imaging Technology Area",
+        "urlLink": "http://www.Technicolor.Com/En/Neus-Sabater?Location=1548"
+    },
+    {
+        "firstName": "Christel",
+        "lastName": "Chamaret",
+        "imgName": "Christel_Chamaret",
+        "title": "Senior Scientist",
+        "talentType": "technology",
+        "division": "ISL/Contextual media",
+        "urlLink": "Http://Www.Technicolor.Com/En/Christel-Chamaret"
+    },
+    {
+        "firstName": "Mozhdeh",
+        "lastName": "Seifi",
+        "imgName": "Mozhdeh_Seifi",
+        "title": "Senior Scientist",
+        "talentType": "technology",
+        "division": "ISL/Contextual media",
+        "urlLink": "https://www.linkedin.com/pub/mozhdeh-seifi/12/413/4b4"
+    },
+    {
+        "firstName": "Tomas",
+        "lastName": "Crivelli",
+        "imgName": "Tomas_Crivelli",
+        "title": "Researcher",
+        "talentType": "technology",
+        "division": "ISL/Contextual media",
+        "urlLink": "https://www.researchgate.net/profile/Tomas_Crivelli"
+    },
+    {
+        "firstName": "Julien",
+        "lastName": "Ricard",
+        "imgName": "Julien_Ricard",
+        "title": "Researcher",
+        "talentType": "technology",
+        "division": "ISL/ATSC",
+        "urlLink": "none"
+    },
+    {
+        "firstName": "Yannick",
+        "lastName": "Olivier",
+        "imgName": "Yannick_Olivier",
+        "title": "Senior Scientist",
+        "talentType": "technology",
+        "division": "ISL/Compression&Color",
+        "urlLink": "none"
+    },
+    {
+        "firstName": "Hassane",
+        "lastName": "Guermoud",
+        "imgName": "Hassane_Guermoud",
+        "title": "Researcher",
+        "talentType": "technology",
+        "division": "ISL/Compression&Color",
+        "urlLink": "none"
+    },
+    {
+        "firstName": "Ulrich",
+        "lastName": "Gries",
+        "imgName": "Ulrich_Gries",
+        "title": "Engineer",
+        "talentType": "technology",
+        "division": "Content Processing Lab – Audio and Acoustics",
+        "urlLink": "none"
+    },
+    {
+        "firstName": "Sven",
+        "lastName": "Kordon",
+        "imgName": "Sven_Kordon",
+        "title": "Senior Engineer",
+        "talentType": "technology",
+        "division": "Content Processing Lab – Audio and Acoustics",
+        "urlLink": "https://www.linkedin.com/in/svenkordon"
+    },
+    {
+        "firstName": "Alexander",
+        "lastName": "Kruger",
+        "imgName": "Alexander_Kruger",
+        "title": "Senior Scientist",
+        "talentType": "technology",
+        "division": "Content Processing Lab – Audio and Acoustics",
+        "urlLink": "http://www.technicolor.com/en/alexander-kruger"
+    },
+    {
+        "firstName": "Jorn",
+        "lastName": "Jachalsky",
+        "imgName": "Jorn_Jachalsky",
+        "title": "Principal Scientist",
+        "talentType": "technology",
+        "division": "Content Processing Lab – Metadata",
+        "urlLink": "https://www.linkedin.com/in/jachalsky"
+    },
+    {
+        "firstName": "Jordi",
+        "lastName": "Salvador",
+        "imgName": "Jordi_Salvador",
+        "title": "Researcher",
+        "talentType": "technology",
+        "division": "Content Processing Lab – Resolution Enhancement",
+        "urlLink": "http://www.technicolor.com/en/jordi-salvador?location=946"
+    },
+    {
+        "firstName": "Lorenzo",
+        "lastName": "Sorgi",
+        "imgName": "Lorenzo_Sorgi",
+        "title": "Researcher",
+        "talentType": "technology",
+        "division": "Content Processing Lab – 3D Modeling",
+        "urlLink": "none"
+    },
+    {
+        "firstName": "Nadia",
+        "lastName": "Fawaz",
+        "imgName": "Nadia_Fawaz",
+        "title": "Senior Researcher",
+        "talentType": "technology",
+        "division": "Personalization Lab, Los Altos CA",
+        "urlLink": "http://nadiafawaz.com/"
+    },
+    {
+        "firstName": "Brian",
+        "lastName": "Eriksson",
+        "imgName": "Brian_Eriksson",
+        "title": "Technology Area Leader",
+        "talentType": "technology",
+        "division": "User Analytics (Los Altos and Rennes)",
+        "urlLink": "http://brianeriksson.com/"
+    },
+    {
+        "firstName": "Jaideep",
+        "lastName": "Chandrashekar",
+        "imgName": "Jaideep_Chandrashekar",
+        "title": "Principal Researcher",
+        "talentType": "technology",
+        "division": "Technology Area Leader, User Analytics (Los Altos and Rennes)",
+        "urlLink": "http://brianeriksson.com/"
+    },
+    {
+        "firstName": "David",
+        "lastName": "Register",
+        "imgName": "David_Register",
+        "title": "Research and Development Engineer",
+        "talentType": "technology",
+        "division": "On-Location Services",
+        "urlLink": "http://www.imdb.com/name/nm2393110/?ref_=fn_al_nm_2"
+    },
+    {
+        "firstName": "Steve",
+        "lastName": "Scott",
+        "imgName": "Steve_Scott",
+        "title": "VP of Theatrical Imaging & Supervising Digital Colorist",
+        "talentType": "creative",
+        "division": "Production Services –Theatrical",
+        "urlLink": "http://www.technicolor.com/en/steve-scott"
+    },
+    {
+        "firstName": "Mike",
+        "lastName": "Hatzer",
+        "imgName": "Mike_Hatzer",
+        "title": "Senior Digital Intermediate Colorist",
+        "talentType": "creative",
+        "division": "Production Services –Theatrical",
+        "urlLink": "http://www.technicolor.com/en/michael-hatzer"
+    },
+    {
+        "firstName": "Sparkle",
+        "lastName": "(Steven P. Arkle)",
+        "imgName": "Sparkle",
+        "title": "Senior Colorist",
+        "talentType": "creative",
+        "division": "Production Services –Broadcast",
+        "urlLink": "http://www.technicolor.com/en/sparkle"
+    },
+    {
+        "firstName": "Gareth",
+        "lastName": "Cook",
+        "imgName": "Gareth_Cook",
+        "title": "Senior Colorist",
+        "talentType": "creative",
+        "division": "Production Services –Broadcast",
+        "urlLink": "http://www.technicolor.com/en/gareth-cook"
+    },
+    {
+        "firstName": "Paul",
+        "lastName": "Hill",
+        "imgName": "Paul_Hill",
+        "title": "VFX Artist",
+        "talentType": "creative",
+        "division": "Production Services –VFX",
+        "urlLink": "http://www.technicolor.com/en/paul-hill"
+    },
+    {
+        "firstName": "Joshua",
+        "lastName": "Pines",
+        "imgName": "Joshua_Pines",
+        "title": "Vice President, Imaging Research and Development",
+        "talentType": "creative",
+        "division": "Production Services – Color Science",
+        "urlLink": "http://www.imdb.com/name/nm0003256/?ref_=fn_al_nm_1"
+    },
+    {
+        "firstName": "Chris",
+        "lastName": "Kutchka",
+        "imgName": "Chris_Kutchka",
+        "title": "Digital Imaging Science",
+        "talentType": "creative",
+        "division": "Production Services – Color Science",
+        "urlLink": "http://www.imdb.com/name/nm0476478/?ref_=fn_al_nm_1"
+    },
+    {
+        "firstName": "Ben",
+        "lastName": "Wilkins",
+        "imgName": "Ben_Wilkins",
+        "title": "Supervising Sound Editor and Re-recording Mixer",
+        "talentType": "creative",
+        "division": "Production Services – Sound",
+        "urlLink": "http://www.technicolor.com/en/ben-wilkins"
+    },
+    {
+        "firstName": "Craig",
+        "lastName": "Mann",
+        "imgName": "Craig_Mann",
+        "title": "Re-recording Mixer",
+        "talentType": "creative",
+        "division": "Production Services – Sound",
+        "urlLink": "http://www.technicolor.com/en/craig-mann"
+    },
+    {
+        "firstName": "Greg P.",
+        "lastName": "Russell",
+        "imgName": "Greg_Russell",
+        "title": "Sound Re-recording Mixer",
+        "talentType": "creative",
+        "division": "Production Services – Sound",
+        "urlLink": "http://www.technicolor.com/en/greg-p-russell"
+    },
+    {
+        "firstName": "Anna",
+        "lastName": "Behlmer",
+        "imgName": "Anna_Behlmer",
+        "title": "Sound Re-recording Mixer",
+        "talentType": "creative",
+        "division": "Production Services – Sound",
+        "urlLink": "http://www.technicolor.com/en/anna-behlmer"
+    },
+    {
+        "firstName": "Gary",
+        "lastName": "MeGregian",
+        "imgName": "Gary_MeGregian",
+        "title": "Supervising Sound Editor",
+        "talentType": "creative",
+        "division": "Production Services – Sound",
+        "urlLink": "http://www.imdb.com/name/nm2424442/?ref_=fn_al_nm_2"
+    },
+    {
+        "firstName": "Peter",
+        "lastName": "Doyle",
+        "imgName": "Peter_Doyle",
+        "title": "Supervising Visual Colorist",
+        "talentType": "creative",
+        "division": "Production Services –Theatrical (London)",
+        "urlLink": "http://www.technicolor.com/en/peter-doyle"
+    },
+    {
+        "firstName": "Jean-Clement",
+        "lastName": "Soret",
+        "imgName": "Jean_Soret",
+        "title": "Global Creative Director of Colour Grading",
+        "talentType": "creative",
+        "division": "Production Services",
+        "urlLink": "http://www.moving-picture.com/reels/colourist-reels/colourist-reel-jeanclement-sore"
+    },
+    {
+        "firstName": "Kevin",
+        "lastName": "Chandoo",
+        "imgName": "Kevin_Chandoo",
+        "title": "Creative Director",
+        "talentType": "creative",
+        "division": "Technicolor Toronto",
+        "urlLink": "http://www.imdb.com/name/nm1619327/?ref_=fn_al_nm_1"
+    },
+    {
+        "firstName": "Mark",
+        "lastName": "Kueper",
+        "imgName": "Mark_Kueper",
+        "title": "Senior Colorist",
+        "talentType": "creative",
+        "division": "Technicolor Toronto",
+        "urlLink": "http://www.imdb.com/name/nm1006028/"
+    },
+    {
+        "firstName": "Mike",
+        "lastName": "Woroniuk",
+        "imgName": "Mike_Woroniuk",
+        "title": "Re-recording Mixer",
+        "talentType": "creative",
+        "division": "Technicolor Toronto",
+        "urlLink": "http://www.imdb.com/name/nm0941574/?ref_=fn_al_nm_2"
+    },
+    {
+        "firstName": "Brett",
+        "lastName": "Trider",
+        "imgName": "Brett_Trider",
+        "title": "Colorist",
+        "talentType": "creative",
+        "division": "Technicolor Toronto",
+        "urlLink": "none"
+    },
+    {
+        "firstName": "Alan",
+        "lastName": "Degraaf",
+        "imgName": "Alan_Degraaf",
+        "title": "Colorist",
+        "talentType": "creative",
+        "division": "Re-recording Mixer",
+        "urlLink": "http://www.imdb.com/name/nm0214797/"
+    },
+    {
+        "firstName": "Paul",
+        "lastName": "Williamson",
+        "imgName": "Paul_Williamson",
+        "title": "Re-recording Mixer",
+        "talentType": "creative",
+        "division": "none",
+        "urlLink": "http://www.imdb.com/name/nm0932124/"
+    }
+]

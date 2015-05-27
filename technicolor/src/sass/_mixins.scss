@@ -1,0 +1,41 @@
+@mixin breakpoint($point) {
+  @if $point == small {
+    @media (max-width: 699px) {
+      @content;
+    }
+  }
+  @if $point == med {
+    @media (min-width: 700px) and (max-width: 2199px) {
+      @content;
+    }
+  }
+  @if $point == large {
+    @media (min-width: 2200px) {
+      @content;
+    }
+  }
+}
+
+@mixin copyVerticleCenter($heightType){
+    height: $heightType;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include translate(-50%, -50%);  
+}
+
+//Nexus 7
+// Portrait width: 600
+// Landscape width: 961
+
+
+//ipad
+// Portrait width:  768px
+// Landscape width: 1024px
+
+
+// small under 499 
+// medium 500 - 800
+// large 801 - and up
+// 799 800
+

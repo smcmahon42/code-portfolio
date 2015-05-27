@@ -1,0 +1,11 @@
+node_modules
+fullbuild
+.tmp
+.sass-cache
+src/css/main.css
+src/vendor/videojs/dist/video-js/video-js.css
+bower_components
+npm-debug.log
+src/.DS_Store
+.DS_Store
+304367

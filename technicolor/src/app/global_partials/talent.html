@@ -1,0 +1,56 @@
+<section id="talent-{{talentType}}" class="talent-wrapper">
+	
+	<div class="talentSlide">
+
+		<ul class="talentGreenMask talentUl">
+			
+			<div class="talentColumn" ng-repeat="talentGroup in talentGroups" ng-class="{lastColumn : $last}">
+				<li ng-repeat="talentPerson in talentGroup.talentPersons">
+					<div class="bioImageGreen">
+						<img class="talentImg" ng-src="images/talent/{{talentPerson.imgName}}.jpg" alt="{{talentPerson.firstName}} {{talentPerson.lastName}}">
+					</div>
+				</li>
+			</div>
+			
+			<img class="greenMask" ng-show="talentType == 'creative'" src="images/talent/talent-yellow.jpg">
+			<img class="greenMask" ng-show="talentType == 'technology'" src="images/talent/talent-blue.jpg">
+			<img class="greenMask" ng-show="talentType == 'all'" src="images/talent/talent-intro.jpg">
+
+		</ul><!-- talentGreenMask -->
+
+
+		<ul class="talentReveal talentUl">
+
+			<div class="talentColumn" ng-repeat="talentGroup in talentGroups" ng-class="{lastColumn : $last}" >
+
+				<li ng-repeat="talentPerson in talentGroup.talentPersons"
+					class="talentTop noPreventDefault {{talentPerson.firstName}}-{{talentPerson.lastName}}"
+					ng-click="showTalent($event)">
+
+					<article class="talentCopy">
+						<span class="vCenter">
+							<h3 class="name">
+								<span ng-hide="talentPerson.firstName === 'none'">{{talentPerson.firstName}}</span><br>
+								<span ng-hide="talentPerson.lastName === 'none'">{{talentPerson.lastName}}</span>
+							</h3>
+							<p class="title">{{talentPerson.title}}</p>
+							<p class="division" ng-hide="talentPerson.division === 'none'">{{talentPerson.division}}</p>
+							<p class="moreinfo" ng-hide="talentPerson.urlLink === 'none'">
+								<a href="{{talentPerson.urlLink}}" target="new">More Information ></a>
+							</p>
+						</span>
+					</article>
+
+					<div class="bioImage">
+						<img ng-src="images/talent/{{talentPerson.imgName}}.jpg" alt="{{talentPerson.firstName}} {{talentPerson.lastName}}">
+					</div>
+
+				</li>
+
+			</div>
+
+		</ul><!-- talentReveal -->
+
+	</div><!-- TalentSlide -->
+
+</section>

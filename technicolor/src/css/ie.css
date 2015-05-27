@@ -1,0 +1,31 @@
+/* IE Styles */
+
+
+/*Empower VFX MRX video controllers*/
+#empower-vfx #video-empower-mrx .vjs-control.vjs-progress-control {
+	top: 80% !important;
+}
+#empower-vfx #video-empower-mrx .vjs-control.vjs-time-controls.vjs-duration, 
+#empower-vfx #video-empower-mrx .vjs-control.vjs-time-controls.vjs-current-time {
+     top: 79.5% !important;
+}
+
+/*Empower Advertising video controllers*/
+#empower-advertising #video-empower-advertising .vjs-control.vjs-progress-control {
+	top: 80% !important;
+}
+#empower-advertising #video-empower-advertising .vjs-control.vjs-time-controls.vjs-duration, 
+#empower-advertising #video-empower-advertising .vjs-control.vjs-time-controls.vjs-current-time {
+     top: 79.5% !important;
+}
+
+.technitrivia-touch {
+	z-index: 999 !important;
+}
+
+.technitrivia-square .ieimageNo {
+		display: none !important;
+	}
+.technitrivia-square .ieimageYes {
+		display: block !important;
+	}

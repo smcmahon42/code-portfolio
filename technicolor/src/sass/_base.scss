@@ -1,0 +1,560 @@
+* {
+	box-sizing:  border-box;
+}
+
+#mainViewPoint {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	overflow: hidden;
+	padding-bottom: 100px;
+	background-color: #1d1d1d;
+}
+
+// Full Background Images for each Chapter Section
+//==========================================================
+
+.full-bg,
+.static-bg { 
+	position: absolute; 
+	top: 0; 
+	left: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+// Global Chapter and Subsection styles
+//==========================================================
+
+.chapter {
+	height: 100%;
+}
+.subSection {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	.sectionContent {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.opacityOverlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+// Global Alert Messages
+//==========================================================
+
+.alertmsg {
+	display: none;
+	position: absolute;
+	z-index: 99999;
+	width: 100%;
+	min-height: 100%;
+	background-color: rgba(0, 0, 0, 0.95);
+	z-index: 999999;
+	h2 {
+		color:#FFF;
+	}
+}
+body#outdated {
+	background-color: #000 !important;
+
+	.outDatedMsg {
+		display: block;
+
+		img {
+			width: 150px;
+			display: block;
+			margin: 20px auto 0 auto;
+		}
+
+		div {
+			width: 400px;
+			min-height: 100%;
+			margin: 10% auto 0 auto;
+		}
+
+		h3 {
+			text-align: center;
+			width: 100%;
+			margin: auto;
+			color: #FFF;
+			font-family: sans-serif;
+			font-weight: 700; 
+			font-style: normal;
+			font-size: 1.5em;
+		}
+
+	}
+}//body#outdated
+
+.deviceAlerts {
+	display: none;
+}
+.isPortrait {
+	display: none;
+	width: 400px;
+	height: 400px;
+	margin: 35% auto 0 auto;
+	img {
+		max-width: 100%;
+	}
+}
+.isPhone {
+	display: none;
+	width: 100%;
+	height: 100%;
+	margin: 10% 0 0 0;
+	h3 {
+		text-align: center;
+		width: 80%;
+		margin: auto;
+		color: #FFF;
+		font-family: $font-primary;
+		font-weight: 700; 
+		font-style: normal;
+		font-size: 1.5em;
+	}
+	img {
+		width: 60%;
+		display: block;
+		margin: 20px auto 0 auto;
+	}
+}
+
+i {
+	font-style: italic;
+}
+
+
+
+// Global Styles for Chapters and Sections/Pages
+//==========================================================
+
+//basic style for each section
+.chapter-section {
+	display: none;
+	color: #fff;
+	height: 100%;
+	position: relative;
+	width: 100%;
+	font-family: $font-primary;
+
+	// .text-shadow {
+	// 	@include jquery-text-shadow(1px 1px 10px 0px rgba(0, 0, 0, 1));
+	// }
+
+////// Text Image Overlay
+
+.text-shadow {
+	padding: 100% 20px;
+	background-color: rgba(0,0,0,0); //0.25
+}
+.leftHandCopy {
+	background-color: rgba(0,0,0,0); //0.25
+	height: 100%;
+	width: 100% !important;
+	padding-right: 65% !important;
+}
+#sciencePage3.leftHandCopy {
+	background-color: rgba(0,0,0,0); //0.25
+	height: auto !important;
+	width: 45% !important;
+	padding-right: 3.5% !important;
+}
+#vfxPage5.leftHandCopy {
+	background-color: none !important;
+	height: none !important;
+	width: 45% !important;
+	padding-right: 0px !important;
+}
+
+////// Text Image Overlay End
+
+
+	.chapterNumber {
+		font-size: 0.7em;
+		font-weight: 400;
+		font-style: normal;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		border: 2px solid #FFF;
+		display: inline-block;
+		position: relative;
+		padding: 4px 5px 4px 10px;
+		span {
+			font-size: 1.2em;
+		}
+		&:before {
+			background-color: #fff;
+			content: '\a0';
+			height: 1px;
+			position: absolute;
+			top: 50%;
+			left: -150px;
+			width: 150px;
+		}
+		&:after {
+			background-color: #fff;
+			content: '\a0';
+			height: 1px;
+			position: absolute;
+			top: 50%;
+			left: 118px;
+			width: 150px;
+		}
+
+	}
+
+	span.kern {
+		padding: 0 4px;
+	}
+
+	.chapterTitle {
+		font-weight: 800;
+		font-size: 3.2em;
+		text-transform: uppercase;
+		text-align: center;
+		margin: 3%;
+	}
+
+	.sectionText {
+		font-weight: 400;
+		font-size: 1.2em;
+		line-height: 1.6em;
+		text-align: center;
+		letter-spacing: 0.05em;
+		width: 75%;
+		margin: auto;
+		max-width: 800px;
+	}
+
+	.upperCaseCallout,
+	.lowerCaseCallout {
+		font-weight: 400;
+		font-size: 1.3em;
+		line-height: 1.7em;
+		text-align: center;
+		width: 65%;
+		margin: 0 auto;
+		height: auto;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		@include translate(-50%, -50%);
+	}
+	.lowerCaseCallout {
+		width: 100%;
+		padding: 20px 20%;
+	}
+	.upperCaseCallout {
+		font-size: 1.2em;
+		line-height: 1.6em;
+		text-transform: uppercase;
+	}
+
+	.sectionTitle {
+		position: relative;
+		height: auto;
+		top: 45%;
+		font-weight: 800;
+		text-transform: uppercase;
+		font-size: 3.3em;
+	}
+
+	.textTitle {
+		font-weight: 700;
+		font-size: 1.6em;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		width: 65%;
+		text-align: center;
+		margin: auto;
+	}
+
+	.page {
+		height: 100%;
+		position: absolute;
+		width: 100%;
+		text-align: center;
+	}
+
+	.text {
+		font-weight: 300;
+		font-size: 1.2em;
+		line-height: 1.55em;
+		letter-spacing: 0.05em;
+		width: 65%;
+		margin: auto;
+	}
+
+	.dash {
+		display: block;
+		width: 100px;
+		height: 20px;
+		border-bottom: 2px solid #FFF;
+		margin: 3px auto 14px auto;
+	}
+
+	.bg-containter {
+		display: none;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+	}
+
+	.leftHandCopy {
+		width: 45%;
+		padding: 3.5%;
+		text-align: left;
+		.textTitle {
+			font-size: 35%;
+			margin: 0;
+			width: auto;
+			text-align: left;
+			@include jquery-text-shadow(1px 1px 10px 0px rgba(0, 0, 0, 1));
+		}
+		.textSubTitle {
+			font-weight: 400;
+			font-size: 35%;
+			@include jquery-text-shadow(1px 1px 10px 0px rgba(0, 0, 0, 1));
+		}
+		.dash {
+			margin: 0 0 15px 0;
+		}
+		.text {
+		  font-weight: 400;
+		  font-size: 23%;
+		  line-height: 1.5em;
+		  width: 100%;
+		  margin: 0 auto 2% auto;
+		  @include jquery-text-shadow(1px 1px 10px 0px rgba(0, 0, 0, 1));
+		}
+		a {
+			width: 220px;
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+	.zoomSpan {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+
+}//.chapter-section
+
+.textQuote {
+	height: auto !important;
+	position: absolute !important;
+	left: 50%;
+	top: 50%;
+	width: 100% !important;
+	@include translate(-50%, -50%);
+
+	.text {
+		margin-top: 7px;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 40%;
+		width: 60%;
+	}
+	.author {
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 20%;
+		margin: 2% 0;
+	}
+	img {
+		max-width: 8%
+	}
+}
+
+// Global Styles for Scroll Down Arrow bottom
+//==========================================================
+.scrollToNext {
+  bottom: 115px;
+  color: #fff;
+  opacity: 0.5;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 150px;
+  margin-left: -75px;
+  left: 50%;
+	span {
+		font-family: $font-primary;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 0.65rem;
+		display: block;
+		margin: auto;
+		text-align: center;
+		cursor: pointer;
+		opacity: 0.5;
+		letter-spacing: 0.15rem;
+	}
+	i {
+	  font-size: 0.65em;
+	  opacity: 0.7;
+	}
+	img {
+	  width: 50px;
+	  margin: 10px auto;
+	  display: inline-block;
+	}
+}
+.introScroll {
+	bottom: 30px;
+} 
+.scrollToNext.intro {
+	bottom: 40px;
+	span {
+		letter-spacing: 0rem;
+	}
+} 
+
+
+.volume-controls img {
+	cursor: pointer;
+	opacity: 0.20;
+}
+
+.copyVerticalCenter {
+	  height: auto;
+	  position: absolute;
+	  left: 50%;
+	  top: 50%;
+	  @include translate(-50%, -50%);
+}
+
+
+#howto {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.88);
+	opacity: 0;
+	display: none;
+	padding-bottom: 100px;
+	position: fixed;
+	z-index: 100;
+	font-family: $font-primary;
+
+	.skipto {
+		position: absolute;
+		right: 26px;
+		top: 61px;
+		p {
+			color: #FFF;
+			font-weight: 400;
+			font-size: 1.2em;
+			float: right;
+			margin: 35px 20px 0 0;
+			text-transform: uppercase;
+		}
+		.curveArrow {
+			width: 60px;
+			height: 50px;
+			float: right;
+		}
+		.foeNav {
+			position: absolute;
+			top: -30px;
+			right: 4px;
+			display: inline-block;
+		}
+	}//skipto
+
+	.howtoContent {
+
+		width: 70%;
+		text-align: center;
+		@include copyVerticleCenter(auto);
+
+		.mainCopy {
+			color: #00aee2;
+			font-size: 1.75em;
+			line-height: 1.5em;
+			font-weight: 400;
+		}
+
+		.directionCopy {
+			p {
+				color: #FFF;
+				font-size: 1.05em;
+				line-height: 1.65em;
+				text-transform: uppercase;
+			}
+			img {
+				display: block;
+				width: 37px;
+				margin: 15px auto;
+			}
+		}
+
+		.goit {
+			width: 174px;
+			margin: auto;
+			padding: 16px 29px;
+			color: #FFF;
+			background-color: #00aee2;
+			font-weight: 300;
+			font-size: 1em;
+			cursor: pointer;
+		}
+
+	}//howtoContent
+}//howto
+
+// Mile Stones Navigation
+.mileSonesNav {
+	position: absolute;
+	width: 100%;
+	height: 110px;
+	bottom: 0px;
+	overflow: hidden;
+	display: none;
+	.slideLeft {
+		float: left;
+	}
+	.slideRight {
+		float: right;
+	}
+	.sliderBtn {
+		width: 26px;
+		height: 100%;
+		display: table;
+		opacity: 0.5;
+		cursor: pointer;
+		padding: 0 15px;
+	}
+	i {
+		font-size: 20px !important;
+		display: table-cell !important;
+		vertical-align: top !important;
+		padding-top: 10px;
+	}
+}
+.slideSectionContainer li {
+	max-width: 500px;
+}
+
+.video-custom .vjs-slider-handle.vjs-seek-handle {
+	display: none !important;
+}
+.video-custom .vjs-slider-handle.vjs-seek-handle::before {
+	display: none !important;
+}
+
+
+

@@ -1,0 +1,156 @@
+@import "videojs/_video.scss";
+@import "videojs/_audio.scss";
+
+#colorstory-init {
+	#introPage1 {
+		@include copyVerticleCenter(auto);
+		min-height: 300px;
+	}
+	.opacityOverlay {
+		background: rgba(0,0,0,0.20);
+	}
+}
+
+#colorstory-history {
+	#historyPage2 , #historyPage5 {
+	  @include copyVerticleCenter(auto);
+	  min-height: 300px;
+		.kern {
+			padding: 0 2px;
+		}
+	}
+	.text-blue {
+		color: $primary-text-color;
+		font-size: 1em;
+	}
+	#historyPage3 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 45%;
+		padding: 1.25%;
+	}	
+}//#colorstory-history
+
+
+#colorstory-science {
+	#sciencePage2 {
+		@include copyVerticleCenter(auto);
+		min-height: 100px;
+	}
+	#sciencePage3 {
+		@include copyVerticleCenter(auto);
+		min-height: 100px;
+	}
+	#sciencePage5 {
+		top: 30%;
+	}
+	#sciencePage4 {
+		/*color: #000;*/
+		width: 45%;
+/*		.dash {
+			border-bottom: 2px solid #000;
+		}*/
+	}
+
+	#video-color-story-science {
+		position: relative;
+		video {
+			height: auto;
+			position: absolute;
+			top: 50%;
+			@include translateY(-50%);
+		}
+	}
+
+	#video-color-light-movement {
+		.vjs-progress-control.vjs-control,
+		.vjs-duration.vjs-time-controls.vjs-control,
+		.vjs-current-time.vjs-time-controls.vjs-control {
+			display: none !important;
+		}
+		video {
+		  position: absolute;
+		  // top: -20% !important;
+		  left: 0;
+		  width: 150% !important;
+		  height: auto !important;
+		}
+	}
+
+}//#colorstory-science
+
+
+#colorstory-future {
+	#futurePage2 {
+		@include copyVerticleCenter(auto);
+		min-height: 100px;
+	}
+	#video-abstract-color {
+		.vjs-progress-control.vjs-control,
+		.vjs-duration.vjs-time-controls.vjs-control,
+		.vjs-current-time.vjs-time-controls.vjs-control {
+			display: none !important;
+		}
+		video {
+		  position: absolute;
+		  // top: -20% !important;
+		  left: 0;
+		  width: 150% !important;
+		  height: auto !important;
+		}
+	}
+}//#colorstory-future
+
+
+.overlaySection {
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	.hideReveal {
+		top: 0;
+		width: 50%;
+		right: 0;
+		display: block;
+		position: absolute;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.static-bg {
+		background-position-x: 0px;
+	}
+	
+	.image2 {
+		clip: rect(0px, 2880px, 1566px, 0px);
+	}
+
+	#imgSlideCtrl {
+		width: 80px;
+		height: 45px;
+		position: absolute;
+		top: 50%;
+		right: 50%;
+		padding: 6px;
+		background-color: rgba(0,0,0,0.5);
+		margin-right: -40px;
+
+		img{
+			width: 68px;
+			height: 33px;
+			display: block;
+		}
+	}
+
+	.tracer {
+		width: 1px;
+		height: 1px;
+		visibility: none;
+		position: absolute;
+		top:50%;
+		left: 0;
+	}
+
+}

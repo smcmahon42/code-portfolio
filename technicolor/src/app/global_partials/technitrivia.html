@@ -1,0 +1,19 @@
+<div >
+	<div class="technitrivia-overlay"></div>
+	<div class="technitrivia " 
+			 ng-class="{'rotateNavBtnTrivia': stateChange.isTechnitriviaOpen }" 
+			  >
+		<div class="technitrivia-square">
+			<img class="ieimageNo" src="images/general/technitrivia_layer.png">
+			<div class="technitrivia-touch noPreventDefault " ng-click="rotateTechnitrivia()" >
+			<img class="ieimageYes" src="images/general/technitrivia_layer.png">
+			</div>
+		</div>
+	</div>
+	<article id='technitrivia-content' class="page text-animation" ng-show="stateChange.isTechnitriviaOpen">
+			<h3 class="text-technitrivia text-blue"> technitrivia</h3> 			
+			<h2 class='textTitle text-technitrivia'>Did you know?</h2>
+			<span class="dash text-technitrivia"></span>
+			<p class="text text-technitrivia"> {{currentTechnitrivia}}</p> 
+	</article>
+</div>

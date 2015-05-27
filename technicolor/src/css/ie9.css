@@ -1,0 +1,29 @@
+/* IE9 only Styles */
+/*.text-shadow {
+	padding: 100% 20px;
+	background-color: rgba(0,0,0,0.25);
+}
+.leftHandCopy {
+	background-color: rgba(0,0,0,0.25);
+	height: 100%;
+	width: 100% !important;
+	padding-right: 65% !important;
+}
+#sciencePage3.leftHandCopy {
+	background-color: rgba(0,0,0,0.25);
+	height: auto !important;
+	width: 45% !important;
+	padding-right: 3.5% !important;
+}
+#vfxPage5.leftHandCopy {
+	background-color: none !important;
+	height: none !important;
+	width: 45% !important;
+	padding-right: 0px !important;
+}
+#soundPage3.text-shadow {
+	background-color: rgba(0,0,0,0.45) !important;
+}
+#entertaimentPage3.text-shadow {
+	background-color: rgba(0,0,0,0.53) !important;
+}*/

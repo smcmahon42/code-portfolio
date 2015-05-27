@@ -1,0 +1,103 @@
+<div id="talent" class="chapter">
+
+	<section id="talent-init" class="chapter-section">
+			
+
+			<div class="bg-containter track-container page p3">
+			
+				<article class="page full-bg track-image p3" data-img-width="2880" data-img-height="1563" style="background-image: url(images/talent/talent-intro.svg);"></article>
+
+				<article id='introPage3' class="page p3">
+		 			<h2 class='sectionTitle'>SOME OF OUR TALENT</h2>
+				</article>
+
+			</div>
+			<!-- page 3 -->
+
+
+			<div class="bg-containter track-container page p2 scaleText">
+			
+				<article class="page full-bg track-image p2" data-img-width="2880" data-img-height="1565" style="background-image: url(images/talent/getty-video.jpg);"></article>
+
+				<article id='introPage2' class="page p2 textQuote">
+					<img src='images/empower/open-quote.png'>
+					<p class='quote text'>We talk about innovation, collaboration, technology, but in the end whether or not we achieve meaningful success - whether or not we connect with consumers - is about getting the correct talent working on the correct problems to deliver the experiences that matter.</p>
+					<p class='author'>— Frederic Rose, CEO</p>
+					<img src='images/empower/close-quote.png'>
+				</article>
+
+			</div>
+			<!-- page 2 -->
+
+
+			<div class="bg-containter track-container page p1">
+				
+				<span class="zoomSpan">
+					<article class="page full-bg track-image p1" data-img-width="2880" data-img-height="1565" style="background-image: url(images/talent/intro.jpg);"></article>
+				</span>
+
+				<article id='introPage1' class="page p1 text-shadow" data-opacity="0.5">
+		 			<div class="chapterNumber">Section <span>5</span></div>
+		 			<h2 class='chapterTitle'>TALENT, <span class="kern">THE</span> HEART <span class="kern">OF</span> OUR <span class="kern">SUCCESS</span></h2>
+		 			<p class='sectionText'>We're the collaborators who ask, "What if?" We're the architects of what's next. We're the inventors, the innovators, the industry partners who constantly push toward the future. All to provide the tools and talent to help storytellers bring their visions to life in ever more immersive and impressive ways.</p>
+				</article>
+
+			</div>
+			<!-- page 1 -->
+
+	</section><!-- talent-init -->
+
+
+	<section id="talent-all" class="chapter-section" >
+
+			<div class="bg-containter page p1">
+
+				<talent-display displayType="all"></talent-display>
+			
+			</div><!-- page 1 -->
+
+	</section><!-- talent-all -->
+
+
+	<section id="talent-technology" class="chapter-section" >
+
+			<div class="bg-containter page p1">
+
+				<talent-display displayType="technology"></talent-display>
+			
+			</div><!-- page 1 -->
+
+	</section><!-- talent-technology -->
+
+
+	<section id="talent-creative" class="chapter-section" >
+
+			<div class="bg-containter page p1">
+
+				<talent-display displayType="creative"></talent-display>
+			
+			</div><!-- page 1 -->
+
+	</section><!-- talent-creative -->
+
+
+
+
+	<nav id="talentNav" class="talentNav-animation" >
+		<ul >
+			<li><a class="noPreventDefault" ng-class="{'activeLink': stateChange.uiState.toParamId == 'talent-all'}" 
+			ui-sref="talent({ id:'talent-all' })">All</a></li>
+			<li><a class="noPreventDefault" ng-class="{'activeLink': stateChange.uiState.toParamId == 'talent-technology'}" 
+			ui-sref="talent({ id:'talent-technology' })">Technology</a></li>
+			<li><a class="noPreventDefault" ng-class="{'activeLink': stateChange.uiState.toParamId == 'talent-creative'}" 
+			ui-sref="talent({ id:'talent-creative' })">Creative</a></li>
+		</ul>
+	</nav>
+
+	<div class="scrollToNext noPreventDefault" ng-click="nextPage('down')">
+		<span>Scroll</span>
+		<i class="fa fa-chevron-down"></i>
+	</div>
+
+</div>
+

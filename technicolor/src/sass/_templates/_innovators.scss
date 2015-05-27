@@ -1,0 +1,100 @@
+#innovators-init {
+	.bg-containter.p2,
+	.p1 .full-bg,
+	.p1 .chapterNumber,
+	.p1 .chapterTitle,
+	.p1 .sectionText {
+		opacity: 0;
+		display: none;
+	}
+	#introPage1 {
+		@include copyVerticleCenter(auto);
+		min-height: 380px;
+	}		
+	#introPage2 {
+		opacity: 0;
+	}
+}
+
+.chapter-section .textSubTitle {
+  position: relative;
+  height: auto;
+  top: 46%;
+  text-transform: uppercase;
+  font-size: 1.3em;
+}
+
+
+#innovators-technology-licensing-patents {
+	#techLicense2 {
+		@include copyVerticleCenter(auto);
+	}
+	#techLicense3 {
+		@include copyVerticleCenter(auto);
+	}
+	#techLicense5 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 45%;
+		padding: 1.25%;
+	}	
+}
+
+
+#innovators-standards {
+	#industryStandards2 {
+		@include copyVerticleCenter(auto);
+		.kern {
+			padding: 0 2px;
+		}
+		img {
+			width: 50%;
+			// height: 15%;
+		}
+	}
+}
+
+#innovators-digital-encoding {
+	#coreOverviewPage1 {
+		@include copyVerticleCenter(auto);
+		.text {
+			font-size: 20px;
+			font-weight: 300;
+			line-height: 1.4em;
+		}
+		ul {
+		    list-style: none;
+		    padding:0;
+		    margin:0;
+		}
+		li { 
+			padding-left: 1em;
+			text-indent: -.7em;
+			font-size: 20px;
+			font-weight: 300;
+			line-height: 1.4em;
+		}
+		li:before {
+		    content: "• ";
+		    color: white; /* or whatever color you prefer */
+		}
+
+	}
+	#immersiveMediaPage1,
+	#immersiveExperiencePage1,
+	#personalizationPage1 {
+		@include copyVerticleCenter(auto);
+		li {
+			list-style-type: none;
+			margin-bottom: 10px;
+		}
+	}
+	#immersiveMediaPage1{
+		ul {
+			// margin-left: 2%;
+			list-style-type: disc;
+			list-style-position: inside;
+		}
+	}
+}

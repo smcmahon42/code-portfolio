@@ -1,0 +1,24 @@
+//audio custom skin
+.audio-custom {
+	background-color: transparent;
+	height: 35% !important;
+	left: 78%;
+	position: absolute !important;
+	top: 37%;
+	width: 60% !important;
+
+	.vjs-big-play-button:before {
+		content: none;
+	}
+	.vjs-big-play-button {
+		display: none !important;
+	}
+	.vjs-mute-control {
+		display: none !important;
+	}
+	.vjs-volume-control {
+		display: none !important;
+	}
+
+	@import "videojs/_progressBar.scss";
+}

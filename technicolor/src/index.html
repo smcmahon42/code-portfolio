@@ -1,0 +1,70 @@
+<!doctype html>
+<!-- <html xmlns:ng="//angularjs.org" ng-app="story" manifest="./techcache.mf"> -->
+<html xmlns:ng="//angularjs.org" ng-app="story">
+	<head>
+
+		<title>Technicolor 100 Years</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7213154/705306/css/fonts.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="libs/video-js/video-js.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="css/main.css" />
+		<!--[if IE 9 ]> 
+			<link rel="stylesheet" type="text/css" media="all" href="css/ie9.css" />
+		<![endif]-->
+		<style type="text/css">
+			[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+			display: none !important;
+			}
+		</style>
+
+	</head>
+
+	<!--[if lt IE 7 ]> <body id="outdated"> <![endif]-->
+	<!--[if IE 7 ]>    <body id="outdated"> <![endif]-->
+	<!--[if IE 8 ]>    <body id="outdated"> <![endif]-->
+	<!--[if (gt IE 8)|!(IE)]><!--> <body class="functional"> <!--<![endif]-->
+
+		<div class="outDatedMsg alertmsg">
+
+			<div>
+				<h3>You are using an out dated browser, please update your browser or install a more current browser.</h3>
+				<img src="images/general/sadFace.png">
+			</div>
+
+		</div>
+
+		<alert-msgs-modal></alert-msgs-modal>
+
+		<main-nav-hamburger-btn></main-nav-hamburger-btn>
+
+		<section id="mainViewPoint" ui-view></section>
+		
+		<main-menu></main-menu>
+
+		<howto-use></howto-use>
+
+		<pre-loader></pre-loader>	
+
+		<footer id="mainFooter" class="footerMsg-animation" ng-class="{'fadeMsg': footerHide}">
+
+			<progress-loader></progress-loader>
+
+			<footer-title></footer-title>
+
+		</footer>
+		
+		<!--[if (gt IE 8)|!(IE)]><!--> 
+		<script src="libs/video-js/video.js"></script>
+		<script src="libs/preload.js"></script>
+		<script src="libs/libsPackage.js"></script>
+		<script src="libs/angularPackage.js"></script>
+		<script src="app.js"></script>
+		<script>
+		  videojs.options.flash.swf = "libs/video-js/video-js.swf";
+		</script>
+		<!--<![endif]-->
+
+	</body>
+</html>

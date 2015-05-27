@@ -1,0 +1,49 @@
+//video custom skin
+
+.video-custom {
+	.vjs-default-skin:hover .vjs-big-play-button,
+	.vjs-default-skin .vjs-big-play-button:focus {
+		outline: 0;
+		border-color: none;
+		/* IE8 needs a non-glow hover state *///
+		background-color: transparent;
+	}
+
+	.vjs-big-play-button:before {
+		content: none;
+	}
+	.vjs-big-play-button {
+		display: none !important;
+	}
+	.vjs-mute-control {
+		display: none !important;
+	}
+	.vjs-volume-control {
+		display: none !important;
+	}
+	.vjs-poster {
+		background-size: cover !important;
+	}
+
+	@import "videojs/_progressBar.scss";
+}
+
+.full-video {
+	height: 100% !important;
+	position: absolute !important;
+	width: 100% !important;
+}
+
+.vjs-touch-area {
+	height: 90% !important;
+	position: absolute !important;
+	width: 100% !important;
+}
+
+.normal-video {
+	height: 60% !important;
+	left: 55%;
+	position: absolute !important;
+	top: 15%;
+	width: 105% !important;
+}

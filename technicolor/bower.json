@@ -1,0 +1,31 @@
+{
+  "name": "Technicolor Story",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "greensock": "latest",
+    "es5-shim": "latest",
+    "jquery-cookie": "latest",
+    "iscroll": "latest",
+    "SoundJS": "latest",
+    "PreloadJS": "latest",
+    "videojs": "latest",
+    "angular": "~1.3.*",
+    "angular-ui-router": "latest",
+    "angular-animate": "latest",
+    "angular-resource": "latest",
+    "angular-sanitize": "latest",
+    "angular-swipe": "latest",
+    "ngkookies": "latest"
+  },
+  "resolutions": {
+    "angular": "1.3.14"
+  }
+}

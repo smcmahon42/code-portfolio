@@ -1,0 +1,30 @@
+<span>
+
+	<article class="icons">
+		
+		<span class="imgSpacer">
+			<img class="footerLogo-animation"
+			ng-class="{'fadeMsg': footerData.titleHide}"
+			ng-src="images/general/100-years-{{footerData.imageName}}.jpg">
+		</span>
+
+		<span class="imgSpacer">
+			<img ng-src="images/general/technicolor-logo.jpg">
+		</span>
+		
+	</article>
+
+	<article class="info footerTitle-animation" ng-class="{'fadeMsg': footerData.titleHide}">
+		<p ng-bind-html="footerData.title"></p>
+	</article>
+
+	<article class='volume-controls'>
+		<img class='volume-img' src='images/general/full-sound.png' ng-show='volumeActive' ng-click='volumeAction()'>
+		<img class='volume-img' src='images/general/mute-sound.png' ng-show='!volumeActive' ng-click='volumeAction()'>
+	</article>
+
+	<article class="howtoFooterBtn" ng-show="showinfoButton">
+		<i class="fa fa-info-circle" ng-click="openCloseHowTo()"></i>
+	</article>
+
+</span>

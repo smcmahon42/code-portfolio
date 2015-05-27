@@ -1,0 +1,40 @@
+#end {
+	.endImage {
+		width:17%;
+		margin: auto;
+		margin-bottom: 30px;
+		opacity: 0;
+		img {
+			max-width: 100%
+		}
+	}
+	.text {
+		color: white;
+		font-family: $font-primary;
+		font-size: 1.8em;
+		font-weight: 300;
+		line-height: 1.55em;
+		letter-spacing: 0.05em;
+		margin: auto;
+		margin-top: 10px;
+		opacity: 0;
+		text-align: center;
+		width: 65%;
+	}
+
+	.restartBtn {
+		width: 100px;
+		margin: 0% auto 0 auto;
+		opacity: 0;
+		a {
+			color: #FFF;
+			opacity: 0.25;
+			font-family: $font-primary;
+			font-weight: 400;
+			font-size: 1em;
+			text-align: center;
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+	}
+}
